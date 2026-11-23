@@ -1,0 +1,866 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  spanish,
+  letterpaper,
+  conference]{IEEEtran}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic,shorthands=off]{babel}
+\else
+\usepackage[bidi=default,shorthands=off]{babel}
+\fi
+\ifLuaTeX
+  \usepackage{selnolig} % disable illegal ligatures
+\fi
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+\usepackage[numbers]{natbib}
+\bibliographystyle{IEEEtran}
+
+
+\usepackage{multirow}
+\usepackage{xurl}
+\usepackage{graphicx}
+\AtBeginDocument{\renewcommand{\tablename}{Tabla}}
+\newcommand{\notatabla}[1]{\par\vspace{2pt}\parbox{\linewidth}{\footnotesize\emph{Nota.} #1}}
+\author{\IEEEauthorblockN{Fiorella Yannet Paredes Coaguila, Mario Wilfredo Ramirez Puma,\\ Jefry Erick Quispe Ramos y Paolo Fontanil Barrera}
+\IEEEauthorblockA{Universidad Nacional del Altiplano -- Puno\\
+Escuela Profesional de Ingeniería Estadística e Informática\\
+Puno, Perú}}
+\AtBeginDocument{\setlength{\parskip}{0pt}\setlength{\parindent}{1em}}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Tabla de contenidos}
+\else
+  \newcommand\contentsname{Tabla de contenidos}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Listado de Figuras}
+\else
+  \newcommand\listfigurename{Listado de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Listado de Tablas}
+\else
+  \newcommand\listtablename{Listado de Tablas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabla}
+\else
+  \newcommand\tablename{Tabla}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  pdftitle={Desigualdades en la atención prenatal y el parto institucional entre mujeres quechuahablantes{,} aimarahablantes y castellanohablantes del departamento de Puno{,} Perú: análisis de la ENDES 2014--2025},
+  pdflang={es},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Desigualdades en la atención prenatal y el parto institucional
+entre mujeres quechuahablantes, aimarahablantes y castellanohablantes
+del departamento de Puno, Perú: análisis de la ENDES 2014--2025}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+\textit{Objetivo.} Describir las diferencias en la atención prenatal y el parto institucional según lengua materna entre mujeres de Puno y estimar asociaciones ajustadas por características sociodemográficas con la ENDES 2014--2025. \textit{Métodos.} Estudio observacional de cortes transversales repetidos. Se incluyeron 5,684 mujeres con un nacimiento en los 60 meses previos a la encuesta, considerando el más reciente. Los desenlaces fueron seis o más controles prenatales, inicio del control en el primer trimestre y parto institucional. Se estimaron porcentajes ponderados y modelos logísticos para muestras complejas ajustados por año, edad, residencia, educación, riqueza y número de hijos; se calcularon probabilidades ajustadas, diferencias absolutas y la interacción lengua $\times$ periodo. El análisis completo se reproduce con R y Quarto. \textit{Resultados.} Participaron 1,739 castellanohablantes, 2,639 quechuahablantes y 1,306 aimarahablantes. Frente a castellanohablantes, la razón de momios ajustada (ORa) de parto institucional fue 0,59 (0,43--0,82) en quechuahablantes y 0,66 (0,45--0,96) en aimarahablantes, equivalentes a diferencias ajustadas de $-$3,7 y $-$2,9 puntos porcentuales; el ajuste explicó cerca de la mitad de la asociación cruda. La mayor diferencia absoluta correspondió al inicio temprano entre aimarahablantes ($-$8,8 puntos; ORa = 0,68). Las asociaciones no disminuyeron significativamente entre 2014--2019 y 2020--2025 y fueron robustas a una definición alternativa de parto institucional y al tratamiento de la varianza. \textit{Conclusiones.} Persisten desventajas asociadas a la lengua materna después del ajuste sociodemográfico, sobre todo en parto institucional e inicio oportuno del control prenatal.
+\end{abstract}
+\begin{IEEEkeywords}
+salud materna; control prenatal; parto institucional; lenguas indígenas; desigualdad en salud; ENDES; Puno; reproducibilidad.
+\end{IEEEkeywords}
+
+\section{Introducción}\label{introducciuxf3n}
+
+La atención materna oportuna, continua y culturalmente pertinente
+constituye un componente fundamental de los sistemas de salud. El
+seguimiento durante la gestación permite identificar señales de alarma,
+promover medidas preventivas y establecer vínculos entre las mujeres y
+los servicios sanitarios. La Organización Mundial de la Salud recomienda
+un modelo centrado en la experiencia positiva del embarazo y en al menos
+ocho contactos de atención prenatal \citep{oms2016}. La cobertura, por
+sí sola, no equivale a calidad: también importan la oportunidad, la
+información, el trato y la capacidad de respuesta del establecimiento.
+
+Las desigualdades de acceso se expresan de forma distinta según
+condiciones sociales y culturales. En América Latina, estudios
+comparativos han identificado que las poblaciones indígenas enfrentan
+desventajas en diversas intervenciones de salud reproductiva y materna,
+especialmente aquellas que dependen de acudir a establecimientos y
+disponer de recursos para recibir atención \citep{mesenburg2018}. La
+lengua hablada constituye una aproximación útil ---aunque incompleta---
+a experiencias lingüísticas y sociales relacionadas con la atención
+sanitaria, y ha sido empleada para documentar inequidades maternas en
+Bolivia, Guatemala, México y Perú \citep{armenta2019}. Su uso exige
+distinguir la variable observada de conceptos más amplios como la
+pertenencia étnica o la autoidentificación \citep{armenta2020}.
+
+Para Perú, se ha documentado que las diferencias socioeconómicas
+persisten cuando se examina la cantidad y calidad de controles
+prenatales \citep{enriquez2022}. Investigaciones centradas en el parto
+institucional también encontraron asociaciones con área de residencia,
+nivel educativo, riqueza y aseguramiento \citep{rodrigo2023, ramos2023}.
+Tales antecedentes orientan la elección de covariables y desaconsejan
+interpretar automáticamente las diferencias descriptivas entre lenguas
+como efectos causales del idioma.
+
+En el departamento de Puno, la coexistencia de castellano, quechua y
+aimara hace pertinente un análisis específico. El estudio cualitativo de
+Samuel \citep{samuel2016} muestra que la implementación de políticas
+para la atención intercultural ha requerido participación social y
+vigilancia de la calidad de los servicios. La experiencia de adaptación
+cultural de la atención del parto en Ayacucho \citep{gabrysch2009}
+permite entender que los cambios organizacionales, la comunicación y las
+prácticas respetuosas pueden contribuir a reducir barreras percibidas.
+Los trabajos etnográficos y cualitativos en la Amazonía peruana
+\citep{delmastro2021, mejia2025} ofrecen contextos valiosos, pero no
+deben confundirse con evidencia causal ni extrapolarse de forma
+automática a Puno.
+
+Aunque se dispone de informes anuales de la Encuesta Demográfica y de
+Salud Familiar (ENDES) \citep{inei2024, inei2025}, comparar de manera
+sistemática a mujeres según lengua materna en Puno durante 2014--2025
+permite examinar patrones de largo plazo y asociaciones ajustadas. El
+valor del estudio radica en generar evidencia local, totalmente
+reproducible, para orientar el seguimiento de desigualdades lingüísticas
+y socioeconómicas en servicios maternos.
+
+\section{Objetivos}\label{objetivos}
+
+\emph{Objetivo general.} Analizar las diferencias en la cobertura de
+atención prenatal y parto institucional entre mujeres
+castellanohablantes, quechuahablantes y aimarahablantes de Puno
+utilizando datos de la ENDES 2014--2025 y estimar su asociación con la
+lengua materna después de ajustar por características sociodemográficas.
+
+\emph{Objetivos específicos.} (a) Describir la composición
+sociodemográfica de los grupos lingüísticos; (b) estimar porcentajes
+anuales ponderados de seis o más controles prenatales, inicio temprano
+del control prenatal y parto institucional; (c) estimar las asociaciones
+entre lengua materna y los tres indicadores, en escala relativa y
+absoluta; (d) evaluar si dichas asociaciones cambiaron entre 2014--2019
+y 2020--2025; y (e) documentar el análisis de forma reproducible con R y
+Quarto.
+
+\section{Materiales y métodos}\label{materiales-y-muxe9todos}
+
+\subsection{Diseño y fuente de
+información}\label{diseuxf1o-y-fuente-de-informaciuxf3n}
+
+Estudio cuantitativo, observacional y analítico de cortes transversales
+repetidos, basado en microdatos de acceso público de doce ediciones de
+la ENDES entre 2014 y 2025 \citep{inei2024, inei2025}. La información
+fue armonizada por año, identificando registros de mujeres, antecedentes
+obstétricos del nacimiento más reciente y variables del diseño muestral.
+Se integró una base multianual con identificadores de conglomerado y
+estrato diferenciados por año. Los resultados describen asociaciones
+para los dominios investigados, no seguimientos longitudinales de las
+mismas mujeres.
+
+\subsection{Población y muestra}\label{poblaciuxf3n-y-muestra}
+
+De 12~620 mujeres de 15 a 49 años entrevistadas en Puno, 5~689
+informaron al menos un nacimiento en los 60 meses previos a la
+entrevista (6~591 nacimientos). Para evitar contar varios partos de la
+misma mujer en una encuesta, se utilizó el nacimiento más reciente. Se
+excluyeron 5 mujeres cuya lengua materna no era castellano, quechua ni
+aimara o carecía de dato, de modo que la muestra analítica comprendió
+5~684 mujeres: castellano (1~739), quechua (2~639) y aimara (1~306)
+(Fig.~\ref{fig-flujo}).
+
+\begin{figure}[!t]
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{informe_files/figure-pdf/fig-flujo-1.pdf}
+
+}
+
+\caption{\label{fig-flujo}Diagrama de flujo de selección de la muestra
+analítica, Puno, ENDES 2014--2025.}
+
+\end{figure}%
+
+\subsection{Variables de estudio}\label{variables-de-estudio}
+
+La exposición principal fue la lengua materna, reconstruida a partir de
+la variable S119. Se armonizaron los códigos entre ediciones: en
+2014--2016, castellano = 1, quechua = 2 y aimara = 3; en 2017--2025,
+quechua = 1, aimara = 2 y castellano = 10. Esta recodificación es
+indispensable para evitar clasificación errónea en las comparaciones
+temporales.
+
+Los desenlaces binarios fueron: (1) seis o más controles prenatales, con
+al menos seis visitas registradas en M14; (2) control temprano, definido
+como primera visita durante los meses 1--3 según M13, clasificando la
+ausencia de controles como no temprana; y (3) parto institucional,
+construido con el lugar del parto (M15) y la atención por personal
+profesional (M3A--M3C). Se clasificaron como no institucionales los
+partos en domicilio propio o de partera; las categorías no clasificables
+(M15 = 96) se trataron como faltantes. Dado que lugar del parto y
+atención calificada no son necesariamente un mismo indicador, se repitió
+el análisis con una definición basada únicamente en el lugar del parto.
+Como indicador complementario, alineado con la recomendación vigente de
+la OMS \citep{oms2016}, se analizó además la proporción con ocho o más
+controles.
+
+Como variables de ajuste se incluyeron edad en años (V012), residencia
+urbana/rural (V025), nivel educativo (V106), quintil de riqueza (V190),
+número de hijos nacidos vivos (V201) y año de encuesta. Educación,
+riqueza y residencia se incorporaron como categorías; edad y número de
+hijos, como términos numéricos.
+
+\subsection{Diseño muestral y análisis
+estadístico}\label{diseuxf1o-muestral-y-anuxe1lisis-estaduxedstico}
+
+Los análisis utilizaron factores de ponderación V005/1 000 000,
+conglomerados V001 y estratos basados en V022 junto con el departamento
+V024. Los códigos de conglomerados y estratos se distinguieron entre
+años. El diseño se construyó con los registros nacionales de cada
+edición (434~993 mujeres) y luego se seleccionó el dominio de estudio,
+evitando eliminar unidades del diseño de forma prematura. En el análisis
+agrupado, los pesos se dividieron entre 12, de modo que las estimaciones
+combinadas representan un año promedio del periodo; este reescalamiento
+no modifica los coeficientes.
+
+Se estimaron porcentajes por año y lengua con intervalos de confianza
+del 95 \% por el método logit, con un diseño por encuesta. Para cada
+desenlace se ajustaron modelos logísticos binarios con \texttt{svyglm()}
+y familia \texttt{quasibinomial()} del paquete \texttt{survey} de R
+\citep{lumley2004, rcore}, tomando como referencia a las
+castellanohablantes. Se informan razones de momios crudas (ORc, con la
+lengua materna como única variable) y ajustadas (ORa), intervalos del 95
+\% y valores \(p\); la comparación entre ambas indica qué parte de la
+asociación se explica por las covariables. Como los desenlaces fueron
+frecuentes y los OR exageran la magnitud relativa en esa situación, se
+calcularon también probabilidades ajustadas por estandarización marginal
+(asignando a cada mujer cada lengua y promediando con los pesos del
+diseño) y sus diferencias en puntos porcentuales, con errores estándar
+por el método delta.
+
+Para examinar si las desigualdades cambiaron en el tiempo, se añadió a
+cada modelo la interacción lengua \(\times\) periodo (2014--2019 frente
+a 2020--2025), evaluada con una prueba de Wald ajustada al diseño. En
+algunos años se detectaron estratos con una sola unidad primaria de
+muestreo; el análisis principal utilizó la opción
+\texttt{survey.lonely.psu\ =\ "adjust"} y, como análisis de
+sensibilidad, se repitió con \texttt{"average"}. La significancia se
+evaluó al 5 \%, sin interpretar la ausencia de significancia como
+ausencia de diferencia. El informe sigue las recomendaciones STROBE
+\citep{vonelm2007, vandenbroucke2007}.
+
+\subsection{Reproducibilidad}\label{reproducibilidad}
+
+El informe se escribió en Quarto \citep{quarto} y se ejecutó en Positron
+con R. Cada cifra, tabla y figura de este documento se calcula al
+renderizar el archivo \texttt{informe.qmd} a partir de dos archivos
+livianos: la base analítica de 5~684 mujeres y el marco de diseño
+muestral nacional; ningún resultado se transcribió a mano. La
+preparación de esos archivos desde los microdatos originales del INEI se
+documenta en los scripts numerados 01--51 del proyecto. La sección final
+detalla el repositorio y las versiones del software.
+
+\subsection{Consideraciones éticas}\label{consideraciones-uxe9ticas}
+
+El estudio utilizó microdatos anonimizados de acceso público difundidos
+por el Instituto Nacional de Estadística e Informática (INEI), sin
+contacto ni intervención sobre las participantes. Los resultados se
+presentan únicamente de forma agregada.
+
+\section{Resultados}\label{resultados}
+
+\subsection{Composición de la muestra y características
+sociodemográficas}\label{composiciuxf3n-de-la-muestra-y-caracteruxedsticas-sociodemogruxe1ficas}
+
+De las 5~684 mujeres elegibles, el 46,4 \% fueron quechuahablantes, el
+30,6 \% castellanohablantes y el 23,0 \% aimarahablantes; estos
+porcentajes se calcularon sobre recuentos sin ponderar y no representan
+la composición poblacional. La Tabla \ref{tab:socio} y la
+Fig.~\ref{fig-socio} resumen las características ponderadas.
+
+\begin{table}[!t]
+\centering
+\caption{Características sociodemográficas por lengua materna}
+\label{tab:socio}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrrr@{}}
+\toprule
+Característica & Castellano & Quechua & Aimara \\
+\midrule
+$n$ (sin ponderar) & 1,739 & 2,639 & 1,306 \\
+Edad media (años) & 28,5 & 30,8 & 31,0 \\
+Residencia rural (\%) & 24,5 & 49,5 & 56,7 \\
+Educación superior (\%) & 43,4 & 17,8 & 16,8 \\
+Dos quintiles inferiores (\%) & 53,0 & 79,5 & 79,7 \\
+Hijos nacidos vivos, media & 1,88 & 2,58 & 2,56 \\
+\bottomrule
+\end{tabular*}
+\notatabla{Estimaciones ponderadas según el diseño muestral de la ENDES.}
+\end{table}
+
+\begin{figure}[!t]
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{informe_files/figure-pdf/fig-socio-1.pdf}
+
+}
+
+\caption{\label{fig-socio}Características sociodemográficas
+seleccionadas por lengua materna (porcentajes ponderados), Puno, ENDES
+2014--2025.}
+
+\end{figure}%
+
+Las mayores diferencias se concentraron en residencia, escolaridad y
+riqueza. La residencia rural alcanzó 49,5 \% entre quechuahablantes y
+56,7 \% entre aimarahablantes, frente a 24,5 \% en castellanohablantes.
+La educación superior mostró el patrón inverso: 43,4 \% en castellano,
+17,8 \% en quechua y 16,8 \% en aimara. Esta heterogeneidad justifica
+presentar, además de las diferencias descriptivas, comparaciones
+ajustadas.
+
+\subsection{Evolución anual de los
+indicadores}\label{evoluciuxf3n-anual-de-los-indicadores}
+
+La Tabla \ref{tab:anual} y la Fig.~\ref{fig-tendencias} presentan los
+porcentajes ponderados para los doce años disponibles. La cobertura de
+seis o más visitas y el parto institucional alcanzan niveles elevados en
+los últimos años, mientras que el control temprano mantiene diferencias
+más visibles. Los intervalos de confianza anuales son amplios, por lo
+que las fluctuaciones de un año a otro no deben interpretarse como
+cambios significativos.
+
+\begin{table*}[!t]
+\centering
+\caption{Indicadores de atención materna por año y lengua materna (\%)}
+\label{tab:anual}
+\small
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+& \multicolumn{3}{c}{$\geq$6 controles prenatales} & \multicolumn{3}{c}{Inicio en el primer trimestre} & \multicolumn{3}{c}{Parto institucional} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+Año & Cast. & Quechua & Aimara & Cast. & Quechua & Aimara & Cast. & Quechua & Aimara \\
+\midrule
+2014 & 82,4 & 79,4 & 68,2 & 60,5 & 59,5 & 47,2 & 91,8 & 69,3 & 77,3 \\
+2015 & 81,1 & 81,2 & 75,5 & 69,7 & 56,6 & 55,5 & 84,8 & 79,4 & 77,5 \\
+2016 & 79,9 & 81,9 & 78,9 & 63,9 & 62,1 & 61,0 & 93,8 & 84,6 & 85,6 \\
+2017 & 82,7 & 82,0 & 75,2 & 61,5 & 65,5 & 57,4 & 97,3 & 86,2 & 91,0 \\
+2018 & 80,8 & 79,0 & 75,7 & 64,1 & 57,6 & 52,8 & 96,9 & 88,8 & 84,7 \\
+2019 & 87,2 & 81,2 & 83,7 & 71,5 & 62,3 & 57,5 & 95,1 & 89,0 & 90,8 \\
+2020 & 90,6 & 82,3 & 88,0 & 81,2 & 66,4 & 58,4 & 95,6 & 89,9 & 94,5 \\
+2021 & 82,5 & 83,1 & 78,4 & 70,9 & 60,1 & 59,2 & 98,9 & 93,7 & 88,0 \\
+2022 & 86,7 & 81,4 & 87,7 & 66,8 & 62,9 & 54,0 & 99,0 & 94,6 & 95,1 \\
+2023 & 88,2 & 86,5 & 90,8 & 77,6 & 66,4 & 68,2 & 100,0 & 97,5 & 99,3 \\
+2024 & 90,8 & 87,2 & 78,2 & 74,1 & 68,1 & 60,8 & 97,0 & 97,4 & 93,4 \\
+2025 & 87,1 & 87,1 & 89,6 & 80,8 & 67,7 & 64,3 & 98,7 & 98,4 & 96,7 \\
+\bottomrule
+\end{tabular}
+\notatabla{Porcentajes ponderados, redondeados a un decimal, estimados con el diseño muestral de cada encuesta. Los intervalos de confianza se muestran en la Fig.~\ref{fig-tendencias}. Un valor de 100\,\% indica que todas las observaciones válidas del grupo fueron positivas y no implica certeza poblacional.}
+\end{table*}
+
+\begin{figure}[!t]
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{informe_files/figure-pdf/fig-tendencias-1.pdf}
+
+}
+
+\caption{\label{fig-tendencias}Evolución anual de los indicadores por
+lengua materna, Puno, 2014--2025: (a) seis o más controles prenatales;
+(b) inicio del control en el primer trimestre; (c) parto institucional.
+Líneas: porcentajes ponderados; bandas: IC del 95 \% (método logit).
+Cuando la estimación es 100 \% no se muestra banda.}
+
+\end{figure}%
+
+En 2014, el parto institucional fue estimado en 91,8 \% para castellano,
+69,3 \% para quechua y 77,3 \% para aimara, mientras que en 2025 alcanzó
+98,7 \%, 98,4 \% y 96,7 \%, respectivamente. Estas diferencias entre
+extremos de la serie son descriptivas y no permiten concluir causalmente
+que un grupo se benefició más que otro.
+
+Para inicio temprano, las estimaciones de 2025 fueron 80,8 \% en
+castellano, 67,7 \% en quechua y 64,3 \% en aimara, con diferencias
+descriptivas frente a castellano de 13,1 y 16,5 puntos porcentuales,
+respectivamente.
+
+\subsection{Modelos logísticos}\label{modelos-loguxedsticos}
+
+La Tabla \ref{tab:ora} y la Fig.~\ref{fig-forest} muestran las
+asociaciones entre lengua materna y cada desenlace, sin ajuste y
+controlando por edad, residencia, educación, riqueza, número de hijos
+nacidos vivos y año de encuesta. Los modelos trabajaron con \(n\) =
+5~681 para seis o más controles, \(n\) = 5~683 para inicio temprano y
+\(n\) = 5~645 para parto institucional.
+
+\begin{table}[!t]
+\centering
+\caption{Razones de momios crudas y ajustadas por lengua materna}
+\label{tab:ora}
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}llccc@{}}
+\toprule
+Indicador & Lengua & ORc (IC 95\,\%) & ORa (IC 95\,\%) & $p$ \\
+\midrule
+$\geq$6 contr. & Quechua & 0,87 (0,72--1,05) & 0,95 (0,78--1,16) & 0,613 \\
+ & Aimara & 0,75 (0,59--0,94) & 0,76 (0,60--0,97) & 0,027 \\
+\addlinespace
+Inicio temp. & Quechua & 0,74 (0,63--0,86) & 0,85 (0,72--1,00) & 0,053 \\
+ & Aimara & 0,61 (0,51--0,73) & 0,68 (0,56--0,81) & $<$0,001 \\
+\addlinespace
+Parto inst. & Quechua & 0,35 (0,26--0,49) & 0,59 (0,43--0,82) & 0,002 \\
+ & Aimara & 0,38 (0,26--0,55) & 0,66 (0,45--0,96) & 0,029 \\
+\bottomrule
+\end{tabular*}
+\notatabla{ORc: razón de momios cruda; ORa: ajustada por edad, residencia, educación, quintil de riqueza, número de hijos nacidos vivos y año de encuesta. Referencia: castellano. Ambos modelos usan los mismos casos y el diseño muestral; $p$ corresponde al ORa. Contr.: controles; temp.: temprano; inst.: institucional.}
+\end{table}
+
+\begin{figure}[!t]
+
+\centering{
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{informe_files/figure-pdf/fig-forest-1.pdf}
+
+}
+
+\caption{\label{fig-forest}Razones de momios ajustadas (ORa) e IC del 95
+\% de la lengua materna para cada indicador (referencia: castellano).}
+
+\end{figure}%
+
+Frente a las castellanohablantes, las aimarahablantes presentaron
+menores momios ajustados de haber tenido seis o más controles (ORa =
+0,763; IC 95 \%: 0,601--0,970; \(p\) = 0,027). Para quechua, la
+estimación fue cercana a la unidad (ORa = 0,950; \(p\) = 0,613). En el
+inicio temprano, el ORa fue 0,675 en aimara (\(p\) \textless{} 0,001) y
+0,850 en quechua (\(p\) = 0,053), este último con evidencia limitada en
+el umbral convencional del 5 \%. En el parto institucional, los dos
+grupos de lengua indígena presentaron menores momios ajustados: ORa =
+0,592 para quechua (IC 95 \%: 0,427--0,821) y ORa = 0,656 para aimara
+(IC 95 \%: 0,449--0,957).
+
+El ajuste por características sociodemográficas atenuó de forma
+importante la asociación con el parto institucional: la razón de momios
+pasó de 0,35 (cruda) a 0,59 (ajustada) en quechuahablantes y de 0,38 a
+0,66 en aimarahablantes, es decir, el coeficiente se redujo en 50 \% y
+57 \% en escala logarítmica. En cambio, para el inicio temprano en
+aimarahablantes la atenuación fue de solo 20 \% (ORc = 0,61; ORa =
+0,68), de modo que la mayor parte de esa desventaja no se explicó por
+las covariables consideradas.
+
+\subsection{Probabilidades ajustadas y diferencias
+absolutas}\label{probabilidades-ajustadas-y-diferencias-absolutas}
+
+Debido a la alta frecuencia de los desenlaces, la magnitud de los OR no
+se traduce directamente en diferencias de probabilidad (Tabla
+\ref{tab:abs}). En parto institucional, las diferencias ajustadas frente
+a castellano fueron de \(-3{,}7\) puntos porcentuales en quechua (IC 95
+\%: \(-5{,}9\) a \(-1{,}6\)) y \(-2{,}9\) en aimara. La mayor diferencia
+absoluta correspondió al inicio temprano en aimarahablantes: 58,5 \%
+frente a 67,2 \% en castellanohablantes, una diferencia de \(-8{,}8\)
+puntos (\(-12{,}8\) a \(-4{,}7\)).
+
+\begin{table*}[!t]
+\centering
+\caption{Probabilidades ajustadas y diferencias absolutas frente a castellanohablantes}
+\label{tab:abs}
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lccccc}
+\toprule
+& \multicolumn{3}{c}{Probabilidad ajustada, \% (IC 95\,\%)} & \multicolumn{2}{c}{Diferencia frente a castellano, pp (IC 95\,\%)} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}
+Indicador & Castellano & Quechua & Aimara & Quechua & Aimara \\
+\midrule
+$\geq$6 controles & 83,7 (81,6--85,8) & 83,0 (81,4--84,7) & 79,8 (77,1--82,5) & $-$0,7 ($-$3,4 a 2,0) & $-$3,9 ($-$7,4 a $-$0,4) \\
+Inicio temprano & 67,2 (64,6--69,9) & 63,7 (61,5--65,9) & 58,5 (55,4--61,5) & $-$3,5 ($-$7,1 a 0,0) & $-$8,8 ($-$12,8 a $-$4,7) \\
+Parto institucional & 93,1 (91,4--94,9) & 89,4 (87,9--90,9) & 90,2 (88,4--92,0) & $-$3,7 ($-$5,9 a $-$1,6) & $-$2,9 ($-$5,5 a $-$0,4) \\
+\bottomrule
+\end{tabular}
+\notatabla{Probabilidades obtenidas por estandarización marginal a partir de los modelos ajustados de la Tabla~\ref{tab:ora}, con los pesos del diseño. pp: puntos porcentuales.}
+\end{table*}
+
+\subsection{Cambio de las desigualdades en el tiempo y análisis de
+sensibilidad}\label{cambio-de-las-desigualdades-en-el-tiempo-y-anuxe1lisis-de-sensibilidad}
+
+La Tabla \ref{tab:periodo} muestra las ORa por periodo. En ningún
+indicador la interacción lengua \(\times\) periodo alcanzó significancia
+estadística (\(p\) = 0,093 para seis o más controles, 0,072 para inicio
+temprano y 0,604 para parto institucional). En parto institucional, pese
+a la convergencia de los porcentajes, las ORa de 2020--2025 se
+mantuvieron por debajo de la unidad (0,51 en quechua y 0,47 en aimara).
+En inicio temprano, la asociación en quechuahablantes fue nula en
+2014--2019 (ORa = 0,99) y se hizo evidente en 2020--2025 (ORa = 0,69; IC
+95 \%: 0,56--0,85).
+
+\begin{table}[!t]
+\centering
+\caption{Razones de momios ajustadas por periodo}
+\label{tab:periodo}
+\footnotesize
+\setlength{\tabcolsep}{2.2pt}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}llccc@{}}
+\toprule
+Indicador & Lengua & 2014--2019 & 2020--2025 & $p_{\mathrm{int}}$ \\
+\midrule
+$\geq$6 contr. & Quechua & 1,05 (0,82--1,35) & 0,81 (0,60--1,10) & \multirow{2}{*}{0,093} \\
+ & Aimara & 0,72 (0,53--0,98) & 0,85 (0,59--1,24) &  \\
+\addlinespace
+Inicio temp. & Quechua & 0,99 (0,78--1,24) & 0,69 (0,56--0,85) & \multirow{2}{*}{0,072} \\
+ & Aimara & 0,75 (0,58--0,97) & 0,58 (0,46--0,74) &  \\
+\addlinespace
+Parto inst. & Quechua & 0,61 (0,42--0,89) & 0,51 (0,26--0,997) & \multirow{2}{*}{0,604} \\
+ & Aimara & 0,71 (0,46--1,10) & 0,47 (0,22--0,996) &  \\
+\bottomrule
+\end{tabular*}
+\notatabla{ORa (IC 95\,\%) frente a castellano en cada periodo, a partir de modelos con interacción lengua $\times$ periodo y las mismas covariables. $p_{\mathrm{int}}$: prueba de Wald de la interacción (2 grados de libertad).}
+\end{table}
+
+Los resultados fueron robustos (Tabla \ref{tab:sens}). Con la definición
+de parto institucional basada solo en el lugar del parto, las ORa fueron
+0,60 en quechua y 0,68 en aimara, prácticamente iguales a las del
+análisis principal. Con el tratamiento \texttt{average} para estratos
+con una sola unidad primaria, los coeficientes no cambiaron y los
+intervalos se ampliaron levemente, sin modificar la significancia. Por
+último, la cobertura de ocho o más controles fue considerablemente menor
+que la de seis o más (64,5 \% en castellano, 60,6 \% en quechua y 61,1
+\% en aimara), sin diferencias significativas por lengua.
+
+\begin{table}[!t]
+\centering
+\caption{Análisis de sensibilidad e indicador complementario}
+\label{tab:sens}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}llcc@{}}
+\toprule
+Análisis & Lengua & ORa (IC 95\,\%) & $p$ \\
+\midrule
+\multicolumn{4}{l}{\textit{Parto institucional solo por lugar del parto}} \\
+& Quechua & 0,60 (0,43--0,83) & 0,002 \\
+& Aimara & 0,68 (0,46--0,997) & 0,048 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Parto institucional, varianza con \texttt{average}}} \\
+& Quechua & 0,59 (0,43--0,82) & 0,002 \\
+& Aimara & 0,66 (0,45--0,96) & 0,029 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Inicio temprano, varianza con \texttt{average}}} \\
+& Quechua & 0,85 (0,72--1,00) & 0,053 \\
+& Aimara & 0,68 (0,56--0,81) & $<$0,001 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{$\geq$6 controles, varianza con \texttt{average}}} \\
+& Quechua & 0,95 (0,78--1,16) & 0,613 \\
+& Aimara & 0,76 (0,60--0,97) & 0,027 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{$\geq$8 controles (recomendación OMS 2016)}} \\
+& Quechua & 0,87 (0,74--1,03) & 0,104 \\
+& Aimara & 0,86 (0,71--1,04) & 0,125 \\
+\bottomrule
+\end{tabular*}
+\notatabla{Referencia: castellano. Mismas covariables que en la Tabla~\ref{tab:ora}.}
+\end{table}
+
+\section{Discusión}\label{discusiuxf3n}
+
+El presente análisis integra doce ediciones de la ENDES para explorar
+desigualdades vinculadas con la lengua materna en Puno. Su principal
+contribución descriptiva consiste en presentar, en una misma serie, tres
+dimensiones de atención materna comparadas entre castellano, quechua y
+aimara. La contribución analítica reside en mostrar que algunas
+asociaciones con la lengua materna persisten cuando se consideran
+diferencias de edad, residencia, educación, riqueza, paridad y año,
+particularmente para parto institucional y, entre aimarahablantes, para
+el inicio temprano del control prenatal.
+
+Las diferencias en composición sociodemográfica sugieren que la
+desigualdad lingüística se superpone con desventajas territoriales y
+materiales. Las mujeres aimarahablantes y quechuahablantes estaban más
+representadas en áreas rurales y en los quintiles inferiores de riqueza,
+patrón coherente con la literatura latinoamericana sobre inequidades
+según riqueza, territorio y pertenencia étnica en salud maternoinfantil
+\citep{mesenburg2018, colome2021}. La comparación entre las razones
+crudas y ajustadas lo confirma: cerca de la mitad de la desventaja en
+parto institucional se explicó por residencia, educación, riqueza y
+paridad, pero la otra mitad persistió. En el inicio temprano entre
+aimarahablantes, en cambio, el ajuste apenas modificó la asociación, lo
+que apunta a factores no captados por las variables socioeconómicas,
+como la distancia, la comunicación con el personal o la experiencia
+previa con los servicios. No obstante, estos resultados no permiten
+distinguir con precisión las rutas causales de esas desigualdades.
+
+La asociación más consistente en ambos grupos indígenas correspondió al
+parto institucional. Ello es relevante porque el acceso a servicios para
+el parto depende de un entramado de distancia, transporte, costo
+indirecto, experiencias de discriminación, pertinencia lingüística y
+confianza en el establecimiento. La investigación de Samuel
+\citep{samuel2016} en Puno destaca el papel de la vigilancia ciudadana y
+la adecuación intercultural; la experiencia de Gabrysch et al.
+\citep{gabrysch2009} en Ayacucho documenta la adaptación de servicios a
+prácticas y preferencias locales, y estudios en la Amazonía describen
+preferencias por el parto domiciliario y barreras de acceso en
+comunidades indígenas \citep{delmastro2021, mejia2025}. Aunque los
+contextos sean diferentes, estos estudios fundamentan la necesidad de
+interpretar las cifras de cobertura junto con la calidad y el trato
+percibido.
+
+Las escalas relativa y absoluta ofrecen lecturas complementarias. Un ORa
+de 0,59 corresponde a una diferencia ajustada de apenas 3--4 puntos
+porcentuales cuando el parto institucional supera el 90 \%. Que la
+diferencia relativa no haya disminuido entre 2014--2019 y 2020--2025,
+aun cuando los porcentajes convergieron, indica que los partos que
+todavía ocurren fuera de establecimientos se concentran en mujeres de
+lengua indígena; este grupo residual puede requerir estrategias
+focalizadas más que una expansión general de la cobertura.
+
+En la atención prenatal, el resultado más reciente indica porcentajes
+elevados de seis o más consultas en los tres grupos, mientras que el
+inicio en el primer trimestre muestra las mayores diferencias absolutas,
+de casi nueve puntos entre aimarahablantes. Un inicio tardío restringe
+las oportunidades de orientación preventiva y de seguimiento adecuado.
+La aparición de una desventaja en quechuahablantes durante 2020--2025
+coincide con el periodo de interrupción de servicios asociado a la
+pandemia de COVID-19, aunque este estudio no permite atribuirla a esa
+causa y la prueba de interacción no fue concluyente. Asimismo, la
+cobertura de ocho o más controles, estándar actual de la OMS
+\citep{oms2016}, fue unos 20 puntos inferior a la de seis o más, lo que
+indica que el indicador histórico sobrestima la adecuación del control
+prenatal en todos los grupos.
+
+La literatura peruana sobre cobertura y calidad prenatal
+\citep{enriquez2022} respalda examinar no solamente cuántas consultas
+ocurrieron, sino también su oportunidad y contenido. Asimismo, los
+estudios sobre información recibida durante la atención y sobre
+aseguramiento indican que los factores institucionales y
+comunicacionales influyen en la utilización de servicios
+\citep{quispe2023, ramos2023, perezlu2018}. Una implicancia práctica de
+este trabajo es recomendar la evaluación de la oferta lingüística y de
+la experiencia de las usuarias, además del monitoreo cuantitativo de la
+cobertura.
+
+Una lectura prudente exige recordar que la lengua materna no equivale
+por sí misma a identidad étnica, discriminación experimentada o
+competencia comunicativa con el personal de salud. La medición de
+inequidades étnicas depende del criterio de clasificación empleado
+\citep{armenta2020}; por ello, las asociaciones encontradas podrían
+reflejar factores culturales, sociales, geográficos e institucionales no
+observados. Tampoco puede asumirse que las diferencias entre 2014 y 2025
+se deban a cambios en políticas específicas, dado el carácter repetido y
+transversal del diseño.
+
+\subsection{Fortalezas y limitaciones}\label{fortalezas-y-limitaciones}
+
+Entre las fortalezas destacan la integración temporal de doce encuestas,
+la armonización explícita de la codificación lingüística, el uso del
+diseño muestral completo, el análisis de tres resultados de atención
+materna en escalas relativa y absoluta, la verificación de la robustez
+frente a definiciones alternativas y al tratamiento de la varianza, y la
+reproducibilidad completa del análisis.
+
+Entre las limitaciones, primero, la ENDES es autoinformada en varios
+componentes, por lo que puede existir error de recuerdo en la edad
+gestacional y el número de visitas. Segundo, la definición de parto
+institucional combinó lugar del parto y personal que lo atendió y puede
+diferir del indicador oficial del INEI; sin embargo, la definición
+basada solo en el lugar produjo resultados prácticamente idénticos.
+Tercero, algunas categorías de M13 y M15 no fueron clasificables y se
+trataron como faltantes, aunque representaron menos del 1 \% de la
+muestra. Cuarto, se detectaron estratos con una sola unidad primaria de
+muestreo; las dos alternativas de estimación de varianza produjeron
+conclusiones iguales. Quinto, la agregación de encuestas anuales no
+constituye un panel. Por último, los modelos no incluyeron distancia a
+establecimientos, barreras lingüísticas percibidas, aseguramiento ni
+calidad de las consultas, por lo que los hallazgos deben interpretarse
+como asociaciones observacionales y no como efectos de la lengua sobre
+la atención.
+
+\section{Implicaciones y
+recomendaciones}\label{implicaciones-y-recomendaciones}
+
+Los resultados justifican mantener sistemas de seguimiento de
+indicadores maternos desagregados por lengua materna y residencia. Un
+monitoreo útil debería presentar porcentajes e intervalos de confianza,
+distinguir entre acceso y calidad, informar diferencias tanto relativas
+como absolutas y documentar definiciones operativas comparables entre
+años. Se recomienda incorporar el indicador de ocho o más controles y el
+inicio en el primer trimestre como metas de seguimiento. En los
+establecimientos, la información comprensible, la pertinencia cultural y
+el trato respetuoso son dimensiones que las cifras de cobertura no
+capturan. La norma peruana de atención del parto vertical con
+pertinencia intercultural \citep{minsa2016} y los estudios en Puno
+proporcionan un marco para orientar estas acciones, sin que esta
+investigación haya evaluado su impacto. Futuras investigaciones podrían
+incorporar distancia geográfica, aseguramiento y calidad del control
+prenatal, así como métodos cualitativos que expliquen la persistencia de
+la desigualdad residual en el parto institucional.
+
+\section{Conclusiones}\label{conclusiones}
+
+Entre las mujeres encuestadas en Puno durante 2014--2025, la atención
+prenatal y el parto institucional mostraron diferencias según la lengua
+materna. Las mujeres quechuahablantes y aimarahablantes presentaron
+mayor residencia rural, menor educación superior y mayor pobreza que las
+castellanohablantes. Tras el ajuste sociodemográfico, ambos grupos
+indígenas mostraron menores probabilidades de parto institucional, y las
+aimarahablantes también de inicio temprano del control prenatal y de
+seis o más controles; la diferencia absoluta más amplia fue la del
+inicio temprano. Estas asociaciones no disminuyeron significativamente
+en el periodo reciente y resultaron robustas a definiciones y métodos
+alternativos, lo que respalda su uso para orientar el monitoreo de la
+equidad en los servicios maternos de Puno.
+
+\section{Disponibilidad de datos y
+código}\label{disponibilidad-de-datos-y-cuxf3digo}
+
+Los microdatos originales están disponibles en el portal de microdatos
+del INEI \citep{inei2025}. El código, los datos procesados y este
+documento se encuentran en el repositorio del proyecto:
+\url{https://github.com/Mario-Wladick/ARTICULO_PRENATAL_ENDES_2014_2025}.
+Para reproducir el informe basta abrir la carpeta del proyecto en
+Positron y ejecutar \texttt{quarto render informe.qmd}. Este documento
+se generó el 23/11/2026 con R 4.5.1, Quarto 1.11.9 y los paquetes
+\texttt{survey} 4.5, \texttt{dplyr} 1.2.1, \texttt{ggplot2} 4.0.4,
+\texttt{knitr} 1.52.
+
+
+\bibliography{referencias.bib}
+
+
+
+\end{document}
