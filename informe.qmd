@@ -44,7 +44,7 @@ crossref:
 #| label: enlaces
 # ---- Enlaces del proyecto (editar aqui) ----
 GITHUB <- "https://github.com/Mario-Wladick/ARTICULO_PRENATAL_ENDES_2014_2025"
-ZENODO_DOI <- "10.5281/zenodo.XXXXXXX"   # reemplazar por el DOI que asigna Zenodo
+ZENODO_DOI <- "10.5281/zenodo.24484048"   # reemplazar por el DOI que asigna Zenodo
 ```
 
 \newpage
