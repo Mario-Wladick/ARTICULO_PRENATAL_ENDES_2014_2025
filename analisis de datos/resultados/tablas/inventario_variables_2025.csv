@@ -1,0 +1,26 @@
+base,variable,etiqueta
+REC0111,CASEID,Identificación Cuestionario Individual
+REC0111,HHID,Identificación Cuestionario del Hogar
+REC0111,V001,Conglomerado
+REC0111,V002,Número de vivienda
+REC0111,V003,Número de línea de entrevistada
+REC0111,V005,Factor de ponderacion
+REC0111,V021,Unidad de muestreo primario - conglomerado
+REC0111,V022,Estratos
+REC0111,V023,Dominio de ejemplo - Departamento
+REC0111,V012,Edad actual - entrevistada
+REC0111,V024,Región
+REC0111,V025,Tipo de lugar de residencia
+REC0111,V106,Nivel educativo más alto
+REC0111,V190,Índice de riqueza
+REC91,CASEID,Identificación del caso
+REC91,S119,Idioma o lengua materna que aprendió hablar en su niñez
+REC21,CASEID,Identificación Cuestionario Individual
+REC21,BIDX,Número de orden de nacimeinto
+REC21,B3,"Fecha de nacimiento, Codificación centenaria de meses (CMC)"
+REC41,CASEID,Identificación Cuestionario Individual
+REC41,M13,Momento del primer control prenatal
+REC41,M14,Visitas prenatales por embarazo
+REC41,M15,Lugar del parto
+REC41,M2A,La chequeó en su control prenatal: Médico
+REC41,M2B,La chequeó en su control prenatal: Enfermera

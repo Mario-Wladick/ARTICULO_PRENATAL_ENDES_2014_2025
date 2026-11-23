@@ -1,0 +1,215 @@
+anio,variable,codigo,etiqueta
+2014,M13,98,DK
+2014,M14,0,No antenatal visits
+2014,M14,98,DK
+2014,M15,10,HOMES
+2014,M15,11,Respondents home
+2014,M15,12,Midwife's home
+2014,M15,21,Hospital MINSA
+2014,M15,22,Hospital ESSALUD
+2014,M15,23,Hospital FF. AA. PNP
+2014,M15,24,Health center MINSA
+2014,M15,25,Health post MINSA
+2014,M15,26,Center/Post ESSALUD
+2014,M15,27,Local Government
+2014,M15,31,Private clinic
+2014,M15,32,Private doctor
+2014,M15,41,Clinic/Post NGO
+2014,M15,42,Church
+2014,M15,96,OTHER
+2014,M15,98,DK
+2015,M13,98,DK
+2015,M14,0,No antenatal visits
+2015,M14,98,DK
+2015,M15,10,HOMES
+2015,M15,11,Respondents home
+2015,M15,12,Midwife's home
+2015,M15,21,Hospital MINSA
+2015,M15,22,Hospital ESSALUD
+2015,M15,23,Hospital FF. AA. PNP
+2015,M15,24,Health center MINSA
+2015,M15,25,Health post MINSA
+2015,M15,26,Center/Post ESSALUD
+2015,M15,27,Local Government
+2015,M15,31,Private clinic
+2015,M15,32,Private doctor
+2015,M15,41,Clinic/Post NGO
+2015,M15,42,Church
+2015,M15,96,OTHER
+2015,M15,98,DK
+2016,M13,98,DK
+2016,M14,0,No antenatal visits
+2016,M14,98,DK
+2016,M15,10,HOMES
+2016,M15,11,Respondents home
+2016,M15,12,Midwife's home
+2016,M15,21,Hospital MINSA
+2016,M15,22,Hospital ESSALUD
+2016,M15,23,Hospital FF. AA. PNP
+2016,M15,24,Health center MINSA
+2016,M15,25,Health post MINSA
+2016,M15,26,Center/Post ESSALUD
+2016,M15,27,Local Government
+2016,M15,31,Private clinic
+2016,M15,32,Private doctor
+2016,M15,41,Clinic/Post NGO
+2016,M15,42,Church
+2016,M15,96,OTHER
+2016,M15,98,DK
+2017,M13,98,DK
+2017,M14,0,No antenatal visits
+2017,M14,98,DK
+2017,M15,10,HOMES
+2017,M15,11,Respondents home
+2017,M15,12,Midwife's home
+2017,M15,21,Hospital MINSA
+2017,M15,22,Hospital ESSALUD
+2017,M15,23,Hospital FF. AA. PNP
+2017,M15,24,Health center MINSA
+2017,M15,25,Health post MINSA
+2017,M15,26,Center/Post ESSALUD
+2017,M15,27,Local Government
+2017,M15,31,Private clinic
+2017,M15,32,Private doctor
+2017,M15,41,Clinic/Post NGO
+2017,M15,42,Church
+2017,M15,96,OTHER
+2017,M15,98,DK
+2018,M13,98,No sabe
+2018,M14,0,No visitas prenatales
+2018,M14,98,No sabe
+2018,M15,10,CASA
+2018,M15,11,Su domicilio
+2018,M15,12,Domicilio de partera
+2018,M15,21,Hospital MINSA
+2018,M15,22,Hospital ESSALUD
+2018,M15,23,Hospital FF. AA. PNP
+2018,M15,24,Centro de salud MINSA
+2018,M15,25,Posta de salud MINSA
+2018,M15,26,"Centro, posta ESSALUD"
+2018,M15,27,Local Municipal
+2018,M15,31,Clínica privada
+2018,M15,32,Consultorio Médico privado
+2018,M15,41, Clínica/Posta de ONG
+2018,M15,42,Iglesia
+2018,M15,96,Otro
+2018,M15,98,No sabe
+2019,M13,98,No sabe
+2019,M14,0,Sin visitas prenatales
+2019,M14,98,No sabe
+2019,M15,11,Su domicilio
+2019,M15,12,Casa de la partera
+2019,M15,21,Hospital MINSA
+2019,M15,22,Hospital ESSALUD
+2019,M15,23,Hospital FF. AA. PNP
+2019,M15,24,Centro de salud MINSA
+2019,M15,25,Puesto de salud MINSA
+2019,M15,26,Center/Posta ESSALUD
+2019,M15,27,Hospital/otro de la Municipalidad
+2019,M15,31,Clínica privada
+2019,M15,32,Consultorio médico privado
+2019,M15,41,Clínica/Posta ONG
+2019,M15,42,Hospital/Otro de la Iglesia
+2019,M15,96,Otro
+2020,M13,98,No sabe
+2020,M14,0,Sin visitas prenatales
+2020,M14,98,No sabe
+2020,M15,11,Su domicilio
+2020,M15,12,Casa de la partera
+2020,M15,21,Hospital MINSA
+2020,M15,22,Hospital ESSALUD
+2020,M15,23,Hospital FF. AA. PNP
+2020,M15,24,Centro de salud MINSA
+2020,M15,25,Puesto de salud MINSA
+2020,M15,26,Center/Posta ESSALUD
+2020,M15,27,Hospital/otro de la Municipalidad
+2020,M15,31,Clínica privada
+2020,M15,32,Consultorio médico privado
+2020,M15,41,Clínica/Posta ONG
+2020,M15,42,Hospital/Otro de la Iglesia
+2020,M15,96,Otro
+2021,M13,98,No sabe
+2021,M14,0,Sin visitas prenatales
+2021,M14,98,No sabe
+2021,M15,11,Su domicilio
+2021,M15,12,Casa de la partera
+2021,M15,21,Hospital MINSA
+2021,M15,22,Hospital ESSALUD
+2021,M15,23,Hospital FF. AA. PNP
+2021,M15,24,Centro de salud MINSA
+2021,M15,25,Puesto de salud MINSA
+2021,M15,26,Center/Posta ESSALUD
+2021,M15,27,Hospital/otro de la Municipalidad
+2021,M15,31,Clínica privada
+2021,M15,32,Consultorio médico privado
+2021,M15,41,Clínica/Posta ONG
+2021,M15,42,Hospital/Otro de la Iglesia
+2021,M15,96,Otro
+2022,M13,98,No sabe
+2022,M14,0,Sin visitas prenatales
+2022,M14,98,No sabe
+2022,M15,11,Su domicilio
+2022,M15,12,Casa de la partera
+2022,M15,21,Hospital MINSA
+2022,M15,22,Hospital ESSALUD
+2022,M15,23,Hospital FF. AA. PNP
+2022,M15,24,Centro de salud MINSA
+2022,M15,25,Puesto de salud MINSA
+2022,M15,26,Center/Posta ESSALUD
+2022,M15,27,Hospital/otro de la Municipalidad
+2022,M15,31,Clínica privada
+2022,M15,32,Consultorio médico privado
+2022,M15,41,Clínica/Posta ONG
+2022,M15,42,Hospital/Otro de la Iglesia
+2022,M15,96,Otro
+2023,M13,98,No sabe
+2023,M14,0,Sin visitas prenatales
+2023,M14,98,No sabe
+2023,M15,11,Su domicilio
+2023,M15,12,Casa de la partera
+2023,M15,21,Hospital MINSA
+2023,M15,22,Hospital ESSALUD
+2023,M15,23,Hospital FF. AA. PNP
+2023,M15,24,Centro de salud MINSA
+2023,M15,25,Puesto de salud MINSA
+2023,M15,26,Center/Posta ESSALUD
+2023,M15,27,Hospital/otro de la Municipalidad
+2023,M15,31,Clínica privada
+2023,M15,32,Consultorio médico privado
+2023,M15,41,Clínica/Posta ONG
+2023,M15,42,Hospital/Otro de la Iglesia
+2023,M15,96,Otro
+2024,M13,98,No sabe
+2024,M14,0,Sin visitas prenatales
+2024,M14,98,No sabe
+2024,M15,11,Su domicilio
+2024,M15,12,Casa de la partera
+2024,M15,21,Hospital MINSA
+2024,M15,22,Hospital ESSALUD
+2024,M15,23,Hospital FF. AA. PNP
+2024,M15,24,Centro de salud MINSA
+2024,M15,25,Puesto de salud MINSA
+2024,M15,26,Center/Posta ESSALUD
+2024,M15,27,Hospital/otro de la Municipalidad
+2024,M15,31,Clínica privada
+2024,M15,32,Consultorio médico privado
+2024,M15,41,Clínica/Posta ONG
+2024,M15,42,Hospital/Otro de la Iglesia
+2024,M15,96,Otro
+2025,M13,98,No sabe
+2025,M14,0,Sin visitas prenatales
+2025,M14,98,No sabe
+2025,M15,11,Su domicilio
+2025,M15,12,Casa de la partera
+2025,M15,21,Hospital MINSA
+2025,M15,22,Hospital ESSALUD
+2025,M15,23,Hospital FF. AA. PNP
+2025,M15,24,Centro de salud MINSA
+2025,M15,25,Puesto de salud MINSA
+2025,M15,26,Center/Posta ESSALUD
+2025,M15,27,Hospital/otro de la Municipalidad
+2025,M15,31,Clínica privada
+2025,M15,32,Consultorio médico privado
+2025,M15,41,Clínica/Posta ONG
+2025,M15,42,Hospital/Otro de la Iglesia
+2025,M15,96,Otro

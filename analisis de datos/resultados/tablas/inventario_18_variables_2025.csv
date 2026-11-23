@@ -1,0 +1,13 @@
+base,variable,etiqueta_oficial,registros,valores_presentes,valores_faltantes,porcentaje_faltantes,valores_distintos
+REC0111,V012,Edad actual - entrevistada,36260,32700,3560,9.82,38
+REC0111,V106,Nivel educativo más alto,36260,32700,3560,9.82,4
+REC0111,V025,Tipo de lugar de residencia,36260,36260,0,0,2
+REC0111,V190,Índice de riqueza,36260,36260,0,0,5
+REC91,S119,Idioma o lengua materna que aprendió hablar en su niñez,36260,32700,3560,9.82,12
+REC21,BORD,Número de orden en la historia de nacimiento,57196,57196,0,0,13
+REC41,M14,Visitas prenatales por embarazo,18841,16933,1908,10.13,22
+REC41,M13,Momento del primer control prenatal,18841,16781,2060,10.93,11
+REC41,M15,Lugar del parto,18841,18841,0,0,14
+REC41,M3A,La atendió en el parto: Médico,18841,18841,0,0,2
+RECH23,HV201,¿Cuál es la fuente principal de abastecimiento de agua para tomar o beber?,37331,33569,3762,10.08,11
+RECH23,HV205,¿Qué tipo de servicio higiénico tiene su hogar?,37331,33569,3762,10.08,9

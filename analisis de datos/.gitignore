@@ -1,0 +1,18 @@
+# Microdatos originales (muy pesados)
+datos_originales/
+*.sav
+*.SAV
+*.zip
+*.rar
+
+# Archivos temporales de Quarto / LaTeX
+informe_files/
+.quarto/
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+.Rhistory
+.RData
+.Rproj.user/

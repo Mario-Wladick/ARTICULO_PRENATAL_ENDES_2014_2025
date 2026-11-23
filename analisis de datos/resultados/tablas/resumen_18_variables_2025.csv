@@ -1,0 +1,19 @@
+numero,variable,descripcion,bases,estado
+1,M14,Numero de controles prenatales,REC41,Encontrada
+2,M13,Mes del primer control prenatal,REC41,Encontrada
+3,M15,Lugar del parto,REC41,Encontrada
+4,S119,Lengua materna,REC91,Encontrada
+5,V012,Edad de la mujer,REC0111,Encontrada
+6,V106,Nivel educativo,REC0111,Encontrada
+7,V025,Area de residencia,REC0111,Encontrada
+8,V190,Quintil de riqueza,REC0111,Encontrada
+9,V501,Estado conyugal,NA,No encontrada en bases revisadas
+10,V714,Situacion laboral,NA,No encontrada en bases revisadas
+11,V201,Hijos nacidos vivos,NA,No encontrada en bases revisadas
+12,V212,Edad al primer nacimiento,NA,No encontrada en bases revisadas
+13,BORD,Orden de nacimiento,REC21,Encontrada
+14,V481,Seguro de salud,NA,No encontrada en bases revisadas
+15,HV201,Fuente de agua,RECH23,Encontrada
+16,HV205,Servicio sanitario,RECH23,Encontrada
+17,M3A,Profesional que atendio el parto,REC41,Encontrada
+18,ANIO,Anio de encuesta,NA,Derivada

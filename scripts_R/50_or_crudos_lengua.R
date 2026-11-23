@@ -1,14 +1,7 @@
 # =============================================================
 # SCRIPT 50 - OR CRUDOS (SIN AJUSTE) POR LENGUA MATERNA
-# Usa el mismo diseno muestral del script 48.
-#  A. Replica de los ORa del script 48 (control de calidad)
-#  B. Probabilidades ajustadas (margenes predictivos) y
-#     diferencias absolutas en puntos porcentuales
-#  C. Cambio de la brecha en el tiempo: lengua x periodo
-#     (2014-2019 vs 2020-2025)
-#  D. Nuevo indicador: 8 o mas controles (OMS 2016)
-#  E. Sensibilidad: parto institucional solo por lugar (M15)
-#  F. Sensibilidad: survey.lonely.psu = "average"
+# Usa el mismo diseno muestral del script 48 y los mismos casos
+# que los modelos ajustados, para comparar ORc con ORa.
 # =============================================================
 
 suppressPackageStartupMessages({

@@ -1,0 +1,10 @@
+lengua,indicador,n,porcentaje,ic95_inferior,ic95_superior
+Aimara,control_6mas,141,89.56,81.17,94.47
+Quechua,control_6mas,195,87.06,81.04,91.37
+Castellano,control_6mas,90,87.05,68.08,95.49
+Aimara,control_temprano,141,64.3,53.03,74.19
+Quechua,control_temprano,195,67.71,59.16,75.23
+Castellano,control_temprano,90,80.81,70.34,88.2
+Aimara,parto_institucional,138,97.31,91.34,99.2
+Quechua,parto_institucional,195,98.38,95.15,99.47
+Castellano,parto_institucional,90,98.67,90.95,99.82

@@ -1,19 +1,32 @@
 ---
-title: "Desigualdades en la atención prenatal y el parto institucional entre mujeres quechuahablantes, aimarahablantes y castellanohablantes del departamento de Puno, Perú: análisis de la ENDES 2014--2025"
+title: "Informe técnico reproducible"
+subtitle: "Atención prenatal y parto institucional según lengua materna en Puno: procesamiento y análisis de la ENDES 2014--2025 con R, Quarto y Positron"
+author:
+  - Fiorella Yannet Paredes Coaguila
+  - Mario Wilfredo Ramirez Puma
+  - Jefry Erick Quispe Ramos
+  - Paolo Fontanil Barrera
+date: today
+date-format: "D [de] MMMM [de] YYYY"
 lang: es
 format:
   pdf:
-    documentclass: IEEEtran
-    classoption: [conference]
-    papersize: letter
+    documentclass: article
+    papersize: a4
+    fontsize: 11pt
+    geometry: margin=2.5cm
     pdf-engine: pdflatex
     number-sections: true
-    cite-method: natbib
-    biblio-style: IEEEtran
-    natbiboptions: numbers
-    include-in-header: header.tex
-    fig-pos: "!t"
-    keep-tex: true
+    toc: true
+    toc-title: "Contenido"
+    colorlinks: true
+    include-in-header: header_informe.tex
+    include-before-body: titulo_informe.tex
+    tbl-pos: "H"
+    fig-pos: "H"
+    tbl-cap-location: top
+    code-block-bg: "#f6f8fa"
+    highlight-style: github
 bibliography: referencias.bib
 knitr:
   opts_chunk:
@@ -23,413 +36,390 @@ execute:
   warning: false
   message: false
 crossref:
-  fig-prefix: "Fig."
+  fig-prefix: "Figura"
+  tbl-prefix: "Tabla"
 ---
 
 ```{r}
+#| label: enlaces
+# ---- Enlaces del proyecto (editar aqui) ----
+GITHUB <- "https://github.com/Mario-Wladick/ARTICULO_PRENATAL_ENDES_2014_2025"
+ZENODO_DOI <- "10.5281/zenodo.XXXXXXX"   # reemplazar por el DOI que asigna Zenodo
+```
+
+\newpage
+
+# Introducción
+
+Este informe documenta el proceso completo de un proyecto de ciencia de datos realizado con microdatos públicos de la Encuesta Demográfica y de Salud Familiar (ENDES) del Instituto Nacional de Estadística e Informática (INEI) [@inei2025]. El proyecto analiza si las mujeres de Puno cuya lengua materna es el quechua o el aimara reciben la misma atención prenatal y del parto que las mujeres castellanohablantes, usando doce encuestas anuales (2014--2025).
+
+El informe describe todo el trabajo: la obtención de los datos, los problemas encontrados al unir doce años de encuestas y cómo se resolvieron, la construcción de la base analítica, el tratamiento del diseño muestral complejo, los análisis estadísticos y los resultados principales. Los resultados se presentan en detalle en el artículo científico del proyecto (`articulo.qmd`).
+
+El trabajo es **reproducible**: este documento se escribió en Quarto [@quarto] y se ejecutó en Positron con R [@rcore]. Todas las cifras, tablas y figuras se calculan al renderizar el archivo; ninguna se copió a mano. El código, los datos procesados y los documentos están disponibles en GitHub y archivados en Zenodo (ver la sección final).
+
+## Objetivos del proyecto
+
+- Construir una base analítica armonizada de mujeres de Puno con un nacimiento reciente, a partir de doce ediciones de la ENDES.
+- Estimar, con el diseño muestral de la encuesta, la cobertura de tres indicadores: seis o más controles prenatales, inicio del control en el primer trimestre y parto institucional.
+- Comparar esos indicadores entre castellanohablantes, quechuahablantes y aimarahablantes, con y sin ajuste por características sociodemográficas.
+- Dejar todo el proceso documentado y reproducible con R, Quarto, Positron, GitHub y Zenodo.
+
+# Herramientas utilizadas
+
+```{r}
+#| label: tbl-herramientas
+#| tbl-cap: "Herramientas del proyecto y su función"
+kab <- function(x) structure(paste(x, collapse = "\n"), format = "latex", class = "knitr_kable")
+herr <- data.frame(
+  Herramienta = c("R", "Positron", "Quarto", "Paquete survey", "dplyr, haven, readr", "ggplot2",
+                  "TinyTeX (LaTeX)", "Git y GitHub", "Zenodo"),
+  Uso = c("Lenguaje para todo el procesamiento y análisis estadístico",
+          "Entorno de desarrollo donde se ejecutaron los scripts y el informe",
+          "Documento que combina texto y código R y genera el PDF",
+          "Estimaciones con pesos, conglomerados y estratos (diseño complejo)",
+          "Lectura de archivos SPSS del INEI y manipulación de datos",
+          "Gráficos del informe y del artículo",
+          "Motor que convierte el documento Quarto en PDF",
+          "Control de versiones y publicación del código",
+          "Archivo permanente del proyecto con identificador DOI"))
+knitr::kable(herr, format = "latex", booktabs = TRUE, linesep = "") |>
+  sub(pattern = "\\{ll\\}", replacement = "{lp{10.5cm}}") |> kab()
+```
+
+# Datos
+
+## Fuente
+
+Se usaron los microdatos de acceso público de la ENDES 2014--2025, descargados del portal de microdatos del INEI. Cada año se distribuye en módulos comprimidos con archivos en formato SPSS (`.sav`). Para el proyecto se utilizaron los siguientes archivos de cada año:
+
+- **REC0111**: datos básicos de la mujer (edad, residencia, educación, riqueza, lengua materna, pesos y diseño muestral).
+- **REC21**: historia de nacimientos, para identificar los nacimientos de los últimos cinco años.
+- **REC41**: atención del embarazo y del parto (número de controles, mes del primer control, lugar del parto y personal que lo atendió).
+- **RE223132**: fecundidad (número de hijos nacidos vivos).
+- **RECH0, RECH1, RECH4 y RECH23**: módulos del hogar, usados para validar la unión de hogares y el seguro de salud.
+
+El conjunto de los doce años ocupa unos 900 MB comprimidos. Por eso, el informe se reproduce a partir de dos archivos livianos derivados (`datos/`, 1,2 MB), y el proceso para obtenerlos desde los microdatos se conserva en los scripts del proyecto.
+
+```{r}
 #| label: setup
-#| cache: false
-source("R/funciones.R")
-
-base  <- readRDS("datos/base_analitica_2014_2025.rds")
-marco <- readRDS("datos/marco_diseno_2014_2025.rds")
+#| echo: true
+#| code-summary: "Carga de datos y funciones"
+source("R/funciones.R")                       # funciones del proyecto
+base  <- readRDS("datos/base_analitica_2014_2025.rds")   # 5 684 mujeres de Puno
+marco <- readRDS("datos/marco_diseno_2014_2025.rds")     # diseño muestral nacional
 flujo <- read.csv("datos/resumen_muestra_puno_2014_2025.csv")
-
 analiticas <- preparar_base(base)
-stopifnot(nrow(analiticas) == 5684)
+```
 
-# Formato para texto Markdown (espacio fino no separable entre miles)
+```{r}
+#| label: calculos
 fm <- function(x) formatC(x, format = "d", big.mark = "\u00a0")
-# Negativos en texto Markdown: el numero completo en modo matematico
-fnm <- function(x, d = 1) ifelse(x < 0, paste0("$-", sub(",", "{,}", f(abs(x), d), fixed = TRUE), "$"), f(x, d))
-
+kab <- function(x) structure(paste(x, collapse = "\n"), format = "latex", class = "knitr_kable")
 n_total <- nrow(analiticas)
 n_leng  <- table(analiticas$lengua_materna)
-pct_leng <- 100 * prop.table(n_leng)
-
-# Disenos
-dis     <- diseno_agrupado(marco, analiticas, "adjust")
-dis_avg <- diseno_agrupado(marco, analiticas, "average")
-
-# Tabla 1: sociodemografia ponderada
+dis <- diseno_agrupado(marco, analiticas, "adjust")
 socio <- lapply(LENGUAS, function(l) {
   e <- svymean(~edad + rural + educacion_superior + dos_quintiles_bajos + hijos_nacidos,
                subset(dis, lengua_materna == l), na.rm = TRUE)
   setNames(as.numeric(coef(e)), names(coef(e)))
-})
-names(socio) <- LENGUAS
-
-# Porcentajes anuales (un diseno por encuesta)
+}); names(socio) <- LENGUAS
 anual <- porcentajes_anuales(marco, analiticas)
-an <- function(a, l, i) anual$p[anual$anio == a & anual$lengua == l & anual$indicador == i]
-
-# Modelos ajustados y crudos
-mods  <- lapply(setNames(INDICADORES, INDICADORES), ajustar, dis = dis)
-ora   <- bind_rows(lapply(INDICADORES, function(r) or_lengua(mods[[r]]$fit, r)))
-orc   <- bind_rows(lapply(INDICADORES, function(r)
-           or_lengua(ajustar(r, dis, covs = "")$fit, r)))
-nmod  <- sapply(mods, function(m) nobs(m$fit))
-O  <- function(tab, i, l, col = "OR") tab[[col]][tab$indicador == i & tab$lengua == l]
-
-# Margenes predictivos
+mods <- lapply(setNames(INDICADORES, INDICADORES), ajustar, dis = dis)
+ora  <- bind_rows(lapply(INDICADORES, function(r) or_lengua(mods[[r]]$fit, r)))
+orc  <- bind_rows(lapply(INDICADORES, function(r) or_lengua(ajustar(r, dis, covs = "")$fit, r)))
 mg   <- lapply(INDICADORES, function(r) margenes(mods[[r]]$fit, mods[[r]]$dis, r))
-prob <- bind_rows(lapply(mg, `[[`, "prob"))
-dif  <- bind_rows(lapply(mg, `[[`, "dif"))
-P <- function(i, l, col = "p") prob[[col]][prob$indicador == i & prob$lengua == l]
+prob <- bind_rows(lapply(mg, `[[`, "prob")); dif <- bind_rows(lapply(mg, `[[`, "dif"))
+O <- function(tab, i, l, col = "OR") tab[[col]][tab$indicador == i & tab$lengua == l]
 D <- function(i, l, col = "d") dif[[col]][dif$indicador == i & dif$lengua == l]
-
-# Interaccion lengua x periodo
-per  <- lapply(setNames(INDICADORES, INDICADORES), or_periodo, dis = dis)
-perT <- bind_rows(lapply(per, `[[`, "tab"))
-pint <- sapply(per, `[[`, "p")
-PE <- function(i, l, pr, col = "OR") perT[[col]][perT$indicador == i & perT$lengua == l & perT$periodo == pr]
-
-# Sensibilidad
-or_lugar <- or_lengua(ajustar("parto_lugar", dis)$fit, "parto_lugar")
-or_8     <- or_lengua(ajustar("control_8mas", dis)$fit, "control_8mas")
-or_avg   <- bind_rows(lapply(INDICADORES, function(r) or_lengua(ajustar(r, dis_avg)$fit, r)))
-p8 <- svyby(~control_8mas, ~lengua_materna, subset(dis, !is.na(control_8mas)), svymean)
-p8 <- setNames(100 * p8$control_8mas, as.character(p8$lengua_materna))
-p6 <- svyby(~control_6mas, ~lengua_materna, subset(dis, !is.na(control_6mas)), svymean)
-p6 <- setNames(100 * p6$control_6mas, as.character(p6$lengua_materna))
-
-# Atenuacion del coeficiente (escala log)
-aten <- function(i, l) 100 * (1 - log(O(ora, i, l)) / log(O(orc, i, l)))
+P <- function(i, l, col = "p") prob[[col]][prob$indicador == i & prob$lengua == l]
+fnm <- function(x, d = 1) ifelse(x < 0, paste0("$-", sub(",", "{,}", f(abs(x), d), fixed = TRUE), "$"), f(x, d))
 ```
 
+## Tamaño de los datos por año
+
+La @tbl-anios resume cuántas mujeres entrevistó la ENDES en todo el país y en Puno cada año, y cuántas quedaron en la muestra analítica.
+
 ```{r}
-#| label: resumen
-#| results: asis
-cat(sprintf(
-"\\begin{abstract}
-\\textit{Objetivo.} Describir las diferencias en la atención prenatal y el parto institucional según lengua materna entre mujeres de Puno y estimar asociaciones ajustadas por características sociodemográficas con la ENDES 2014--2025. \\textit{Métodos.} Estudio observacional de cortes transversales repetidos. Se incluyeron %s mujeres con un nacimiento en los 60 meses previos a la encuesta, considerando el más reciente. Los desenlaces fueron seis o más controles prenatales, inicio del control en el primer trimestre y parto institucional. Se estimaron porcentajes ponderados y modelos logísticos para muestras complejas ajustados por año, edad, residencia, educación, riqueza y número de hijos; se calcularon probabilidades ajustadas, diferencias absolutas y la interacción lengua $\\times$ periodo. El análisis completo se reproduce con R y Quarto. \\textit{Resultados.} Participaron %s castellanohablantes, %s quechuahablantes y %s aimarahablantes. Frente a castellanohablantes, la razón de momios ajustada (ORa) de parto institucional fue %s en quechuahablantes y %s en aimarahablantes, equivalentes a diferencias ajustadas de %s y %s puntos porcentuales; el ajuste explicó cerca de la mitad de la asociación cruda. La mayor diferencia absoluta correspondió al inicio temprano entre aimarahablantes (%s puntos; ORa = %s). Las asociaciones no disminuyeron significativamente entre 2014--2019 y 2020--2025 y fueron robustas a una definición alternativa de parto institucional y al tratamiento de la varianza. \\textit{Conclusiones.} Persisten desventajas asociadas a la lengua materna después del ajuste sociodemográfico, sobre todo en parto institucional e inicio oportuno del control prenatal.
-\\end{abstract}
-\\begin{IEEEkeywords}
-salud materna; control prenatal; parto institucional; lenguas indígenas; desigualdad en salud; ENDES; Puno; reproducibilidad.
-\\end{IEEEkeywords}
-",
-fn(n_total), fn(n_leng[["Castellano"]]), fn(n_leng[["Quechua"]]), fn(n_leng[["Aimara"]]),
-fic(O(ora,"parto_institucional","Quechua"), O(ora,"parto_institucional","Quechua","li"), O(ora,"parto_institucional","Quechua","ls")),
-fic(O(ora,"parto_institucional","Aimara"), O(ora,"parto_institucional","Aimara","li"), O(ora,"parto_institucional","Aimara","ls")),
-fneg(D("parto_institucional","Quechua")), fneg(D("parto_institucional","Aimara")),
-fneg(D("control_temprano","Aimara")), f(O(ora,"control_temprano","Aimara"),2)))
+#| label: tbl-anios
+#| tbl-cap: "Mujeres entrevistadas por la ENDES y muestra analítica de Puno, 2014--2025"
+nac <- as.data.frame(table(marco$anio)); names(nac) <- c("anio", "nac")
+tab <- data.frame(
+  Año = flujo$anio,
+  `Mujeres en el país` = fm(nac$nac),
+  `Mujeres en Puno` = fm(flujo$mujeres_puno),
+  `Con nacimiento reciente` = fm(flujo$mujeres_con_nacimiento_reciente),
+  `Muestra analítica` = fm(as.numeric(table(analiticas$anio))),
+  check.names = FALSE)
+tab <- rbind(tab, data.frame(Año = "Total", `Mujeres en el país` = fm(sum(nac$nac)),
+  `Mujeres en Puno` = fm(sum(flujo$mujeres_puno)),
+  `Con nacimiento reciente` = fm(sum(flujo$mujeres_con_nacimiento_reciente)),
+  `Muestra analítica` = fm(n_total), check.names = FALSE))
+knitr::kable(tab, format = "latex", booktabs = TRUE, align = "lrrrr", linesep = "") |>
+  sub(pattern = "\nTotal", replacement = "\n\\\\midrule\nTotal") |> kab()
 ```
 
-# Introducción
+# Flujo de trabajo
 
-La atención materna oportuna, continua y culturalmente pertinente constituye un componente fundamental de los sistemas de salud. El seguimiento durante la gestación permite identificar señales de alarma, promover medidas preventivas y establecer vínculos entre las mujeres y los servicios sanitarios. La Organización Mundial de la Salud recomienda un modelo centrado en la experiencia positiva del embarazo y en al menos ocho contactos de atención prenatal [@oms2016]. La cobertura, por sí sola, no equivale a calidad: también importan la oportunidad, la información, el trato y la capacidad de respuesta del establecimiento.
-
-Las desigualdades de acceso se expresan de forma distinta según condiciones sociales y culturales. En América Latina, estudios comparativos han identificado que las poblaciones indígenas enfrentan desventajas en diversas intervenciones de salud reproductiva y materna, especialmente aquellas que dependen de acudir a establecimientos y disponer de recursos para recibir atención [@mesenburg2018]. La lengua hablada constituye una aproximación útil ---aunque incompleta--- a experiencias lingüísticas y sociales relacionadas con la atención sanitaria, y ha sido empleada para documentar inequidades maternas en Bolivia, Guatemala, México y Perú [@armenta2019]. Su uso exige distinguir la variable observada de conceptos más amplios como la pertenencia étnica o la autoidentificación [@armenta2020].
-
-Para Perú, se ha documentado que las diferencias socioeconómicas persisten cuando se examina la cantidad y calidad de controles prenatales [@enriquez2022]. Investigaciones centradas en el parto institucional también encontraron asociaciones con área de residencia, nivel educativo, riqueza y aseguramiento [@rodrigo2023; @ramos2023]. Tales antecedentes orientan la elección de covariables y desaconsejan interpretar automáticamente las diferencias descriptivas entre lenguas como efectos causales del idioma.
-
-En el departamento de Puno, la coexistencia de castellano, quechua y aimara hace pertinente un análisis específico. El estudio cualitativo de Samuel [@samuel2016] muestra que la implementación de políticas para la atención intercultural ha requerido participación social y vigilancia de la calidad de los servicios. La experiencia de adaptación cultural de la atención del parto en Ayacucho [@gabrysch2009] permite entender que los cambios organizacionales, la comunicación y las prácticas respetuosas pueden contribuir a reducir barreras percibidas. Los trabajos etnográficos y cualitativos en la Amazonía peruana [@delmastro2021; @mejia2025] ofrecen contextos valiosos, pero no deben confundirse con evidencia causal ni extrapolarse de forma automática a Puno.
-
-Aunque se dispone de informes anuales de la Encuesta Demográfica y de Salud Familiar (ENDES) [@inei2024; @inei2025], comparar de manera sistemática a mujeres según lengua materna en Puno durante 2014--2025 permite examinar patrones de largo plazo y asociaciones ajustadas. El valor del estudio radica en generar evidencia local, totalmente reproducible, para orientar el seguimiento de desigualdades lingüísticas y socioeconómicas en servicios maternos.
-
-# Objetivos
-
-*Objetivo general.* Analizar las diferencias en la cobertura de atención prenatal y parto institucional entre mujeres castellanohablantes, quechuahablantes y aimarahablantes de Puno utilizando datos de la ENDES 2014--2025 y estimar su asociación con la lengua materna después de ajustar por características sociodemográficas.
-
-*Objetivos específicos.* (a) Describir la composición sociodemográfica de los grupos lingüísticos; (b) estimar porcentajes anuales ponderados de seis o más controles prenatales, inicio temprano del control prenatal y parto institucional; (c) estimar las asociaciones entre lengua materna y los tres indicadores, en escala relativa y absoluta; (d) evaluar si dichas asociaciones cambiaron entre 2014--2019 y 2020--2025; y (e) documentar el análisis de forma reproducible con R y Quarto.
-
-# Materiales y métodos
-
-## Diseño y fuente de información
-
-Estudio cuantitativo, observacional y analítico de cortes transversales repetidos, basado en microdatos de acceso público de doce ediciones de la ENDES entre 2014 y 2025 [@inei2024; @inei2025]. La información fue armonizada por año, identificando registros de mujeres, antecedentes obstétricos del nacimiento más reciente y variables del diseño muestral. Se integró una base multianual con identificadores de conglomerado y estrato diferenciados por año. Los resultados describen asociaciones para los dominios investigados, no seguimientos longitudinales de las mismas mujeres.
-
-## Población y muestra
-
-De `r fm(sum(flujo$mujeres_puno))` mujeres de 15 a 49 años entrevistadas en Puno, `r fm(sum(flujo$mujeres_con_nacimiento_reciente))` informaron al menos un nacimiento en los 60 meses previos a la entrevista (`r fm(sum(flujo$nacimientos_recientes))` nacimientos). Para evitar contar varios partos de la misma mujer en una encuesta, se utilizó el nacimiento más reciente. Se excluyeron `r sum(flujo$mujeres_con_nacimiento_reciente) - n_total` mujeres cuya lengua materna no era castellano, quechua ni aimara o carecía de dato, de modo que la muestra analítica comprendió `r fm(n_total)` mujeres: castellano (`r fm(n_leng[["Castellano"]])`), quechua (`r fm(n_leng[["Quechua"]])`) y aimara (`r fm(n_leng[["Aimara"]])`) (@fig-flujo).
+El proyecto se organizó en `r length(list.files("scripts_R", pattern = "\\.R$"))` scripts de R numerados, agrupados en seis fases (@fig-flujo-trabajo). Cada script hace una tarea concreta y guarda sus resultados en tablas de control (`.csv`), lo que permitió revisar cada paso antes de seguir al siguiente.
 
 ```{r}
-#| label: fig-flujo
-#| fig-cap: "Diagrama de flujo de selección de la muestra analítica, Puno, ENDES 2014--2025."
-#| fig-width: 3.5
-#| fig-height: 3.8
-#| out-width: "100%"
-cajas <- tibble::tribble(
-  ~x, ~y, ~w, ~h, ~txt, ~tipo,
-  3.6, 10.1, 6.6, 1.3, paste0("Mujeres de 15–49 años entrevistadas\nen Puno, ENDES 2014–2025\nn = ", fm(sum(flujo$mujeres_puno))), "a",
-  3.6, 7.6, 6.6, 1.3, paste0("Mujeres con un nacimiento en los\n60 meses previos: n = ", fm(sum(flujo$mujeres_con_nacimiento_reciente)),
-                             "\n(de ", fm(sum(flujo$nacimientos_recientes)), " nacimientos, el más reciente)"), "a",
-  8.4, 6.25, 3.0, 1.0, paste0("Excluidas: lengua\nmaterna distinta o\nsin dato (n = ", sum(flujo$mujeres_con_nacimiento_reciente) - n_total, ")"), "b",
-  3.6, 4.9, 6.6, 1.3, paste0("Muestra analítica\nn = ", fm(n_total)), "a",
-  1.2, 2.55, 2.2, 1.15, paste0("Castellano\nn = ", fm(n_leng[["Castellano"]])), "a",
-  3.6, 2.55, 2.2, 1.15, paste0("Quechua\nn = ", fm(n_leng[["Quechua"]])), "a",
-  6.0, 2.55, 2.2, 1.15, paste0("Aimara\nn = ", fm(n_leng[["Aimara"]])), "a")
-flechas <- data.frame(x = c(3.6, 3.6, 3.6, 3.6, 3.6), y = c(9.45, 6.95, 4.25, 4.25, 4.25),
-                      xend = c(3.6, 3.6, 1.2, 3.6, 6.0), yend = c(8.25, 5.55, 3.15, 3.15, 3.15))
+#| label: fig-flujo-trabajo
+#| fig-cap: "Fases del proyecto y scripts de R correspondientes"
+#| fig-width: 6.3
+#| fig-height: 3.4
+fases <- data.frame(
+  id = 1:6,
+  x = c(1, 2, 3, 1, 2, 3), y = c(2, 2, 2, 1, 1, 1),
+  titulo = c("Fase 1 · Scripts 01–18", "Fase 2 · Scripts 19–30", "Fase 3 · Scripts 31–40",
+             "Fase 4 · Scripts 41–47", "Fase 5 · Scripts 48–50", "Fase 6 · Script 51 + Quarto"),
+  texto = c("Prueba piloto con la\nENDES 2025: archivos,\nuniones, indicadores,\ndiseño muestral",
+            "Doce años: inventario,\nverificación de años,\nclaves y códigos\nentre ediciones",
+            "Muestra de Puno,\nindicadores, variables\nsociodemográficas y\nbase analítica",
+            "Diseño muestral\nnacional, estratos\ncon una sola UPM,\nintervalos de confianza",
+            "Modelos logísticos,\nprobabilidades\najustadas, periodos\ny sensibilidad",
+            "Datos livianos,\ninforme y artículo\nreproducibles,\nGitHub y Zenodo"))
+flechas <- data.frame(x = c(1.38, 2.38, 3, 1.38, 2.38), y = c(2, 2, 1.62, 1, 1),
+                      xend = c(1.62, 2.62, 3, 1.62, 2.62), yend = c(2, 2, 1.38, 1, 1))
+flechas[3, ] <- c(3, 1.62, 1, 1.38)  # de fase 3 baja a fase 4
 ggplot() +
   geom_segment(data = flechas, aes(x, y, xend = xend, yend = yend), colour = "#666666",
-               linewidth = 0.3, arrow = arrow(length = unit(1.4, "mm"), type = "closed")) +
-  annotate("segment", x = 3.6, xend = 6.9, y = 6.25, yend = 6.25, colour = "#666666", linewidth = 0.3) +
-  geom_rect(data = cajas, aes(xmin = x - w/2, xmax = x + w/2, ymin = y - h/2, ymax = y + h/2, colour = tipo),
-            fill = ifelse(cajas$tipo == "a", "#f3f6fb", "#fafafa"), linewidth = 0.4) +
-  geom_text(data = cajas, aes(x, y, label = txt), size = 2.55, family = "serif", lineheight = 0.95) +
-  scale_colour_manual(values = c(a = "#2a78d6", b = "#999999"), guide = "none") +
-  coord_cartesian(xlim = c(0, 10), ylim = c(1.8, 10.9), expand = FALSE) + theme_void()
+               linewidth = 0.4, arrow = arrow(length = unit(1.6, "mm"), type = "closed")) +
+  geom_tile(data = fases, aes(x, y), width = 0.74, height = 0.74, fill = "#f3f6fb",
+            colour = "#2a78d6", linewidth = 0.5) +
+  geom_text(data = fases, aes(x, y + 0.27, label = titulo), size = 2.6, fontface = "bold",
+            family = "serif", colour = "#1c5cab") +
+  geom_text(data = fases, aes(x, y - 0.05, label = texto), size = 2.5, family = "serif",
+            lineheight = 0.95) +
+  coord_cartesian(xlim = c(0.6, 3.4), ylim = c(0.6, 2.4), expand = FALSE) + theme_void()
 ```
 
-## Variables de estudio
+**Fase 1 -- Prueba piloto con la ENDES 2025 (scripts 01--18).** Antes de trabajar con los doce años se probó todo el procedimiento con un solo año: se verificaron los archivos, se exploraron las variables, se validaron las llaves para unir las bases (`CASEID`, `HHID`), se seleccionó la muestra de Puno, se construyeron los tres indicadores, se evaluaron variables adicionales (como el seguro de salud) y se hicieron las primeras estimaciones ponderadas con el diseño muestral.
 
-La exposición principal fue la lengua materna, reconstruida a partir de la variable S119. Se armonizaron los códigos entre ediciones: en 2014--2016, castellano = 1, quechua = 2 y aimara = 3; en 2017--2025, quechua = 1, aimara = 2 y castellano = 10. Esta recodificación es indispensable para evitar clasificación errónea en las comparaciones temporales.
+**Fase 2 -- Verificación de los doce años (scripts 19--30).** Se extrajeron e inventariaron los módulos de 2014 a 2025, se comprobó que cada carpeta correspondiera realmente al año indicado, se compararon los nombres de variables y los códigos entre ediciones y se corrigieron las diferencias en las claves de unión.
 
-Los desenlaces binarios fueron: (1) seis o más controles prenatales, con al menos seis visitas registradas en M14; (2) control temprano, definido como primera visita durante los meses 1--3 según M13, clasificando la ausencia de controles como no temprana; y (3) parto institucional, construido con el lugar del parto (M15) y la atención por personal profesional (M3A--M3C). Se clasificaron como no institucionales los partos en domicilio propio o de partera; las categorías no clasificables (M15 = 96) se trataron como faltantes. Dado que lugar del parto y atención calificada no son necesariamente un mismo indicador, se repitió el análisis con una definición basada únicamente en el lugar del parto. Como indicador complementario, alineado con la recomendación vigente de la OMS [@oms2016], se analizó además la proporción con ocho o más controles.
+**Fase 3 -- Construcción de la base analítica (scripts 31--40).** Se seleccionaron las mujeres de Puno con un nacimiento en los últimos cinco años, se conservó solo el nacimiento más reciente, se construyeron los indicadores prenatales y de parto, se auditó la clasificación del parto institucional, se integraron las variables sociodemográficas y de fecundidad, y se preparó la base final de `r fm(n_total)` mujeres.
 
-Como variables de ajuste se incluyeron edad en años (V012), residencia urbana/rural (V025), nivel educativo (V106), quintil de riqueza (V190), número de hijos nacidos vivos (V201) y año de encuesta. Educación, riqueza y residencia se incorporaron como categorías; edad y número de hijos, como términos numéricos.
+**Fase 4 -- Diseño muestral (scripts 41--47).** Se reconstruyó el diseño a partir de todas las mujeres del país, porque calcular varianzas solo con las mujeres de Puno daría errores estándar incorrectos. Se detectaron y trataron los estratos con una sola unidad primaria de muestreo (UPM) y se calcularon intervalos de confianza por año.
 
-## Diseño muestral y análisis estadístico
+**Fase 5 -- Análisis estadístico (scripts 48--50).** Se ajustaron los modelos logísticos para muestras complejas y se hicieron los análisis complementarios: razones de momios crudas y ajustadas, probabilidades ajustadas, cambio entre periodos y análisis de sensibilidad.
 
-Los análisis utilizaron factores de ponderación V005/1 000 000, conglomerados V001 y estratos basados en V022 junto con el departamento V024. Los códigos de conglomerados y estratos se distinguieron entre años. El diseño se construyó con los registros nacionales de cada edición (`r fm(nrow(marco))` mujeres) y luego se seleccionó el dominio de estudio, evitando eliminar unidades del diseño de forma prematura. En el análisis agrupado, los pesos se dividieron entre 12, de modo que las estimaciones combinadas representan un año promedio del periodo; este reescalamiento no modifica los coeficientes.
+**Fase 6 -- Reproducibilidad (script 51 y documentos Quarto).** Se generaron los archivos livianos de `datos/`, se escribieron este informe y el artículo en Quarto, y se publicó el proyecto en GitHub y Zenodo.
 
-Se estimaron porcentajes por año y lengua con intervalos de confianza del 95 % por el método logit, con un diseño por encuesta. Para cada desenlace se ajustaron modelos logísticos binarios con `svyglm()` y familia `quasibinomial()` del paquete `survey` de R [@lumley2004; @rcore], tomando como referencia a las castellanohablantes. Se informan razones de momios crudas (ORc, con la lengua materna como única variable) y ajustadas (ORa), intervalos del 95 % y valores $p$; la comparación entre ambas indica qué parte de la asociación se explica por las covariables. Como los desenlaces fueron frecuentes y los OR exageran la magnitud relativa en esa situación, se calcularon también probabilidades ajustadas por estandarización marginal (asignando a cada mujer cada lengua y promediando con los pesos del diseño) y sus diferencias en puntos porcentuales, con errores estándar por el método delta.
+# Control de calidad: problemas encontrados y soluciones
 
-Para examinar si las desigualdades cambiaron en el tiempo, se añadió a cada modelo la interacción lengua $\times$ periodo (2014--2019 frente a 2020--2025), evaluada con una prueba de Wald ajustada al diseño. En algunos años se detectaron estratos con una sola unidad primaria de muestreo; el análisis principal utilizó la opción `survey.lonely.psu = "adjust"` y, como análisis de sensibilidad, se repitió con `"average"`. La significancia se evaluó al 5 %, sin interpretar la ausencia de significancia como ausencia de diferencia. El informe sigue las recomendaciones STROBE [@vonelm2007; @vandenbroucke2007].
-
-## Reproducibilidad
-
-El informe se escribió en Quarto [@quarto] y se ejecutó en Positron con R. Cada cifra, tabla y figura de este documento se calcula al renderizar el archivo `informe.qmd` a partir de dos archivos livianos: la base analítica de `r fm(n_total)` mujeres y el marco de diseño muestral nacional; ningún resultado se transcribió a mano. La preparación de esos archivos desde los microdatos originales del INEI se documenta en los scripts numerados 01--51 del proyecto. La sección final detalla el repositorio y las versiones del software.
-
-## Consideraciones éticas
-
-El estudio utilizó microdatos anonimizados de acceso público difundidos por el Instituto Nacional de Estadística e Informática (INEI), sin contacto ni intervención sobre las participantes. Los resultados se presentan únicamente de forma agregada.
-
-# Resultados
-
-## Composición de la muestra y características sociodemográficas
-
-De las `r fm(n_total)` mujeres elegibles, el `r f(pct_leng[["Quechua"]])` % fueron quechuahablantes, el `r f(pct_leng[["Castellano"]])` % castellanohablantes y el `r f(pct_leng[["Aimara"]])` % aimarahablantes; estos porcentajes se calcularon sobre recuentos sin ponderar y no representan la composición poblacional. La Tabla \ref{tab:socio} y la @fig-socio resumen las características ponderadas.
+Unir doce años de una encuesta no es directo: el INEI cambia nombres, códigos y formatos entre ediciones. La @tbl-problemas resume los principales problemas detectados durante el proceso y cómo se resolvió cada uno.
 
 ```{r}
-#| label: tab-socio
-#| results: asis
-fila <- function(et, v, k = 100, d = 1) paste0(et, " & ", paste(sapply(LENGUAS, function(l) f(k * socio[[l]][[v]], d)), collapse = " & "), " \\\\\n")
-cat("\\begin{table}[!t]\n\\centering\n\\caption{Características sociodemográficas por lengua materna}\n\\label{tab:socio}\n\\small\n\\setlength{\\tabcolsep}{4pt}\n",
-"\\begin{tabular*}{\\columnwidth}{@{\\extracolsep{\\fill}}lrrr@{}}\n\\toprule\nCaracterística & Castellano & Quechua & Aimara \\\\\n\\midrule\n",
-"$n$ (sin ponderar) & ", paste(sapply(LENGUAS, function(l) fn(n_leng[[l]])), collapse = " & "), " \\\\\n",
-fila("Edad media (años)", "edad", 1),
-fila("Residencia rural (\\%)", "rural"),
-fila("Educación superior (\\%)", "educacion_superior"),
-fila("Dos quintiles inferiores (\\%)", "dos_quintiles_bajos"),
-fila("Hijos nacidos vivos, media", "hijos_nacidos", 1, 2),
-"\\bottomrule\n\\end{tabular*}\n\\notatabla{Estimaciones ponderadas según el diseño muestral de la ENDES.}\n\\end{table}\n", sep = "")
+#| label: tbl-problemas
+#| tbl-cap: "Problemas detectados durante el procesamiento y solución aplicada"
+prob_tab <- data.frame(
+  Problema = c(
+    "La carpeta de 2019 contenía en realidad los datos de 2025",
+    "En 2018 el año de entrevista no venía en la variable habitual",
+    "En 2014 y 2015 las claves CASEID y HHID tenían otro formato",
+    "Los códigos de lengua materna (S119) cambiaron en 2017",
+    "CASEID se repite entre años distintos",
+    "Códigos especiales: M13 = 0, M14 = 98, M15 = 96",
+    "Lugar del parto y personal calificado no siempre coinciden",
+    "Estratos con una sola UPM en varios años",
+    "Proporción de 100 % (castellano, parto institucional, 2023)"),
+  Solución = c(
+    "Se descargó la versión corregida de 2019 y se verificó (script 24): 38 335 mujeres",
+    "Se calculó a partir de la fecha en formato CMC de V008 (scripts 22--23)",
+    "Se corrigieron y validaron las uniones mujer--hogar (scripts 28--29B): validación completa",
+    "Se recodificó: 2014--2016 (1 cast., 2 quechua, 3 aimara); 2017--2025 (10, 1, 2)",
+    "Se usó la clave compuesta año + CASEID y se diferenciaron UPM y estratos por año",
+    "Ningún control = no temprano; «no sabe» y «otro» como faltantes (script 34)",
+    "Auditoría del cruce (script 36) y análisis de sensibilidad solo por lugar",
+    "Opción survey.lonely.psu = adjust, comparada con average (script 47)",
+    "No se informa intervalo logit; se aclara en tablas y figuras"))
+knitr::kable(prob_tab, format = "latex", booktabs = TRUE, linesep = "\\addlinespace") |>
+  sub(pattern = "\\{ll\\}", replacement = "{p{6.3cm}p{9cm}}") |> kab()
 ```
+
+Además, cada script principal termina con comprobaciones automáticas (`stopifnot`) que detienen el proceso si algo no cuadra; por ejemplo, que la base tenga exactamente `r fm(n_total)` mujeres o que no se pierda ninguna al unir el diseño muestral.
+
+# Métodos estadísticos
+
+## Variables
+
+- **Exposición:** lengua materna (castellano, quechua, aimara), variable S119.
+- **Indicadores (desenlaces):** seis o más controles prenatales (M14); inicio del control en el primer trimestre (M13); parto institucional (lugar del parto M15 y personal M3A--M3C).
+- **Covariables:** edad, residencia urbana/rural, nivel educativo, quintil de riqueza, número de hijos nacidos vivos y año de la encuesta.
+
+## Diseño muestral
+
+La ENDES no es una muestra aleatoria simple: usa pesos, conglomerados (UPM) y estratos. Ignorarlos produce porcentajes y errores estándar incorrectos. Por eso todos los cálculos se hicieron con el paquete `survey` [@lumley2004]. El siguiente código, tomado de `R/funciones.R`, muestra cómo se construye el diseño agrupado de los doce años:
 
 ```{r}
-#| label: fig-socio
-#| fig-cap: "Características sociodemográficas seleccionadas por lengua materna (porcentajes ponderados), Puno, ENDES 2014--2025."
-#| fig-width: 3.5
-#| fig-height: 2.3
-#| out-width: "100%"
-ds <- expand.grid(lengua = LENGUAS, v = c("rural", "educacion_superior", "dos_quintiles_bajos"),
-                  stringsAsFactors = FALSE)
-ds$valor <- mapply(function(l, v) 100 * socio[[l]][[v]], ds$lengua, ds$v)
-ds$v <- factor(ds$v, levels = c("rural", "educacion_superior", "dos_quintiles_bajos"),
-               labels = c("Residencia\nrural", "Educación\nsuperior", "Dos quintiles\ninferiores"))
-ds$lengua <- factor(ds$lengua, levels = LENGUAS)
-ggplot(ds, aes(v, valor, fill = lengua)) +
-  geom_col(position = position_dodge(0.8), width = 0.74, colour = "white", linewidth = 0.3) +
-  geom_text(aes(label = f(valor)), position = position_dodge(0.8), vjust = -0.4, size = 1.9, family = "serif") +
-  scale_fill_manual(values = COLORES) + scale_y_continuous(limits = c(0, 92), expand = c(0, 0)) +
-  labs(x = NULL, y = "% ponderado") + tema() + theme(panel.grid.major.x = element_blank())
+#| label: codigo-diseno
+#| echo: true
+#| eval: false
+datos <- marco |>
+  left_join(analiticas, by = c("anio", "CASEID")) |>
+  mutate(en_articulo = coalesce(en_articulo, FALSE),
+         psu_multianual     = interaction(anio, psu),               # UPM distinta por año
+         estrato_multianual = interaction(anio, departamento, estrato),
+         peso_12 = peso / 12)                                        # promedio anual
+diseno <- svydesign(ids = ~psu_multianual, strata = ~estrato_multianual,
+                    weights = ~peso_12, data = datos, nest = TRUE)
+diseno_puno <- subset(diseno, en_articulo)   # dominio: mujeres de Puno de la muestra
 ```
 
-Las mayores diferencias se concentraron en residencia, escolaridad y riqueza. La residencia rural alcanzó `r f(100*socio$Quechua[["rural"]])` % entre quechuahablantes y `r f(100*socio$Aimara[["rural"]])` % entre aimarahablantes, frente a `r f(100*socio$Castellano[["rural"]])` % en castellanohablantes. La educación superior mostró el patrón inverso: `r f(100*socio$Castellano[["educacion_superior"]])` % en castellano, `r f(100*socio$Quechua[["educacion_superior"]])` % en quechua y `r f(100*socio$Aimara[["educacion_superior"]])` % en aimara. Esta heterogeneidad justifica presentar, además de las diferencias descriptivas, comparaciones ajustadas.
+## Modelos
 
-## Evolución anual de los indicadores
-
-La Tabla \ref{tab:anual} y la @fig-tendencias presentan los porcentajes ponderados para los doce años disponibles. La cobertura de seis o más visitas y el parto institucional alcanzan niveles elevados en los últimos años, mientras que el control temprano mantiene diferencias más visibles. Los intervalos de confianza anuales son amplios, por lo que las fluctuaciones de un año a otro no deben interpretarse como cambios significativos.
+Para cada indicador se ajustó una regresión logística para muestras complejas. Se compararon las razones de momios crudas (ORc, solo con la lengua materna) y ajustadas (ORa, con todas las covariables). Como los indicadores son muy frecuentes, también se calcularon probabilidades ajustadas y sus diferencias en puntos porcentuales.
 
 ```{r}
-#| label: tab-anual
-#| results: asis
-filas <- sapply(2014:2025, function(a) paste0(a, " & ", paste(unlist(lapply(INDICADORES, function(i)
-  sapply(LENGUAS, function(l) f(an(a, l, i))))), collapse = " & "), " \\\\"))
-cat("\\begin{table*}[!t]\n\\centering\n\\caption{Indicadores de atención materna por año y lengua materna (\\%)}\n\\label{tab:anual}\n\\small\n\\setlength{\\tabcolsep}{6pt}\n",
-"\\begin{tabular}{lrrrrrrrrr}\n\\toprule\n& \\multicolumn{3}{c}{$\\geq$6 controles prenatales} & \\multicolumn{3}{c}{Inicio en el primer trimestre} & \\multicolumn{3}{c}{Parto institucional} \\\\\n",
-"\\cmidrule(lr){2-4}\\cmidrule(lr){5-7}\\cmidrule(lr){8-10}\n",
-"Año & Cast. & Quechua & Aimara & Cast. & Quechua & Aimara & Cast. & Quechua & Aimara \\\\\n\\midrule\n",
-paste(filas, collapse = "\n"),
-"\n\\bottomrule\n\\end{tabular}\n\\notatabla{Porcentajes ponderados, redondeados a un decimal, estimados con el diseño muestral de cada encuesta. Los intervalos de confianza se muestran en la Fig.~\\ref{fig-tendencias}. Un valor de 100\\,\\% indica que todas las observaciones válidas del grupo fueron positivas y no implica certeza poblacional.}\n\\end{table*}\n", sep = "")
+#| label: codigo-modelo
+#| echo: true
+#| eval: false
+modelo <- svyglm(parto_institucional ~ lengua_materna + edad + residencia + educacion +
+                   riqueza + hijos_nacidos + factor(anio),
+                 design = diseno_puno, family = quasibinomial())
+exp(coef(modelo))   # razones de momios ajustadas
 ```
+
+# Resultados principales
+
+## Características de la muestra
+
+La muestra analítica incluyó `r fm(n_total)` mujeres: `r fm(n_leng[["Castellano"]])` castellanohablantes, `r fm(n_leng[["Quechua"]])` quechuahablantes y `r fm(n_leng[["Aimara"]])` aimarahablantes. Las mujeres de lengua indígena vivían con más frecuencia en zonas rurales y en los hogares más pobres, y tenían menos educación superior (@tbl-socio).
+
+```{r}
+#| label: tbl-socio
+#| tbl-cap: "Características sociodemográficas ponderadas por lengua materna"
+fila <- function(v, k = 100, d = 1) sapply(LENGUAS, function(l) f(k * socio[[l]][[v]], d))
+ts <- rbind(
+  "n (sin ponderar)" = sapply(LENGUAS, function(l) fm(n_leng[[l]])),
+  "Edad media (años)" = fila("edad", 1),
+  "Residencia rural (%)" = fila("rural"),
+  "Educación superior (%)" = fila("educacion_superior"),
+  "Dos quintiles más pobres (%)" = fila("dos_quintiles_bajos"),
+  "Hijos nacidos vivos (media)" = fila("hijos_nacidos", 1, 2))
+knitr::kable(ts, format = "latex", booktabs = TRUE, align = "rrr", linesep = "")
+```
+
+## Evolución de los indicadores
+
+La @fig-tendencias muestra la evolución anual. El parto institucional aumentó en los tres grupos y casi se igualó hacia 2025; el inicio del control en el primer trimestre mantiene las diferencias más claras.
 
 ```{r}
 #| label: fig-tendencias
-#| fig-cap: "Evolución anual de los indicadores por lengua materna, Puno, 2014--2025: (a) seis o más controles prenatales; (b) inicio del control en el primer trimestre; (c) parto institucional. Líneas: porcentajes ponderados; bandas: IC del 95 % (método logit). Cuando la estimación es 100 % no se muestra banda."
-#| fig-width: 3.5
-#| fig-height: 6.2
-#| out-width: "100%"
-titulos <- c(control_6mas = "(a) Seis o más controles prenatales",
-             control_temprano = "(b) Inicio del control en el primer trimestre",
-             parto_institucional = "(c) Parto institucional")
-dt <- anual %>% mutate(lengua = factor(lengua, levels = LENGUAS),
-                       panel = factor(titulos[indicador], levels = titulos))
+#| fig-cap: "Evolución anual de los indicadores por lengua materna, Puno, 2014--2025. Líneas: porcentajes ponderados; bandas: IC del 95 %."
+#| fig-width: 6.3
+#| fig-height: 2.8
+titulos <- c(control_6mas = "Seis o más controles", control_temprano = "Inicio en el 1.er trimestre",
+             parto_institucional = "Parto institucional")
+dt <- anual |> mutate(lengua = factor(lengua, levels = LENGUAS),
+                      panel = factor(titulos[indicador], levels = titulos))
 ggplot(dt, aes(anio, p, colour = lengua, fill = lengua)) +
   geom_ribbon(aes(ymin = li, ymax = ls), alpha = 0.10, colour = NA) +
-  geom_line(aes(linetype = lengua), linewidth = 0.5) +
-  geom_point(aes(shape = lengua), size = 1.2) +
-  facet_wrap(~panel, ncol = 1, scales = "free_y") +
+  geom_line(aes(linetype = lengua), linewidth = 0.5) + geom_point(aes(shape = lengua), size = 1.1) +
+  facet_wrap(~panel, nrow = 1) +
   scale_colour_manual(values = COLORES) + scale_fill_manual(values = COLORES) +
   scale_shape_manual(values = FORMAS) + scale_linetype_manual(values = LINEAS) +
-  scale_x_continuous(breaks = 2014:2025, labels = sprintf("%02d", 14:25)) +
-  labs(x = "Año de encuesta (20xx)", y = "%") + tema() +
-  theme(strip.text = element_text(hjust = 0, size = 7.5))
+  scale_x_continuous(breaks = seq(2014, 2025, 2), labels = sprintf("%02d", seq(14, 25, 2))) +
+  labs(x = "Año de encuesta (20xx)", y = "%") + tema()
 ```
 
-En 2014, el parto institucional fue estimado en `r f(an(2014,"Castellano","parto_institucional"))` % para castellano, `r f(an(2014,"Quechua","parto_institucional"))` % para quechua y `r f(an(2014,"Aimara","parto_institucional"))` % para aimara, mientras que en 2025 alcanzó `r f(an(2025,"Castellano","parto_institucional"))` %, `r f(an(2025,"Quechua","parto_institucional"))` % y `r f(an(2025,"Aimara","parto_institucional"))` %, respectivamente. Estas diferencias entre extremos de la serie son descriptivas y no permiten concluir causalmente que un grupo se benefició más que otro.
-
-Para inicio temprano, las estimaciones de 2025 fueron `r f(an(2025,"Castellano","control_temprano"))` % en castellano, `r f(an(2025,"Quechua","control_temprano"))` % en quechua y `r f(an(2025,"Aimara","control_temprano"))` % en aimara, con diferencias descriptivas frente a castellano de `r f(an(2025,"Castellano","control_temprano") - an(2025,"Quechua","control_temprano"))` y `r f(an(2025,"Castellano","control_temprano") - an(2025,"Aimara","control_temprano"))` puntos porcentuales, respectivamente.
-
-## Modelos logísticos
-
-La Tabla \ref{tab:ora} y la @fig-forest muestran las asociaciones entre lengua materna y cada desenlace, sin ajuste y controlando por edad, residencia, educación, riqueza, número de hijos nacidos vivos y año de encuesta. Los modelos trabajaron con $n$ = `r fm(nmod[["control_6mas"]])` para seis o más controles, $n$ = `r fm(nmod[["control_temprano"]])` para inicio temprano y $n$ = `r fm(nmod[["parto_institucional"]])` para parto institucional.
+## Asociación con la lengua materna
 
 ```{r}
-#| label: tab-ora
-#| results: asis
-et <- c(control_6mas = "$\\geq$6 contr.", control_temprano = "Inicio temp.", parto_institucional = "Parto inst.")
-filas <- c()
-for (i in INDICADORES) for (l in c("Quechua", "Aimara")) {
-  filas <- c(filas, paste0(if (l == "Quechua") et[[i]] else "", " & ", l, " & ",
-    fic(O(orc,i,l), O(orc,i,l,"li"), O(orc,i,l,"ls")), " & ",
-    fic(O(ora,i,l), O(ora,i,l,"li"), O(ora,i,l,"ls")), " & ", fp(O(ora,i,l,"p")), " \\\\",
-    if (l == "Aimara" && i != "parto_institucional") "\n\\addlinespace" else ""))
-}
-cat("\\begin{table}[!t]\n\\centering\n\\caption{Razones de momios crudas y ajustadas por lengua materna}\n\\label{tab:ora}\n\\footnotesize\n\\setlength{\\tabcolsep}{2pt}\n",
-"\\begin{tabular*}{\\columnwidth}{@{\\extracolsep{\\fill}}llccc@{}}\n\\toprule\nIndicador & Lengua & ORc (IC 95\\,\\%) & ORa (IC 95\\,\\%) & $p$ \\\\\n\\midrule\n",
-paste(filas, collapse = "\n"),
-"\n\\bottomrule\n\\end{tabular*}\n\\notatabla{ORc: razón de momios cruda; ORa: ajustada por edad, residencia, educación, quintil de riqueza, número de hijos nacidos vivos y año de encuesta. Referencia: castellano. Ambos modelos usan los mismos casos y el diseño muestral; $p$ corresponde al ORa. Contr.: controles; temp.: temprano; inst.: institucional.}\n\\end{table}\n", sep = "")
+#| label: tbl-or
+#| tbl-cap: "Razones de momios crudas (ORc) y ajustadas (ORa) y diferencias ajustadas frente a castellanohablantes"
+et <- c(control_6mas = "6 o más controles", control_temprano = "Inicio temprano",
+        parto_institucional = "Parto institucional")
+filas <- list()
+for (i in INDICADORES) for (l in c("Quechua", "Aimara")) filas[[length(filas) + 1]] <- data.frame(
+  Indicador = if (l == "Quechua") et[[i]] else "", Lengua = l,
+  `ORc (IC 95 %)` = fic(O(orc, i, l), O(orc, i, l, "li"), O(orc, i, l, "ls")),
+  `ORa (IC 95 %)` = fic(O(ora, i, l), O(ora, i, l, "li"), O(ora, i, l, "ls")),
+  `Diferencia, pp (IC 95 %)` = fdif(D(i, l), D(i, l, "li"), D(i, l, "ls")),
+  check.names = FALSE)
+knitr::kable(do.call(rbind, filas), format = "latex", booktabs = TRUE, escape = FALSE,
+             align = "llccc", linesep = c("", "\\addlinespace"),
+             col.names = c("Indicador", "Lengua", "ORc (IC 95\\,\\%)", "ORa (IC 95\\,\\%)",
+                           "Diferencia, pp (IC 95\\,\\%)"))
 ```
+
+Frente a las castellanohablantes, ambos grupos de lengua indígena tuvieron menor probabilidad de parto institucional después del ajuste (ORa = `r f(O(ora, "parto_institucional", "Quechua"), 2)` en quechua y `r f(O(ora, "parto_institucional", "Aimara"), 2)` en aimara), lo que equivale a `r fnm(D("parto_institucional", "Quechua"))` y `r fnm(D("parto_institucional", "Aimara"))` puntos porcentuales. Cerca de la mitad de la asociación cruda se explicó por las covariables. La mayor diferencia absoluta fue el inicio temprano del control prenatal en aimarahablantes: `r f(P("control_temprano", "Aimara"))` % frente a `r f(P("control_temprano", "Castellano"))` %, una diferencia de `r fnm(D("control_temprano", "Aimara"))` puntos que casi no cambió con el ajuste (@tbl-or y @fig-forest).
 
 ```{r}
 #| label: fig-forest
-#| fig-cap: "Razones de momios ajustadas (ORa) e IC del 95 % de la lengua materna para cada indicador (referencia: castellano)."
-#| fig-width: 3.5
-#| fig-height: 2.5
-#| out-width: "100%"
-etq <- c(control_6mas = "≥6 controles", control_temprano = "Inicio temprano", parto_institucional = "Parto institucional")
-df <- ora %>% mutate(etiqueta = paste(etq[indicador], "·", lengua),
-                     orden = rev(seq_len(n())) + rep(c(0.6, 0.6, 0.3, 0.3, 0, 0), length.out = n()),
-                     lengua = factor(lengua, levels = LENGUAS),
-                     txt = paste0(f(OR, 2), " (", f(li, 2), "–", f(ls, 2), ")"))
+#| fig-cap: "Razones de momios ajustadas e IC del 95 % por lengua materna (referencia: castellano)"
+#| fig-width: 5.5
+#| fig-height: 2.4
+df <- ora |> mutate(etiqueta = paste(et[indicador], "·", lengua),
+                    orden = rev(seq_len(n())) + rep(c(0.6, 0.6, 0.3, 0.3, 0, 0), length.out = n()),
+                    lengua = factor(lengua, levels = LENGUAS))
 ggplot(df, aes(OR, orden, colour = lengua)) +
   geom_vline(xintercept = 1, linetype = "dashed", colour = "#666666", linewidth = 0.3) +
   geom_errorbarh(aes(xmin = li, xmax = ls), height = 0, linewidth = 0.6) +
   geom_point(aes(shape = lengua), size = 2) +
-  geom_text(aes(x = 1.45, label = txt), hjust = 0, size = 2.3, colour = "#333333", family = "serif") +
   scale_x_log10(breaks = c(0.5, 0.7, 1), labels = c("0,5", "0,7", "1,0")) +
   scale_y_continuous(breaks = df$orden, labels = df$etiqueta) +
-  coord_cartesian(xlim = c(0.4, 1.25), clip = "off") +
   scale_colour_manual(values = COLORES, guide = "none") + scale_shape_manual(values = FORMAS, guide = "none") +
-  labs(x = "ORa, escala log (ref.: castellano)", y = NULL) + tema() +
-  theme(plot.margin = margin(4, 62, 4, 4), panel.grid.major.y = element_blank())
+  labs(x = "ORa (escala logarítmica)", y = NULL) + tema() + theme(panel.grid.major.y = element_blank())
 ```
 
-Frente a las castellanohablantes, las aimarahablantes presentaron menores momios ajustados de haber tenido seis o más controles (ORa = `r f(O(ora,"control_6mas","Aimara"),3)`; IC 95 %: `r f(O(ora,"control_6mas","Aimara","li"),3)`--`r f(O(ora,"control_6mas","Aimara","ls"),3)`; $p$ = `r f(O(ora,"control_6mas","Aimara","p"),3)`). Para quechua, la estimación fue cercana a la unidad (ORa = `r f(O(ora,"control_6mas","Quechua"),3)`; $p$ = `r f(O(ora,"control_6mas","Quechua","p"),3)`). En el inicio temprano, el ORa fue `r f(O(ora,"control_temprano","Aimara"),3)` en aimara ($p$ < 0,001) y `r f(O(ora,"control_temprano","Quechua"),3)` en quechua ($p$ = `r f(O(ora,"control_temprano","Quechua","p"),3)`), este último con evidencia limitada en el umbral convencional del 5 %. En el parto institucional, los dos grupos de lengua indígena presentaron menores momios ajustados: ORa = `r f(O(ora,"parto_institucional","Quechua"),3)` para quechua (IC 95 %: `r f(O(ora,"parto_institucional","Quechua","li"),3)`--`r f(O(ora,"parto_institucional","Quechua","ls"),3)`) y ORa = `r f(O(ora,"parto_institucional","Aimara"),3)` para aimara (IC 95 %: `r f(O(ora,"parto_institucional","Aimara","li"),3)`--`r f(O(ora,"parto_institucional","Aimara","ls"),3)`).
+# Reproducibilidad
 
-El ajuste por características sociodemográficas atenuó de forma importante la asociación con el parto institucional: la razón de momios pasó de `r f(O(orc,"parto_institucional","Quechua"),2)` (cruda) a `r f(O(ora,"parto_institucional","Quechua"),2)` (ajustada) en quechuahablantes y de `r f(O(orc,"parto_institucional","Aimara"),2)` a `r f(O(ora,"parto_institucional","Aimara"),2)` en aimarahablantes, es decir, el coeficiente se redujo en `r f(aten("parto_institucional","Quechua"),0)` % y `r f(aten("parto_institucional","Aimara"),0)` % en escala logarítmica. En cambio, para el inicio temprano en aimarahablantes la atenuación fue de solo `r f(aten("control_temprano","Aimara"),0)` % (ORc = `r f(O(orc,"control_temprano","Aimara"),2)`; ORa = `r f(O(ora,"control_temprano","Aimara"),2)`), de modo que la mayor parte de esa desventaja no se explicó por las covariables consideradas.
+## Estructura del proyecto
 
-## Probabilidades ajustadas y diferencias absolutas
+```
+ARTICULO_PRENATAL_ENDES_2014_2025/
+|-- informe.qmd          Este informe tecnico
+|-- articulo.qmd         Articulo cientifico (formato IEEE)
+|-- R/funciones.R        Funciones de diseno muestral, modelos y graficos
+|-- datos/               Datos livianos derivados (1,2 MB)
+|-- scripts_R/           Scripts 01-51: todo el proceso desde los microdatos
+|-- referencias.bib      Bibliografia
+|-- header.tex           Formato del articulo
+|-- header_informe.tex   Formato de este informe
+`-- README.md            Instrucciones
+```
 
-Debido a la alta frecuencia de los desenlaces, la magnitud de los OR no se traduce directamente en diferencias de probabilidad (Tabla \ref{tab:abs}). En parto institucional, las diferencias ajustadas frente a castellano fueron de `r fnm(D("parto_institucional","Quechua"))` puntos porcentuales en quechua (IC 95 %: `r fnm(D("parto_institucional","Quechua","li"))` a `r fnm(D("parto_institucional","Quechua","ls"))`) y `r fnm(D("parto_institucional","Aimara"))` en aimara. La mayor diferencia absoluta correspondió al inicio temprano en aimarahablantes: `r f(P("control_temprano","Aimara"))` % frente a `r f(P("control_temprano","Castellano"))` % en castellanohablantes, una diferencia de `r fnm(D("control_temprano","Aimara"))` puntos (`r fnm(D("control_temprano","Aimara","li"))` a `r fnm(D("control_temprano","Aimara","ls"))`).
+## Cómo reproducir los resultados
+
+1. Instalar R, Positron, Quarto y TinyTeX (`quarto install tinytex`).
+2. Instalar los paquetes: `install.packages(c("survey", "dplyr", "ggplot2", "knitr", "rmarkdown", "tibble"))`.
+3. Clonar o descargar el repositorio y abrir la carpeta en Positron.
+4. En la terminal, ejecutar `quarto render informe.qmd` y `quarto render articulo.qmd`.
+
+Para reconstruir los datos desde cero, se descargan los microdatos del INEI y se ejecutan los scripts en orden; el script 51 genera los archivos de `datos/`.
+
+## Entorno de cómputo
 
 ```{r}
-#| label: tab-abs
+#| label: entorno
 #| results: asis
-et2 <- c(control_6mas = "$\\geq$6 controles", control_temprano = "Inicio temprano", parto_institucional = "Parto institucional")
-filas <- sapply(INDICADORES, function(i) paste0(et2[[i]], " & ",
-  paste(sapply(LENGUAS, function(l) fic(P(i,l), P(i,l,"li"), P(i,l,"ls"), 1)), collapse = " & "), " & ",
-  paste(sapply(c("Quechua", "Aimara"), function(l) fdif(D(i,l), D(i,l,"li"), D(i,l,"ls"))), collapse = " & "), " \\\\"))
-cat("\\begin{table*}[!t]\n\\centering\n\\caption{Probabilidades ajustadas y diferencias absolutas frente a castellanohablantes}\n\\label{tab:abs}\n\\small\n\\setlength{\\tabcolsep}{5pt}\n",
-"\\begin{tabular}{lccccc}\n\\toprule\n& \\multicolumn{3}{c}{Probabilidad ajustada, \\% (IC 95\\,\\%)} & \\multicolumn{2}{c}{Diferencia frente a castellano, pp (IC 95\\,\\%)} \\\\\n",
-"\\cmidrule(lr){2-4}\\cmidrule(lr){5-6}\nIndicador & Castellano & Quechua & Aimara & Quechua & Aimara \\\\\n\\midrule\n",
-paste(filas, collapse = "\n"),
-"\n\\bottomrule\n\\end{tabular}\n\\notatabla{Probabilidades obtenidas por estandarización marginal a partir de los modelos ajustados de la Tabla~\\ref{tab:ora}, con los pesos del diseño. pp: puntos porcentuales.}\n\\end{table*}\n", sep = "")
+pk <- c("survey", "dplyr", "ggplot2", "knitr")
+cat(sprintf("Este informe se generó el %s con %s, Quarto %s y los paquetes %s, en %s.\n",
+  format(Sys.Date(), "%d/%m/%Y"), sub("R version ([0-9.]+).*", "R \\1", R.version.string),
+  tryCatch(system("quarto --version", intern = TRUE)[1], error = function(e) ""),
+  paste(sapply(pk, function(p) paste0("`", p, "` ", packageVersion(p))), collapse = ", "),
+  utils::sessionInfo()$running))
 ```
-
-## Cambio de las desigualdades en el tiempo y análisis de sensibilidad
-
-La Tabla \ref{tab:periodo} muestra las ORa por periodo. En ningún indicador la interacción lengua $\times$ periodo alcanzó significancia estadística ($p$ = `r f(pint[["control_6mas"]],3)` para seis o más controles, `r f(pint[["control_temprano"]],3)` para inicio temprano y `r f(pint[["parto_institucional"]],3)` para parto institucional). En parto institucional, pese a la convergencia de los porcentajes, las ORa de 2020--2025 se mantuvieron por debajo de la unidad (`r f(PE("parto_institucional","Quechua","2020-2025"),2)` en quechua y `r f(PE("parto_institucional","Aimara","2020-2025"),2)` en aimara). En inicio temprano, la asociación en quechuahablantes fue nula en 2014--2019 (ORa = `r f(PE("control_temprano","Quechua","2014-2019"),2)`) y se hizo evidente en 2020--2025 (ORa = `r f(PE("control_temprano","Quechua","2020-2025"),2)`; IC 95 %: `r f(PE("control_temprano","Quechua","2020-2025","li"),2)`--`r f(PE("control_temprano","Quechua","2020-2025","ls"),2)`).
-
-```{r}
-#| label: tab-periodo
-#| results: asis
-ic3 <- function(e, a, b) paste0(f(e, 2), " (", f(a, 2), "--", ifelse(b > 0.995 & b < 1, f(b, 3), f(b, 2)), ")")
-filas <- c()
-for (i in INDICADORES) for (l in c("Quechua", "Aimara")) {
-  filas <- c(filas, paste0(if (l == "Quechua") et[[i]] else "", " & ", l, " & ",
-    ic3(PE(i,l,"2014-2019"), PE(i,l,"2014-2019","li"), PE(i,l,"2014-2019","ls")), " & ",
-    ic3(PE(i,l,"2020-2025"), PE(i,l,"2020-2025","li"), PE(i,l,"2020-2025","ls")), " & ",
-    if (l == "Quechua") paste0("\\multirow{2}{*}{", f(pint[[i]], 3), "}") else "", " \\\\",
-    if (l == "Aimara" && i != "parto_institucional") "\n\\addlinespace" else ""))
-}
-cat("\\begin{table}[!t]\n\\centering\n\\caption{Razones de momios ajustadas por periodo}\n\\label{tab:periodo}\n\\footnotesize\n\\setlength{\\tabcolsep}{2.2pt}\n",
-"\\begin{tabular*}{\\columnwidth}{@{\\extracolsep{\\fill}}llccc@{}}\n\\toprule\nIndicador & Lengua & 2014--2019 & 2020--2025 & $p_{\\mathrm{int}}$ \\\\\n\\midrule\n",
-paste(filas, collapse = "\n"),
-"\n\\bottomrule\n\\end{tabular*}\n\\notatabla{ORa (IC 95\\,\\%) frente a castellano en cada periodo, a partir de modelos con interacción lengua $\\times$ periodo y las mismas covariables. $p_{\\mathrm{int}}$: prueba de Wald de la interacción (2 grados de libertad).}\n\\end{table}\n", sep = "")
-```
-
-Los resultados fueron robustos (Tabla \ref{tab:sens}). Con la definición de parto institucional basada solo en el lugar del parto, las ORa fueron `r f(O(or_lugar,"parto_lugar","Quechua"),2)` en quechua y `r f(O(or_lugar,"parto_lugar","Aimara"),2)` en aimara, prácticamente iguales a las del análisis principal. Con el tratamiento `average` para estratos con una sola unidad primaria, los coeficientes no cambiaron y los intervalos se ampliaron levemente, sin modificar la significancia. Por último, la cobertura de ocho o más controles fue considerablemente menor que la de seis o más (`r f(p8[["Castellano"]])` % en castellano, `r f(p8[["Quechua"]])` % en quechua y `r f(p8[["Aimara"]])` % en aimara), sin diferencias significativas por lengua.
-
-```{r}
-#| label: tab-sens
-#| results: asis
-bloque <- function(titulo, tab, i) paste0("\\multicolumn{4}{l}{\\textit{", titulo, "}} \\\\\n",
-  paste(sapply(c("Quechua", "Aimara"), function(l) paste0("& ", l, " & ",
-    ic3(O(tab,i,l), O(tab,i,l,"li"), O(tab,i,l,"ls")), " & ", fp(O(tab,i,l,"p")), " \\\\")), collapse = "\n"))
-cat("\\begin{table}[!t]\n\\centering\n\\caption{Análisis de sensibilidad e indicador complementario}\n\\label{tab:sens}\n\\small\n\\setlength{\\tabcolsep}{3pt}\n",
-"\\begin{tabular*}{\\columnwidth}{@{\\extracolsep{\\fill}}llcc@{}}\n\\toprule\nAnálisis & Lengua & ORa (IC 95\\,\\%) & $p$ \\\\\n\\midrule\n",
-paste(c(bloque("Parto institucional solo por lugar del parto", or_lugar, "parto_lugar"),
-        bloque("Parto institucional, varianza con \\texttt{average}", or_avg, "parto_institucional"),
-        bloque("Inicio temprano, varianza con \\texttt{average}", or_avg, "control_temprano"),
-        bloque("$\\geq$6 controles, varianza con \\texttt{average}", or_avg, "control_6mas"),
-        bloque("$\\geq$8 controles (recomendación OMS 2016)", or_8, "control_8mas")), collapse = "\n\\addlinespace\n"),
-"\n\\bottomrule\n\\end{tabular*}\n\\notatabla{Referencia: castellano. Mismas covariables que en la Tabla~\\ref{tab:ora}.}\n\\end{table}\n", sep = "")
-```
-
-# Discusión
-
-El presente análisis integra doce ediciones de la ENDES para explorar desigualdades vinculadas con la lengua materna en Puno. Su principal contribución descriptiva consiste en presentar, en una misma serie, tres dimensiones de atención materna comparadas entre castellano, quechua y aimara. La contribución analítica reside en mostrar que algunas asociaciones con la lengua materna persisten cuando se consideran diferencias de edad, residencia, educación, riqueza, paridad y año, particularmente para parto institucional y, entre aimarahablantes, para el inicio temprano del control prenatal.
-
-Las diferencias en composición sociodemográfica sugieren que la desigualdad lingüística se superpone con desventajas territoriales y materiales. Las mujeres aimarahablantes y quechuahablantes estaban más representadas en áreas rurales y en los quintiles inferiores de riqueza, patrón coherente con la literatura latinoamericana sobre inequidades según riqueza, territorio y pertenencia étnica en salud maternoinfantil [@mesenburg2018; @colome2021]. La comparación entre las razones crudas y ajustadas lo confirma: cerca de la mitad de la desventaja en parto institucional se explicó por residencia, educación, riqueza y paridad, pero la otra mitad persistió. En el inicio temprano entre aimarahablantes, en cambio, el ajuste apenas modificó la asociación, lo que apunta a factores no captados por las variables socioeconómicas, como la distancia, la comunicación con el personal o la experiencia previa con los servicios. No obstante, estos resultados no permiten distinguir con precisión las rutas causales de esas desigualdades.
-
-La asociación más consistente en ambos grupos indígenas correspondió al parto institucional. Ello es relevante porque el acceso a servicios para el parto depende de un entramado de distancia, transporte, costo indirecto, experiencias de discriminación, pertinencia lingüística y confianza en el establecimiento. La investigación de Samuel [@samuel2016] en Puno destaca el papel de la vigilancia ciudadana y la adecuación intercultural; la experiencia de Gabrysch et al. [@gabrysch2009] en Ayacucho documenta la adaptación de servicios a prácticas y preferencias locales, y estudios en la Amazonía describen preferencias por el parto domiciliario y barreras de acceso en comunidades indígenas [@delmastro2021; @mejia2025]. Aunque los contextos sean diferentes, estos estudios fundamentan la necesidad de interpretar las cifras de cobertura junto con la calidad y el trato percibido.
-
-Las escalas relativa y absoluta ofrecen lecturas complementarias. Un ORa de `r f(O(ora,"parto_institucional","Quechua"),2)` corresponde a una diferencia ajustada de apenas 3--4 puntos porcentuales cuando el parto institucional supera el 90 %. Que la diferencia relativa no haya disminuido entre 2014--2019 y 2020--2025, aun cuando los porcentajes convergieron, indica que los partos que todavía ocurren fuera de establecimientos se concentran en mujeres de lengua indígena; este grupo residual puede requerir estrategias focalizadas más que una expansión general de la cobertura.
-
-En la atención prenatal, el resultado más reciente indica porcentajes elevados de seis o más consultas en los tres grupos, mientras que el inicio en el primer trimestre muestra las mayores diferencias absolutas, de casi nueve puntos entre aimarahablantes. Un inicio tardío restringe las oportunidades de orientación preventiva y de seguimiento adecuado. La aparición de una desventaja en quechuahablantes durante 2020--2025 coincide con el periodo de interrupción de servicios asociado a la pandemia de COVID-19, aunque este estudio no permite atribuirla a esa causa y la prueba de interacción no fue concluyente. Asimismo, la cobertura de ocho o más controles, estándar actual de la OMS [@oms2016], fue unos `r f(mean(p6 - p8), 0)` puntos inferior a la de seis o más, lo que indica que el indicador histórico sobrestima la adecuación del control prenatal en todos los grupos.
-
-La literatura peruana sobre cobertura y calidad prenatal [@enriquez2022] respalda examinar no solamente cuántas consultas ocurrieron, sino también su oportunidad y contenido. Asimismo, los estudios sobre información recibida durante la atención y sobre aseguramiento indican que los factores institucionales y comunicacionales influyen en la utilización de servicios [@quispe2023; @ramos2023; @perezlu2018]. Una implicancia práctica de este trabajo es recomendar la evaluación de la oferta lingüística y de la experiencia de las usuarias, además del monitoreo cuantitativo de la cobertura.
-
-Una lectura prudente exige recordar que la lengua materna no equivale por sí misma a identidad étnica, discriminación experimentada o competencia comunicativa con el personal de salud. La medición de inequidades étnicas depende del criterio de clasificación empleado [@armenta2020]; por ello, las asociaciones encontradas podrían reflejar factores culturales, sociales, geográficos e institucionales no observados. Tampoco puede asumirse que las diferencias entre 2014 y 2025 se deban a cambios en políticas específicas, dado el carácter repetido y transversal del diseño.
-
-## Fortalezas y limitaciones
-
-Entre las fortalezas destacan la integración temporal de doce encuestas, la armonización explícita de la codificación lingüística, el uso del diseño muestral completo, el análisis de tres resultados de atención materna en escalas relativa y absoluta, la verificación de la robustez frente a definiciones alternativas y al tratamiento de la varianza, y la reproducibilidad completa del análisis.
-
-Entre las limitaciones, primero, la ENDES es autoinformada en varios componentes, por lo que puede existir error de recuerdo en la edad gestacional y el número de visitas. Segundo, la definición de parto institucional combinó lugar del parto y personal que lo atendió y puede diferir del indicador oficial del INEI; sin embargo, la definición basada solo en el lugar produjo resultados prácticamente idénticos. Tercero, algunas categorías de M13 y M15 no fueron clasificables y se trataron como faltantes, aunque representaron menos del 1 % de la muestra. Cuarto, se detectaron estratos con una sola unidad primaria de muestreo; las dos alternativas de estimación de varianza produjeron conclusiones iguales. Quinto, la agregación de encuestas anuales no constituye un panel. Por último, los modelos no incluyeron distancia a establecimientos, barreras lingüísticas percibidas, aseguramiento ni calidad de las consultas, por lo que los hallazgos deben interpretarse como asociaciones observacionales y no como efectos de la lengua sobre la atención.
-
-# Implicaciones y recomendaciones
-
-Los resultados justifican mantener sistemas de seguimiento de indicadores maternos desagregados por lengua materna y residencia. Un monitoreo útil debería presentar porcentajes e intervalos de confianza, distinguir entre acceso y calidad, informar diferencias tanto relativas como absolutas y documentar definiciones operativas comparables entre años. Se recomienda incorporar el indicador de ocho o más controles y el inicio en el primer trimestre como metas de seguimiento. En los establecimientos, la información comprensible, la pertinencia cultural y el trato respetuoso son dimensiones que las cifras de cobertura no capturan. La norma peruana de atención del parto vertical con pertinencia intercultural [@minsa2016] y los estudios en Puno proporcionan un marco para orientar estas acciones, sin que esta investigación haya evaluado su impacto. Futuras investigaciones podrían incorporar distancia geográfica, aseguramiento y calidad del control prenatal, así como métodos cualitativos que expliquen la persistencia de la desigualdad residual en el parto institucional.
 
 # Conclusiones
 
-Entre las mujeres encuestadas en Puno durante 2014--2025, la atención prenatal y el parto institucional mostraron diferencias según la lengua materna. Las mujeres quechuahablantes y aimarahablantes presentaron mayor residencia rural, menor educación superior y mayor pobreza que las castellanohablantes. Tras el ajuste sociodemográfico, ambos grupos indígenas mostraron menores probabilidades de parto institucional, y las aimarahablantes también de inicio temprano del control prenatal y de seis o más controles; la diferencia absoluta más amplia fue la del inicio temprano. Estas asociaciones no disminuyeron significativamente en el periodo reciente y resultaron robustas a definiciones y métodos alternativos, lo que respalda su uso para orientar el monitoreo de la equidad en los servicios maternos de Puno.
+- Se construyó una base analítica armonizada de `r fm(n_total)` mujeres de Puno a partir de doce ediciones de la ENDES, resolviendo problemas de archivos, claves y códigos que cambian entre años.
+- El uso del diseño muestral completo (pesos, conglomerados y estratos de todo el país) fue indispensable para obtener estimaciones y errores estándar válidos.
+- Las mujeres quechuahablantes y aimarahablantes tuvieron menor probabilidad de parto institucional que las castellanohablantes aun después del ajuste sociodemográfico, y las aimarahablantes iniciaron más tarde el control prenatal.
+- Todo el proceso es reproducible: cualquier persona puede regenerar este informe y el artículo con R, Quarto y Positron a partir del repositorio público.
 
-# Disponibilidad de datos y código
+# Referencias
+
+::: {#refs}
+:::
+
+# Enlaces del proyecto {.unnumbered}
 
 ```{r}
-#| label: software
+#| label: links
 #| results: asis
-pk <- c("survey", "dplyr", "ggplot2", "knitr")
-ver <- paste(sapply(pk, function(p) paste0("\\texttt{", p, "} ", as.character(packageVersion(p)))), collapse = ", ")
-cat(sprintf("Los microdatos originales están disponibles en el portal de microdatos del INEI [@inei2025]. El código, los datos procesados y este documento se encuentran en el repositorio del proyecto: \\url{https://github.com/Mario-Wladick/ARTICULO_PRENATAL_ENDES_2014_2025}. Para reproducir el informe basta abrir la carpeta del proyecto en Positron y ejecutar \\texttt{quarto render informe.qmd}. Este documento se generó el %s con %s, Quarto %s y los paquetes %s.\n",
-  format(Sys.Date(), "%d/%m/%Y"),
-  sub("R version ([0-9.]+).*", "R \\1", R.version.string),
-  tryCatch(system("quarto --version", intern = TRUE)[1], error = function(e) ""),
-  ver))
+zen <- if (grepl("X", ZENODO_DOI)) "(pendiente de asignación)" else
+  paste0("\\url{https://doi.org/", ZENODO_DOI, "}")
+cat(sprintf("- **Repositorio en GitHub:** \\url{%s}\n- **Archivo en Zenodo (DOI):** %s\n", GITHUB, zen))
 ```
-

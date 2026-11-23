@@ -1,0 +1,169 @@
+anio,variable,poblacion,codigo,frecuencia,etiqueta
+2014,M15,Registros REC41 nacional,11,1270,Respondents home
+2014,M15,Registros REC41 nacional,12,34,Midwife's home
+2014,M15,Registros REC41 nacional,21,3995,Hospital MINSA
+2014,M15,Registros REC41 nacional,22,1286,Hospital ESSALUD
+2014,M15,Registros REC41 nacional,23,20,Hospital FF. AA. PNP
+2014,M15,Registros REC41 nacional,24,1678,Health center MINSA
+2014,M15,Registros REC41 nacional,25,449,Health post MINSA
+2014,M15,Registros REC41 nacional,26,33,Center/Post ESSALUD
+2014,M15,Registros REC41 nacional,27,7,Local Government
+2014,M15,Registros REC41 nacional,31,675,Private clinic
+2014,M15,Registros REC41 nacional,32,47,Private doctor
+2014,M15,Registros REC41 nacional,42,21,Church
+2014,M15,Registros REC41 nacional,96,95,OTHER
+2015,M15,Registros REC41 nacional,11,2116,Respondents home
+2015,M15,Registros REC41 nacional,12,40,Midwife's home
+2015,M15,Registros REC41 nacional,21,10421,Hospital MINSA
+2015,M15,Registros REC41 nacional,22,3775,Hospital ESSALUD
+2015,M15,Registros REC41 nacional,23,54,Hospital FF. AA. PNP
+2015,M15,Registros REC41 nacional,24,4157,Health center MINSA
+2015,M15,Registros REC41 nacional,25,820,Health post MINSA
+2015,M15,Registros REC41 nacional,26,101,Center/Post ESSALUD
+2015,M15,Registros REC41 nacional,27,17,Local Government
+2015,M15,Registros REC41 nacional,31,1884,Private clinic
+2015,M15,Registros REC41 nacional,32,139,Private doctor
+2015,M15,Registros REC41 nacional,41,9,Clinic/Post NGO
+2015,M15,Registros REC41 nacional,42,58,Church
+2015,M15,Registros REC41 nacional,96,226,OTHER
+2015,M15,Registros REC41 nacional,NA,4,NA
+2016,M15,Registros REC41 nacional,11,1732,Respondents home
+2016,M15,Registros REC41 nacional,12,23,Midwife's home
+2016,M15,Registros REC41 nacional,21,9453,Hospital MINSA
+2016,M15,Registros REC41 nacional,22,3488,Hospital ESSALUD
+2016,M15,Registros REC41 nacional,23,38,Hospital FF. AA. PNP
+2016,M15,Registros REC41 nacional,24,3712,Health center MINSA
+2016,M15,Registros REC41 nacional,25,601,Health post MINSA
+2016,M15,Registros REC41 nacional,26,143,Center/Post ESSALUD
+2016,M15,Registros REC41 nacional,27,10,Local Government
+2016,M15,Registros REC41 nacional,31,1635,Private clinic
+2016,M15,Registros REC41 nacional,32,129,Private doctor
+2016,M15,Registros REC41 nacional,41,5,Clinic/Post NGO
+2016,M15,Registros REC41 nacional,42,48,Church
+2016,M15,Registros REC41 nacional,96,158,OTHER
+2017,M15,Registros REC41 nacional,11,1440,Respondents home
+2017,M15,Registros REC41 nacional,12,31,Midwife's home
+2017,M15,Registros REC41 nacional,21,9876,Hospital MINSA
+2017,M15,Registros REC41 nacional,22,3604,Hospital ESSALUD
+2017,M15,Registros REC41 nacional,23,41,Hospital FF. AA. PNP
+2017,M15,Registros REC41 nacional,24,3818,Health center MINSA
+2017,M15,Registros REC41 nacional,25,512,Health post MINSA
+2017,M15,Registros REC41 nacional,26,75,Center/Post ESSALUD
+2017,M15,Registros REC41 nacional,27,14,Local Government
+2017,M15,Registros REC41 nacional,31,1782,Private clinic
+2017,M15,Registros REC41 nacional,32,80,Private doctor
+2017,M15,Registros REC41 nacional,41,5,Clinic/Post NGO
+2017,M15,Registros REC41 nacional,42,41,Church
+2017,M15,Registros REC41 nacional,96,209,OTHER
+2018,M15,Registros REC41 nacional,11,1499,Su domicilio
+2018,M15,Registros REC41 nacional,12,43,Domicilio de partera
+2018,M15,Registros REC41 nacional,21,10529,Hospital MINSA
+2018,M15,Registros REC41 nacional,22,3950,Hospital ESSALUD
+2018,M15,Registros REC41 nacional,23,46,Hospital FF. AA. PNP
+2018,M15,Registros REC41 nacional,24,3878,Centro de salud MINSA
+2018,M15,Registros REC41 nacional,25,648,Posta de salud MINSA
+2018,M15,Registros REC41 nacional,26,85,"Centro, posta ESSALUD"
+2018,M15,Registros REC41 nacional,27,13,Local Municipal
+2018,M15,Registros REC41 nacional,31,1977,Clínica privada
+2018,M15,Registros REC41 nacional,32,99,Consultorio Médico privado
+2018,M15,Registros REC41 nacional,41,3, Clínica/Posta de ONG
+2018,M15,Registros REC41 nacional,42,60,Iglesia
+2018,M15,Registros REC41 nacional,96,259,Otro
+2019,M15,Registros REC41 nacional,11,1181,Su domicilio
+2019,M15,Registros REC41 nacional,12,14,Casa de la partera
+2019,M15,Registros REC41 nacional,21,10212,Hospital MINSA
+2019,M15,Registros REC41 nacional,22,3578,Hospital ESSALUD
+2019,M15,Registros REC41 nacional,23,52,Hospital FF. AA. PNP
+2019,M15,Registros REC41 nacional,24,3406,Centro de salud MINSA
+2019,M15,Registros REC41 nacional,25,509,Puesto de salud MINSA
+2019,M15,Registros REC41 nacional,26,48,Center/Posta ESSALUD
+2019,M15,Registros REC41 nacional,27,7,Hospital/otro de la Municipalidad
+2019,M15,Registros REC41 nacional,31,1708,Clínica privada
+2019,M15,Registros REC41 nacional,32,73,Consultorio médico privado
+2019,M15,Registros REC41 nacional,41,3,Clínica/Posta ONG
+2019,M15,Registros REC41 nacional,42,39,Hospital/Otro de la Iglesia
+2019,M15,Registros REC41 nacional,96,324,Otro
+2020,M15,Registros REC41 nacional,11,840,Su domicilio
+2020,M15,Registros REC41 nacional,12,17,Casa de la partera
+2020,M15,Registros REC41 nacional,21,8562,Hospital MINSA
+2020,M15,Registros REC41 nacional,22,2865,Hospital ESSALUD
+2020,M15,Registros REC41 nacional,23,25,Hospital FF. AA. PNP
+2020,M15,Registros REC41 nacional,24,3006,Centro de salud MINSA
+2020,M15,Registros REC41 nacional,25,364,Puesto de salud MINSA
+2020,M15,Registros REC41 nacional,26,60,Center/Posta ESSALUD
+2020,M15,Registros REC41 nacional,27,9,Hospital/otro de la Municipalidad
+2020,M15,Registros REC41 nacional,31,1188,Clínica privada
+2020,M15,Registros REC41 nacional,32,66,Consultorio médico privado
+2020,M15,Registros REC41 nacional,41,1,Clínica/Posta ONG
+2020,M15,Registros REC41 nacional,42,51,Hospital/Otro de la Iglesia
+2020,M15,Registros REC41 nacional,96,188,Otro
+2021,M15,Registros REC41 nacional,11,1240,Su domicilio
+2021,M15,Registros REC41 nacional,12,23,Casa de la partera
+2021,M15,Registros REC41 nacional,21,10715,Hospital MINSA
+2021,M15,Registros REC41 nacional,22,3383,Hospital ESSALUD
+2021,M15,Registros REC41 nacional,23,35,Hospital FF. AA. PNP
+2021,M15,Registros REC41 nacional,24,3975,Centro de salud MINSA
+2021,M15,Registros REC41 nacional,25,398,Puesto de salud MINSA
+2021,M15,Registros REC41 nacional,26,54,Center/Posta ESSALUD
+2021,M15,Registros REC41 nacional,27,4,Hospital/otro de la Municipalidad
+2021,M15,Registros REC41 nacional,31,1841,Clínica privada
+2021,M15,Registros REC41 nacional,32,58,Consultorio médico privado
+2021,M15,Registros REC41 nacional,41,7,Clínica/Posta ONG
+2021,M15,Registros REC41 nacional,42,52,Hospital/Otro de la Iglesia
+2021,M15,Registros REC41 nacional,96,315,Otro
+2022,M15,Registros REC41 nacional,11,1269,Su domicilio
+2022,M15,Registros REC41 nacional,12,20,Casa de la partera
+2022,M15,Registros REC41 nacional,21,10634,Hospital MINSA
+2022,M15,Registros REC41 nacional,22,3186,Hospital ESSALUD
+2022,M15,Registros REC41 nacional,23,37,Hospital FF. AA. PNP
+2022,M15,Registros REC41 nacional,24,3948,Centro de salud MINSA
+2022,M15,Registros REC41 nacional,25,357,Puesto de salud MINSA
+2022,M15,Registros REC41 nacional,26,44,Center/Posta ESSALUD
+2022,M15,Registros REC41 nacional,27,11,Hospital/otro de la Municipalidad
+2022,M15,Registros REC41 nacional,31,1691,Clínica privada
+2022,M15,Registros REC41 nacional,32,52,Consultorio médico privado
+2022,M15,Registros REC41 nacional,41,8,Clínica/Posta ONG
+2022,M15,Registros REC41 nacional,42,51,Hospital/Otro de la Iglesia
+2022,M15,Registros REC41 nacional,96,303,Otro
+2023,M15,Registros REC41 nacional,11,1151,Su domicilio
+2023,M15,Registros REC41 nacional,12,19,Casa de la partera
+2023,M15,Registros REC41 nacional,21,10247,Hospital MINSA
+2023,M15,Registros REC41 nacional,22,3084,Hospital ESSALUD
+2023,M15,Registros REC41 nacional,23,32,Hospital FF. AA. PNP
+2023,M15,Registros REC41 nacional,24,3869,Centro de salud MINSA
+2023,M15,Registros REC41 nacional,25,348,Puesto de salud MINSA
+2023,M15,Registros REC41 nacional,26,43,Center/Posta ESSALUD
+2023,M15,Registros REC41 nacional,27,5,Hospital/otro de la Municipalidad
+2023,M15,Registros REC41 nacional,31,1689,Clínica privada
+2023,M15,Registros REC41 nacional,32,41,Consultorio médico privado
+2023,M15,Registros REC41 nacional,41,10,Clínica/Posta ONG
+2023,M15,Registros REC41 nacional,42,41,Hospital/Otro de la Iglesia
+2023,M15,Registros REC41 nacional,96,261,Otro
+2024,M15,Registros REC41 nacional,11,1077,Su domicilio
+2024,M15,Registros REC41 nacional,12,19,Casa de la partera
+2024,M15,Registros REC41 nacional,21,9861,Hospital MINSA
+2024,M15,Registros REC41 nacional,22,2885,Hospital ESSALUD
+2024,M15,Registros REC41 nacional,23,25,Hospital FF. AA. PNP
+2024,M15,Registros REC41 nacional,24,3566,Centro de salud MINSA
+2024,M15,Registros REC41 nacional,25,331,Puesto de salud MINSA
+2024,M15,Registros REC41 nacional,26,32,Center/Posta ESSALUD
+2024,M15,Registros REC41 nacional,27,9,Hospital/otro de la Municipalidad
+2024,M15,Registros REC41 nacional,31,1658,Clínica privada
+2024,M15,Registros REC41 nacional,32,47,Consultorio médico privado
+2024,M15,Registros REC41 nacional,41,3,Clínica/Posta ONG
+2024,M15,Registros REC41 nacional,42,32,Hospital/Otro de la Iglesia
+2024,M15,Registros REC41 nacional,96,206,Otro
+2025,M15,Registros REC41 nacional,11,864,Su domicilio
+2025,M15,Registros REC41 nacional,12,14,Casa de la partera
+2025,M15,Registros REC41 nacional,21,9652,Hospital MINSA
+2025,M15,Registros REC41 nacional,22,2785,Hospital ESSALUD
+2025,M15,Registros REC41 nacional,23,40,Hospital FF. AA. PNP
+2025,M15,Registros REC41 nacional,24,3385,Centro de salud MINSA
+2025,M15,Registros REC41 nacional,25,324,Puesto de salud MINSA
+2025,M15,Registros REC41 nacional,26,33,Center/Posta ESSALUD
+2025,M15,Registros REC41 nacional,27,1,Hospital/otro de la Municipalidad
+2025,M15,Registros REC41 nacional,31,1500,Clínica privada
+2025,M15,Registros REC41 nacional,32,32,Consultorio médico privado
+2025,M15,Registros REC41 nacional,41,2,Clínica/Posta ONG
+2025,M15,Registros REC41 nacional,42,18,Hospital/Otro de la Iglesia
+2025,M15,Registros REC41 nacional,96,191,Otro

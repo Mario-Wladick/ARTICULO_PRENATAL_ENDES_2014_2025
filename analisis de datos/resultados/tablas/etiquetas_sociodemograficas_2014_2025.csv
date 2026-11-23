@@ -1,0 +1,136 @@
+anio,variable,codigo,etiqueta
+2014,V025,1,Urban
+2014,V025,2,Rural
+2014,V106,0,No education
+2014,V106,1,Primary
+2014,V106,2,Secondary
+2014,V106,3,Higher
+2014,V190,1,Poorest
+2014,V190,2,Poorer
+2014,V190,3,Middle
+2014,V190,4,Richer
+2014,V190,5,Richest
+2015,V025,1,Urban
+2015,V025,2,Rural
+2015,V106,0,No education
+2015,V106,1,Primary
+2015,V106,2,Secondary
+2015,V106,3,Higher
+2015,V190,1,Poorest
+2015,V190,2,Poorer
+2015,V190,3,Middle
+2015,V190,4,Richer
+2015,V190,5,Richest
+2016,V025,1,Urban
+2016,V025,2,Rural
+2016,V106,0,No education
+2016,V106,1,Primary
+2016,V106,2,Secondary
+2016,V106,3,Higher
+2016,V190,1,Poorest
+2016,V190,2,Poorer
+2016,V190,3,Middle
+2016,V190,4,Richer
+2016,V190,5,Richest
+2016,V022,1,SEDE CAPITAL
+2016,V022,2,RESTO URBANO
+2016,V022,3,RURAL
+2017,V025,1,Urban
+2017,V025,2,Rural
+2017,V106,0,No education
+2017,V106,1,Primary
+2017,V106,2,Secondary
+2017,V106,3,Higher
+2017,V190,1,Poorest
+2017,V190,2,Poorer
+2017,V190,3,Middle
+2017,V190,4,Richer
+2017,V190,5,Richest
+2018,V025,1,Urbana
+2018,V025,2,Rural
+2018,V106,0,Sin educación
+2018,V106,1,Primaria
+2018,V106,2,Secundaria
+2018,V106,3,Superior
+2018,V190,1,Muy pobre
+2018,V190,2,Pobre
+2018,V190,3,Medio
+2018,V190,4,Rico
+2018,V190,5,Muy rico
+2019,V025,1,Urbano
+2019,V025,2,Rural
+2019,V106,0,Sin educación
+2019,V106,1,Primario
+2019,V106,2,Secundario
+2019,V106,3,Mayor
+2019,V190,1,El más pobre
+2019,V190,2,Pobrer
+2019,V190,3,Medio
+2019,V190,4,Rico
+2019,V190,5,Más rico
+2020,V025,1,Urbano
+2020,V025,2,Rural
+2020,V106,0,Sin educación
+2020,V106,1,Primario
+2020,V106,2,Secundario
+2020,V106,3,Mayor
+2020,V190,1,El más pobre
+2020,V190,2,Pobrer
+2020,V190,3,Medio
+2020,V190,4,Rico
+2020,V190,5,Más rico
+2021,V025,1,Urbano
+2021,V025,2,Rural
+2021,V106,0,Sin educación
+2021,V106,1,Primario
+2021,V106,2,Secundario
+2021,V106,3,Mayor
+2021,V190,1,El más pobre
+2021,V190,2,Pobrer
+2021,V190,3,Medio
+2021,V190,4,Rico
+2021,V190,5,Más rico
+2022,V025,1,Urbano
+2022,V025,2,Rural
+2022,V106,0,Sin educación
+2022,V106,1,Primario
+2022,V106,2,Secundario
+2022,V106,3,Mayor
+2022,V190,1,El más pobre
+2022,V190,2,Pobrer
+2022,V190,3,Medio
+2022,V190,4,Rico
+2022,V190,5,Más rico
+2023,V025,1,Urbano
+2023,V025,2,Rural
+2023,V106,0,Sin educación
+2023,V106,1,Primario
+2023,V106,2,Secundario
+2023,V106,3,Superior
+2023,V190,1,El más pobre
+2023,V190,2,Pobrer
+2023,V190,3,Medio
+2023,V190,4,Rico
+2023,V190,5,Más rico
+2024,V025,1,Urbano
+2024,V025,2,Rural
+2024,V106,0,Sin educación
+2024,V106,1,Primario
+2024,V106,2,Secundario
+2024,V106,3,Superior
+2024,V190,1,El más pobre
+2024,V190,2,Pobrer
+2024,V190,3,Medio
+2024,V190,4,Rico
+2024,V190,5,Más rico
+2025,V025,1,Urbano
+2025,V025,2,Rural
+2025,V106,0,Sin educación
+2025,V106,1,Primario
+2025,V106,2,Secundario
+2025,V106,3,Superior
+2025,V190,1,El más pobre
+2025,V190,2,Pobrer
+2025,V190,3,Medio
+2025,V190,4,Rico
+2025,V190,5,Más rico

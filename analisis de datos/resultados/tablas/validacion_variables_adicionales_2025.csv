@@ -1,0 +1,57 @@
+base,variable,etiqueta_variable,codigo,categoria,n
+RE223132,V212,Edad del entrevistado al primer nacimiento,11,11,4
+RE223132,V212,Edad del entrevistado al primer nacimiento,12,12,21
+RE223132,V212,Edad del entrevistado al primer nacimiento,13,13,127
+RE223132,V212,Edad del entrevistado al primer nacimiento,14,14,386
+RE223132,V212,Edad del entrevistado al primer nacimiento,15,15,991
+RE223132,V212,Edad del entrevistado al primer nacimiento,16,16,1824
+RE223132,V212,Edad del entrevistado al primer nacimiento,17,17,2307
+RE223132,V212,Edad del entrevistado al primer nacimiento,18,18,2587
+RE223132,V212,Edad del entrevistado al primer nacimiento,19,19,2608
+RE223132,V212,Edad del entrevistado al primer nacimiento,20,20,2212
+RE223132,V212,Edad del entrevistado al primer nacimiento,21,21,1789
+RE223132,V212,Edad del entrevistado al primer nacimiento,22,22,1476
+RE223132,V212,Edad del entrevistado al primer nacimiento,23,23,1110
+RE223132,V212,Edad del entrevistado al primer nacimiento,24,24,1001
+RE223132,V212,Edad del entrevistado al primer nacimiento,25,25,876
+RE223132,V212,Edad del entrevistado al primer nacimiento,26,26,707
+RE223132,V212,Edad del entrevistado al primer nacimiento,27,27,650
+RE223132,V212,Edad del entrevistado al primer nacimiento,28,28,571
+RE223132,V212,Edad del entrevistado al primer nacimiento,29,29,467
+RE223132,V212,Edad del entrevistado al primer nacimiento,30,30,391
+RE223132,V212,Edad del entrevistado al primer nacimiento,31,31,275
+RE223132,V212,Edad del entrevistado al primer nacimiento,32,32,250
+RE223132,V212,Edad del entrevistado al primer nacimiento,33,33,197
+RE223132,V212,Edad del entrevistado al primer nacimiento,34,34,139
+RE223132,V212,Edad del entrevistado al primer nacimiento,35,35,104
+RE223132,V212,Edad del entrevistado al primer nacimiento,36,36,87
+RE223132,V212,Edad del entrevistado al primer nacimiento,37,37,76
+RE223132,V212,Edad del entrevistado al primer nacimiento,38,38,46
+RE223132,V212,Edad del entrevistado al primer nacimiento,39,39,43
+RE223132,V212,Edad del entrevistado al primer nacimiento,40,40,17
+RE223132,V212,Edad del entrevistado al primer nacimiento,41,41,16
+RE223132,V212,Edad del entrevistado al primer nacimiento,42,42,11
+RE223132,V212,Edad del entrevistado al primer nacimiento,43,43,4
+RE223132,V212,Edad del entrevistado al primer nacimiento,44,44,7
+RE223132,V212,Edad del entrevistado al primer nacimiento,45,45,2
+RE223132,V212,Edad del entrevistado al primer nacimiento,NA,NA,9321
+REC91,S229B1,Afiliada a seguro de salud (seguro integral),NA,NA,36260
+REC41,M2A,La chequeó en su control prenatal: Médico,0,No,12680
+REC41,M2A,La chequeó en su control prenatal: Médico,1,Sí,4253
+REC41,M2A,La chequeó en su control prenatal: Médico,NA,NA,1908
+REC41,M2B,La chequeó en su control prenatal: Enfermera,0,No,15631
+REC41,M2B,La chequeó en su control prenatal: Enfermera,1,Sí,1302
+REC41,M2B,La chequeó en su control prenatal: Enfermera,NA,NA,1908
+REC41,M3B,La atendió en el parto: Enfermera,0,No,4517
+REC41,M3B,La atendió en el parto: Enfermera,1,Sí,14324
+REC41,M3C,La atendió en el parto: Obstetra,0,No,4564
+REC41,M3C,La atendió en el parto: Obstetra,1,Sí,14277
+RECH1,HV115,¿Cúal es su estado civil o conyugal?,0,Soltero(a),26114
+RECH1,HV115,¿Cúal es su estado civil o conyugal?,1,Casado(a),18850
+RECH1,HV115,¿Cúal es su estado civil o conyugal?,2,Conviviente,34758
+RECH1,HV115,¿Cúal es su estado civil o conyugal?,3,Viudo(a),3642
+RECH1,HV115,¿Cúal es su estado civil o conyugal?,4,Divorciado(a),397
+RECH1,HV115,¿Cúal es su estado civil o conyugal?,5,Separado(a),8241
+RECH1,HV115,¿Cúal es su estado civil o conyugal?,NA,NA,39927
+RECH4,SH11C,Seguro de salud: Integral,0,No,37205
+RECH4,SH11C,Seguro de salud: Integral,1,Si,94724

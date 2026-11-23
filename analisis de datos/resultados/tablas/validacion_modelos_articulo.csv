@@ -1,0 +1,4 @@
+indicador,n_completos,grados_libertad_residuales,convergencia
+control_6mas,5681,1054,TRUE
+control_temprano,5683,1054,TRUE
+parto_institucional,5645,1052,TRUE

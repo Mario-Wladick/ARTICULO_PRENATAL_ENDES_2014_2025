@@ -1,0 +1,318 @@
+base,variable,etiqueta
+CSALUD01_2025,QS203C,Edad que empezó a fumar diariamente
+CSALUD01_2025,QS203U,Edad que empezó a fumar diariamente - Unidad
+CSALUD01_2025,QS207C,Cantidad  Edad primera vez que tomo bebidas alcohólicas
+CSALUD01_2025,QS207U,Unidad Edad primera vez que tomo bebidas alcohólicas
+CSALUD01_2025,QS24,Asistió a la escuela
+CSALUD01_2025,QS25AA,¿Cuál es el idioma o lengua materna que aprendió hablar en su niñez
+CSALUD01_2025,QS25C3,"Alguna dificultad para hablar o comunicarse, aún usando la lengua de señas u otro"
+CSALUD01_2025,QS26,Tiene seguro de salud
+CSALUD01_2025,QS27,Institucion a que corresponde el seguro que tiene
+CSALUD01_2025,QS28,Conoce o ha oído hablar de la tuberculosis o TBC
+CSALUD01_2025,QS29B,Ha oído hablar de la enfermedad llamada SIDA
+CSALUD01_2025,QS306,En los últimos 12 meses ha tenido dificultad para ver o reconocer a una distancia aproximada de 6 metros
+CSALUD01_2025,QS404C,"Cree que el análisis de sangre para el dosaje del Antígeno Prostático Específico (PSA), permite la detección temprana del cáncer de próstata"
+CSALUD01_2025,QS418A,Alguna vez en su vida le han realizado el análisis de sangre para el dosaje de Antígeno Prostático Específico (PSA)
+CSALUD01_2025,QS419A,Hace cuánto tiempo realizaron la última vez el análisis de sangre para el dosaje de Antígeno Prostático Específico (PSA) - Unidad
+CSALUD01_2025,QS419A_A,Hace cuánto tiempo realizaron la última vez el análisis de sangre para el dosaje de Antígeno Prostático Específico (PSA) - Cantidad
+CSALUD01_2025,QS503,"Conoce o ha oído hablar de una enfermedad llamada tuberculosis, TB o TBC"
+CSALUD01_2025,QS505A,La tuberculosis se contagia cuando la persona enferma tose o estornuda cerca a otra persona
+CSALUD01_2025,QS506,Se puede curar la tuberculosis
+CSALUD01_2025,QS506B,Si un miembro de su familia tuviera tuberculosis¿Usted guardaría en secreto su enfermedad?
+CSALUD01_2025,QS601B,Ha oído hablar de una enfermedad llamada SIDA
+CSALUD01_2025,QS700F,Últimos 14 días ha sentido molestias o problemas como: Poner atencion
+CSALUD01_2025,QS702,"Estas molestias o problema, cuanto le han dificultado para realizar su trabajo, sus actividades en la casa o llevarse bien con otras personas, mucho, poco o nada"
+CSALUD01_2025,QS704F,Últimos 12 meses: ha tenido dificultad en poner atención o concentrarse en las cosas que hace
+CSALUD01_2025,QS704I,Últimos 12 meses: se ha sentido mal de sí misma(o) o ha sentido que es una(un) fracasada(o) o que se ha fallado a si misma(o) o a su familia
+CSALUD01_2025,QS706,"Las molestias o problema cuánto le han dificultado para realizar su trabajo, sus actividades en la casa o llevarse bien con otras personas"
+CSALUD01_2025,QS708_B,¿Dónde recibió tratamiento? - ESSALUD
+CSALUD01_2025,QS708_F,¿Dónde recibió tratamiento? -  Policlínico/ Posta de ESSALUD/ UBAP
+CSALUD01_2025,QS709,Últimos 12 meses ha estado casada(o) o conviviendo
+CSALUD01_2025,QS713,"Últimos 12 meses hubo momentos en que la bebida o la resaca le dificultaron realizar sus actividades o sus responsabilidades en los estudios, en el trabajo o en la casa"
+CSALUD01_2025,QS714,"Últimos 12 meses hubo momentos en que el consumo de alcohol le provocó discusiones u otros problemas con su familia, amigos, vecinos o compañeros de trabajo"
+CSALUD01_2025,QS719,Últimos 12 meses hubo momentos en que tuvo tantas ganas de beber que no pudo resistirse a tomar una copa o le resultó difícil pensar en otra cosa
+CSALUD01_2025,QS731_B,¿Dónde recibió tratamiento? - ESSALUD
+CSALUD01_2025,QS731_F,¿Dónde recibió tratamiento? -  Policlínico/ Posta de ESSALUD/ UBAP
+CSALUD01_2025,QS900,Personas de 15 años a màs de edad - Peso en kilogramos
+CSALUD01_2025,QS901,Personas de 15 años a màs de edad - Talla en centímetros
+CSALUD01_2025,QS903S,Primera medición presión arterial sistólica
+CSALUD01_2025,QS905S,Segunda medición presión arterial sistólica
+CSALUD08_2025,QS802D,Edad niño/niña
+CSALUD08_2025,QS833,"En los últimos 30 días, la niña(o) asistió a la escuela o colegio"
+PS_QALIWARMA_2025,PS109_1R,Recibió desayuno y/o almuerzo del programa nacional de alimentación escolar QALIWARMA
+Programas Sociales x Hogar_2025,QH100B,Alguna gestante y/o niño o niño de 0 a 36 meses de edad reciben en su hogar visitas de la facilitadora del Programa Nacional CUNA MÁS?:
+Programas Sociales x Hogar_2025,QH93,Algun miembro es beneficiario de TRABAJA PERÚ?
+RE223132_2025,V202,¿Cuántos hijos viven con usted?
+RE223132_2025,V203,¿Cuántas hijas viven con usted?
+RE223132_2025,V204,¿Cuántos hijos no están viviendo con usted?
+RE223132_2025,V205,¿Cuántas hijas no están viviendo con usted?
+RE223132_2025,V206,¿Cuántos hijos han muerto?
+RE223132_2025,V207,¿Cuántas hijas han muerto?
+RE223132_2025,V211,"Fecha del primer nacimiento, Codificación centenaria de meses (CMC)"
+RE223132_2025,V212,Edad del entrevistado al primer nacimiento
+RE223132_2025,V219,Número total de hijos vivos incluido el embarazo actual
+RE223132_2025,V220,"Número total de hijos vivos incluido el embarazo actual (6, si es mayor de 6)"
+RE223132_2025,V221,Intervalo entre la primera unión y primer nacimiento en meses
+RE223132_2025,V224,Total de hijas(os) nacidos vivos - Entrada historial de nacimiento
+RE223132_2025,V235,Índice de la historia de nacimiento de último hijo nacido
+RE223132_2025,V237,Otros nacimientos vivos en el intervalo entre el último parto y la fecha de la entrevista
+RE223132_2025,V310,Cuantas hijas e hijos tenía cuando empezó a usar el primer método para no quedar embarazada
+RE223132_2025,V311,Cuantas hijas e hijos tenía cuando empezó a usar el primer método (Grupos)
+RE223132_2025,V320,Edad en la esterilización
+RE223132_2025,V321,Duración conyugal en la esterilización
+RE223132_2025,V393,La ha visitado un trabajador de salud para hablarle sobre planificación Familiar en los últimos 12 meses
+RE223132_2025,V3A01,Antes de la operación de esterilización les dijeron que no podrían tener más hijas(os)
+RE223132_2025,V3A03,Fue informada por un trabajador o promotor de salud/farmacéutico sobre los efectos secundarios que podría tener con ese método
+RE223132_2025,V3A06,Fue informada por un trabajador o promotor de salud acerca de otros métodos de planificación familiar que usted podría usar
+RE223132_2025,V3A08F,Porque no usa un método: Amenorrea postparto
+REC0111_2025,AWFACTE,Factor todas las mujeres - educación
+REC0111_2025,QD333_3,"Alguna dificultad o limitación permanente para hablar o comunicarse, aún usando la lengua de señas u otro"
+REC0111_2025,V012,Edad actual - entrevistada
+REC0111_2025,V013,Edad actual por grupos de 5 años
+REC0111_2025,V020,Muestra alguna vez casada
+REC0111_2025,V107,Año/grado de educación más alto aprobado
+REC0111_2025,V113,Fuente principal de abasteciemiento de agua potable que utilizan en su hogar para tomar o beber
+REC0111_2025,V115,Tiempo para llegar a la fuente de agua
+REC0111_2025,V133,Educación en años simples
+REC0111_2025,V137,Número de niños de 6 años de edad
+REC0111_2025,V138,Número de mujeres de 15 a 49 años de edad elegibles en el hogar
+REC0111_2025,V152,Edad del jefe del hogar
+REC21_2025,B0,El nacimiento fue parto ùnico o mùltiple
+REC21_2025,B13,Bandera para la edad en la muerte
+REC21_2025,B6,Edad a la muerte
+REC21_2025,B7,Edad a la muerte (meses imputados)
+REC21_2025,B8,Edad actual del niño
+REC21_2025,BEDAD,"Meses exactos desde nacimiento hasta la fecha apertura, (para los difuntos no coincide con edad al morir)"
+REC21_2025,QD333_3,"Alguna dificultad o limitaciòn permanente para hablar o comunicarse, aún usando la lengua de señas u otro"
+REC41_2025,M1,Durante el embarazo cuantas dosis contra el tétano le aplicaron
+REC41_2025,M15,Lugar del parto
+REC41_2025,M17,Parto por cesárea
+REC41_2025,M1A,Antes del embarazo cuantas dosis de la vacuna contra el  tétano recibió
+REC41_2025,M2F,La chequeó en su control prenatal: Asistente de parto entrenado
+REC41_2025,M3A,La atendió en el parto: Médico
+REC41_2025,M3B,La atendió en el parto: Enfermera
+REC41_2025,M3C,La atendió en el parto: Obstetra
+REC41_2025,M3D,La atendió en el parto: Técnico en enfermería
+REC41_2025,M3E,La atendió en el parto: Promotor de salud
+REC41_2025,M3F,La atendió en el parto: Asistente de parto entrenado
+REC41_2025,M3G,La atendió en el parto: Comadrona/partera
+REC41_2025,M3H,La atendió en el parto: Familiar
+REC41_2025,M3I,La atendió en el parto: CS otra persona
+REC41_2025,M3J,La atendió en el parto: CS otra persona
+REC41_2025,M3K,La atendió en el parto: Otro
+REC41_2025,M3L,La atendió en el parto: CS otro
+REC41_2025,M3M,La atendió en el parto: CS otro
+REC41_2025,M3N,La atendió en el parto: Nadie
+REC41_2025,M51A,Tiempo en que tuvo control después del parto
+REC41_2025,M54,Recibió una dosis de vitamina A en los primeros 2 meses después del parto
+REC41_2025,M55A,"Durante los primeros 3 días despues del parto, le dieron de tomar: leche, diferente a la leche materna"
+REC41_2025,M55B,"Durante los primeros 3 días despues del parto, le dieron de tomar: agua sola"
+REC41_2025,M55C,"Durante los primeros 3 días despues del parto, le dieron de tomar: dextrosa glucosada"
+REC41_2025,M55D,"Durante los primeros 3 días despues del parto, le dieron de tomar: agua"
+REC41_2025,M55E,"Durante los primeros 3 días despues del parto, le dieron de tomar: agua azucarada"
+REC41_2025,M55F,"Durante los primeros 3 días despues del parto, le dieron de tomar: jugo de fruta"
+REC41_2025,M55G,"Durante los primeros 3 días despues del parto, le dieron de tomar: fórmula para bebes"
+REC41_2025,M55H,"Durante los primeros 3 días despues del parto, le dieron de tomar: té/infusiones"
+REC41_2025,M55I,"Durante los primeros 3 días despues del parto, le dieron de tomar: miel"
+REC41_2025,M55J,"Durante los primeros 3 días despues del parto, le dieron de tomar: país específico"
+REC41_2025,M55K,"Durante los primeros 3 días despues del parto, le dieron de tomar: país específico"
+REC41_2025,M55L,"Durante los primeros 3 días despues del parto, le dieron de tomar: país específico"
+REC41_2025,M55M,"Durante los primeros 3 días despues del parto, le dieron de tomar: país específico"
+REC41_2025,M55X,"Durante los primeros 3 días despues del parto, le dieron de tomar: otro"
+REC41_2025,M55Z,"Durante los primeros 3 días despues del parto, le dieron de tomar: nada"
+REC41_2025,M57E,Atención prenatal: Hospital MINSA
+REC41_2025,M57F,Atención prenatal: Centro de salud MINSA
+REC41_2025,M57G,Atención prenatal: Posta médica MINSA
+REC41_2025,M57H,Atención prenatal: Clínica móvil
+REC41_2025,M57I,Atención prenatal: Hospital ESSALUD
+REC41_2025,M57J,Atención prenatal: Hospital FF.AA. y PNP
+REC41_2025,M57K,Atención prenatal: Policlínico/centro/posta ESSALUD
+REC41_2025,M57L,Atención prenatal: Hospital/Otro de la Municipalidad
+REC41_2025,M57M,Atención prenatal: Hospital privado/clínica
+REC41_2025,M57N,Atención prenatal: Clínica móvil particular
+REC41_2025,M57O,Atención prenatal: Médico particular
+REC41_2025,M57P,Atención prenatal: Clínica/Posta de ONG
+REC41_2025,M57Q,Atención prenatal: Hospital/Otro de la Iglesia
+REC41_2025,M57R,Atención prenatal: Otros privados
+REC41_2025,M57S,Atención prenatal: Casa de partera
+REC41_2025,M57T,Atención prenatal: Otro CS
+REC41_2025,M57U,Atención prenatal: Otro CS
+REC41_2025,M57V,Atención prenatal: Otro CS
+REC41_2025,M57X,Atención prenatal: Otro
+REC41_2025,M61,Tiempo que permaneció en el lugar del parto
+REC41_2025,M63,Cuánto tiempo antes del parto se realizó un control de salud
+REC41_2025,M65D,Razón no fue a centro de salud: No confía en atención
+REC41_2025,M66,Después del parto tuvo algún chequeo o revisiòn médica
+REC41_2025,M67,Cuánto tiempo después del parto se realizó su primer chequeo o revisiòn médica
+REC41_2025,M68,Quién le realizó su chequeo o revisión médica después del parto
+REC41_2025,M71,Cuánto tiempo después del parto se realizó el control postnatal
+REC91_2025,S1023AG,Para buscar ayuda acudió a: Establecimiento de salud
+REC91_2025,S1028A,Reprende o castiga a sus hijas o hijos en el hogar: padre biológico
+REC91_2025,S1028B,Reprende o castiga a sus hijas o hijos en el hogar: madre biológica
+REC91_2025,S1028X,Reprende o castiga a sus hijas o hijos en el hogar: otros
+REC91_2025,S1030AA,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): palmadas
+REC91_2025,S1030AB,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): reprimenda verbal
+REC91_2025,S1030AC,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): prohibición de algo que les gusta
+REC91_2025,S1030AD,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): privarlos de alimentos
+REC91_2025,S1030AE,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): golpes y castigos físicos
+REC91_2025,S1030AF,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): dejándolos cerrados
+REC91_2025,S1030AG,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): ignorándolos
+REC91_2025,S1030AH,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): poniéndoles más trabajo
+REC91_2025,S1030AI,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): dejándolos fuera de la casa
+REC91_2025,S1030AJ,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): echándoles agua
+REC91_2025,S1030AK,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): quitándoles la ropa
+REC91_2025,S1030AL,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): quitándole las pertenencias
+REC91_2025,S1030AM,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): quitándoles el apoyo económico
+REC91_2025,S1030AX,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): otro
+REC91_2025,S1030BA,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): palmadas
+REC91_2025,S1030BB,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): reprimenda verbal
+REC91_2025,S1030BC,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): prohibición de algo que les gusta
+REC91_2025,S1030BD,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): privarlos de alimentos
+REC91_2025,S1030BE,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): golpes y castigos físicos
+REC91_2025,S1030BF,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): dejándolos cerrados
+REC91_2025,S1030BG,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): ignorándolos
+REC91_2025,S1030BH,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): poniéndoles más trabajo
+REC91_2025,S1030BI,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): dejándolos fuera de la casa
+REC91_2025,S1030BJ,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): echándoles el agua
+REC91_2025,S1030BK,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): quitándoles la ropa
+REC91_2025,S1030BL,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): quitándoles las pertenencias
+REC91_2025,S1030BM,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): quitándoles el apoyo económico
+REC91_2025,S1030BX,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): otro
+REC91_2025,S1030CA,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): palmadas
+REC91_2025,S1030CB,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): reprimenda verbal
+REC91_2025,S1030CC,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): prohibición de algo que les gusta
+REC91_2025,S1030CD,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): privarlos de alimentos
+REC91_2025,S1030CE,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): golpes y castigos físicos
+REC91_2025,S1030CF,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): dejándolos cerrados
+REC91_2025,S1030CG,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): ignorándolos
+REC91_2025,S1030CH,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): poniéndoles más trabajo ellos
+REC91_2025,S1030CI,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): dejándolos fuera de la casa
+REC91_2025,S1030CJ,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): echándoles agua
+REC91_2025,S1030CK,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): quitándoles la ropa
+REC91_2025,S1030CL,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): quitándoles las pertenencias
+REC91_2025,S1030CM,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): quitándoles el apoyo económico
+REC91_2025,S1030CX,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): otro
+REC91_2025,S1031,Algunos de sus hijos fueron castigado por su mal comportamiento
+REC91_2025,S1032I,De qué manera la castigan o castigaban a Ud. sus padres:  ponerle más trabajo
+REC91_2025,S1032K,De qué manera la castigan o castigaban a Ud. sus padres:  hundiéndola en agua
+REC91_2025,S1033,Cree Ud. que para la educación de los niños es necesario el castigo físico
+REC91_2025,S108G,El último grado de educación aprobado
+REC91_2025,S108Y,El último año de educación aprobado
+REC91_2025,S111,"Actualmente asiste a la escuela, colegio, instituto o universidad"
+REC91_2025,S112,Razón por que dejo de asistir a la escuela
+REC91_2025,S119,Idioma o lengua materna que aprendió hablar en su niñez
+REC91_2025,S119NA,Idioma materna su madre
+REC91_2025,S119NB,Lengua materna su padre
+REC91_2025,S229B,Control del embarazo en: hospital ESSALUD
+REC91_2025,S229B1,Afiliada a seguro de salud (seguro integral)
+REC91_2025,S229DA,Conocimiento de Seguro Integral por: TV
+REC91_2025,S229DB,Conocimiento del Seguro Integral por: radio
+REC91_2025,S229DC,Conocimiento del Seguro Integral por: periódicos
+REC91_2025,S229DD,Conocimiento del Seguro Integral por: personal de salud
+REC91_2025,S229DE,Se hizo consciente de Seguro Integral por: familia/amigos
+REC91_2025,S229DF,Conocimiento de Seguro Integral por: club de madres
+REC91_2025,S229DX,Conocimiento de Seguro Integral por: otros
+REC91_2025,S229F,Control del embarazo en: center/post ESSALUD
+REC91_2025,S325GA,Opinión de atención recibida: horas de trabajo
+REC91_2025,S325GB,Opinión de la atención recibida: métodos de planificación familiar
+REC91_2025,S325GC,Opinión de la atención recibida: método prescrito
+REC91_2025,S325GD,Opinión de la atención recibida: sala de espera cómoda
+REC91_2025,S325GE,Opinión de la atención recibida: limpieza de la sala de espera
+REC91_2025,S325GF,Opinión de la atención recibida: tiempo de espera
+REC91_2025,S325GG,Opinión de la atención recibida: tratamiento del personal administrativo
+REC91_2025,S325GH,Opinión de la atención recibida: tratamiento del personal de salud
+REC91_2025,S325GI,Opinión de la atención recibida: tratamiento del médico
+REC91_2025,S325GJ,Opinión de la atención recibida: explicaciones del médico
+REC91_2025,S325GK,Opinión de atención recibida: privacidad
+REC91_2025,S484,Afiliado o incorporado al programa Juntos
+REC91_2025,S489D,"Si un miembro de su familia tuviera tuberculosis, mantendría en secreto su enfermedad"
+REC91_2025,S490BA,Normalmente utiliza cuando se lava las manos: Agua de caño o grifo
+REC91_2025,S492A,Ayer el niño(a) durante el día o la noche bebió: Solo agua
+REC91_2025,S493F,"Ayer el niño(a) durante el día o la noche comió: mango, papaya, aguaje"
+REC91_2025,S618F,Los últimos 12 meses comentado sobre planificación familiar con: hija
+REC91_2025,S618G,Los últimos 12 meses comentado sobre planificación familiar con: hijo
+REC91_2025,S806AX,En que etapa puede ser transmitido el VIH de la madre al hijo: otro
+REC91_2025,S806AZ,En que etapa puede ser transmitido el VIHI de la madre al hijo: No sabe
+REC91_2025,S807,Si una niña/niño tiene infección por el virus que causa el SIDA: se debe permitir asistir a la escuela o colegio
+REC91_2025,S810,Si un médico tiene la infecciòn por el virus que causa el SIDA: se le debe permitir continuar con su trabajo
+REC91_2025,S816AK,Síntomas de ETS en mujeres: infertilidad/no poder tener hijos
+REC94_2025,QI422A_A,Durante el embarazo algún personal de salud le realizó una prueba o análisis para descartar anemia
+REC94_2025,S411CA,Cuantos meses de embarazo tenía cuando se realizó el primer análisis de sangre
+REC94_2025,S413,Durante el embarazo estaba afiliada al SIS
+REC94_2025,S425A,Entrevistada era miembro del seguro de salud materna
+REC94_2025,S426FA,Cuánto tiempo transcurrió hasta llegar al establecimiento para dar a luz
+REC94_2025,S426GA,Complicaciones de parto: Parto prolongado
+REC94_2025,S426GB,Complicaciones de parto: Sangrado excesivo
+REC94_2025,S426GC,Complicaciones de parto: Fiebre con sangrado vaginal
+REC94_2025,S426GD,Complicaciones de parto: Convulsiones
+REC94_2025,S426GE,Complicaciones de parto: Otras
+REC94_2025,S427DA,Complicaciones después del parto: sangrado intenso
+REC94_2025,S427DB,Complicaciones después del parto: pérdida de conciencia
+REC94_2025,S427DC,"Complicaciones después del parto: fiebre alta, escalofríos"
+REC94_2025,S427DD,Complicaciones después del parto: infección de los senos
+REC94_2025,S427DE,Complicaciones después del parto: dolor al orinar
+REC94_2025,S427DF,Complicaciones después del parto: flujos vaginales
+REC94_2025,S427DG,Complicaciones después del parto: Pérdida involuntaria de orina
+REC94_2025,S427F,Cuando tuvo esas complicaciones recibió atención médica
+REC94_2025,S431A,En el establecimiento de salud le dieron algo en biberón al bebe después del nacimiento
+REC94_2025,S432,El niño está afiliado al Seguro Integral de Salud
+REC94_2025,S432AM,Mes afiliación seguro de salud integral
+REC94_2025,S432AY,Año de afiliación seguro de salud integral
+RECH1_2025,HV105,Edad
+RECH1_2025,HV110,Actualmente ¿Asiste a una escuela o colegio (un instituto superior o universidad)?
+RECH1_2025,HV115,¿Cúal es su estado civil o conyugal?
+RECH1_2025,HV121,¿Asistió a una escuela o colegio? en algún momento durante el año actual
+RECH1_2025,HV122,¿A qué nivel asiste o se matriculó?
+RECH1_2025,HV123,Año o grado que asiste o se matriculó
+RECH1_2025,HV124,Número de años de estudio al que asiste o se matriculó durante el año actual
+RECH1_2025,HV126,¿A que nivel asistió o se matriculó el año pasado?
+RECH1_2025,HV127,Año o grado que asistió o se matriculó
+RECH1_2025,HV128,Número de años de estudio al que asiste o se matriculó el año pasado
+RECH1_2025,HV129,"Condición de asistencia a una escuela, colegio, instituto superior o universidad"
+RECH23_2025,HML2,Número de niños menores de edad en la noche anterior
+RECH23_2025,HV201,¿Cuál es la fuente principal de abastecimiento de agua para tomar o beber?
+RECH23_2025,HV202,¿Cuál es la fuente principal de abastecimiento de agua en su hogar?
+RECH23_2025,HV204,"¿Cuánto tiempo se demora en ir, recoger agua y volver?"
+RECH23_2025,HV220,Edad del jefe de hogar
+RECH23_2025,HV235,Ubicación de la fuente de agua
+RECH23_2025,HV236,Persona que a recoger agua para su hogar
+RECH23_2025,HV237,Hecho algo al agua para hacerla segura para beber
+RECH23_2025,HV237A,El agua usualmente es tratada por: hervida
+RECH23_2025,HV237B,El agua usualmente es tratada por: añadir lejía o cloro
+RECH23_2025,HV237C,El agua usualmente es tratada por: filtro a través de un paño
+RECH23_2025,HV237D,El agua usualmente es tratada por: uso de agua filtrada
+RECH23_2025,HV237E,El agua usualmente es tratada por: desinfección solar
+RECH23_2025,HV237F,El agua usualmente es tratada por: dejar reposar y asentarse
+RECH23_2025,HV237G,El agua usualmente es tratada por: CS - agua embotellada
+RECH23_2025,HV237H,El agua usualmente es tratada por: CS
+RECH23_2025,HV237I,El agua usualmente es tratada por: CS
+RECH23_2025,HV237J,El agua usualmente es tratada por: CS
+RECH23_2025,HV237K,El agua usualmente es tratada por: CS
+RECH23_2025,HV237X,El agua usualmente es tratada por: otros
+RECH23_2025,HV237Z,El agua usualmente es tratada por: no sabe
+RECH23_2025,QH227B,La nuestra del agua se extrajo del:
+RECH23_2025,SH42,El abastecimiento de agua para beber está disponible todo el día
+RECH23_2025,SH48,¿Conserva en un envase o recipiente el agua para beber?
+RECH23_2025,SH51,Pago por el agua?
+RECH23_2025,SH52,Institución de pago de agua
+RECH23_2025,SH61R,¿Tiene bomba de agua?
+RECH4_2025,SH11A,Seguro de salud: ESSALUD/IPSS
+RECH4_2025,SH11B,Seguro de salud: Militar
+RECH4_2025,SH11C,Seguro de salud: Integral
+RECH4_2025,SH11D,Seguro de salud: Compañía de seguros
+RECH4_2025,SH11E,Seguro de salud: Seguro privado
+RECH4_2025,SH11Y,Seguro de salud: No sabe
+RECH4_2025,SH11Z,Seguro de salud: No tienen
+RECH4_2025,SH12,Alguno de los seguros está a su nombre
+RECH4_2025,SH15G,Nivel de educación en grados
+RECH4_2025,SH15N,Nivel de educación aprobado
+RECH4_2025,SH15Y,Nivel de educación en años
+RECH4_2025,SH18G,Grado al que actualmente asiste o se matriculó
+RECH4_2025,SH18N,Nivel de educación que actualmente asiste o se matriculó
+RECH4_2025,SH18Y,Año al que actualmente asiste o se matriculó
+RECH4_2025,SH20G,Grado al que asistió el año pasado
+RECH4_2025,SH20N,Nivel educativo al que asistió el año pasado
+RECH4_2025,SH20Y,Año al que asistió el año pasado
+RECH4_2025,SH21,Resultado de la asistencia del año escolar pasado
+RECHM_2025,QH31M,A qué edad murió
+RECHM_2025,QH33M,"Murió por alguna causa relacionada con el embarazo, parto, sobreparto o por alguna otra causa"

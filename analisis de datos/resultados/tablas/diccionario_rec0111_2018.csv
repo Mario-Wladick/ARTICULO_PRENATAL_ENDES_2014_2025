@@ -1,0 +1,104 @@
+variable,etiqueta
+HHID,Identificacion Cuestionario del Hogar
+CASEID,Identificación Cuestionario Individual
+V001,Número de conglomerado
+V002,Número de hogar
+V003,Número de línea de entrevistada
+V004,Ultima unidad de área
+V008,Fecha de entrevista (CMC)
+V009,Mes de nacimiento de la entrevistada
+V010,Año de nacimiento de la entrevistada
+V011,Fecha de nacimiento (CMC)
+V012,Edad actual - entrevistada
+V013,Grupos de edades quinquenales
+V014,Información completa
+V015,Resultado de entrevista individual
+V017,CMC Inicio del calendario
+V018,Columna del mes de la entrevista
+V019,Amplitud del calendario
+V019A,Número de columnas del calendario
+V020,Muestra alguna vez casado
+V021,Unidad primaria de muestreo
+V023,Dominio de la muestra
+V024,Región
+V025,Tipo de lugar de residencia
+V026,Lugar de residencia de facto
+V027,Número de visitas
+V028,Identificador del entrevistador
+V029,Identificador del digitador
+V030,Supervisor de campo
+V031,Editor de campo
+V032,Editor de oficina
+V033,Probabilidad de selección de última área
+V034,Número de línea del esposo
+V040,Altitud en metros del conglomerado
+V042,Selección de hogar para hemoglobina
+V043,Selección para módulo de estatus de mujeres
+V044,Selección para módulo de violencia domestica
+V000,Código del país
+Q105DD,Día de nacimiento de la entrevistada
+V101,Región
+V102,Tipo de lugar de residencia
+V103,Lugar de residencia en niñez
+V104,Años vividos en lugar de residencia
+V105,Tipo de lugar de residencia previa
+V106,Máximo nivel de educación
+V107,Máximo años de educación
+V113,Fuente de agua potable
+V115,Tiempo para llegar a la fuente de agua
+V116,Tipo de instalación sanitaria
+V119,Tiene electricidad
+V120,Tiene radio
+V121,Tiene televisión
+V122,Tiene refrigerador
+V123,Tiene bicicleta
+V124,Tiene motocicleta / scooter
+V125,Tiene carro o camión
+V127,Material principal del piso
+V128,Material principal de paredes
+V129,Material principal de techo
+V130,Religión
+V131,Etnicidad
+V133,Educación en años simples
+V134,Lugar de residencia de facto
+V135,Residente usual o visitante
+V136,Número de miembros del hogar
+V137,Número de niños menores de 5 años
+V138,Número de mujeres elegibles en HH
+V139,Región de residencia de jure
+V140,Tipo de lugar de residencia de jure
+V141,Lugar de residencia de jure
+V149,Nivel de educación alcanzado
+V150,Relación de parentesco con el jefe del hogar
+V151,Sexo del jefe de hogar
+V152,Edad del jefe de hogar
+V153,Tiene teléfono
+AWFACTT,Factor todas las mujeres  - total
+AWFACTU,Factor todas las mujeres  - urbano-rural
+AWFACTR,Factor todas las mujeres  - regional
+AWFACTE,Factor todas las mujeres  - educación
+AWFACTW,Factor todas las mujeres  - índice de riqueza
+V155,Alfabetización
+V156,Alguna vez participo en programa de alfabetización fuera de la primaria
+V157,Frecuencia con la que lee el periódico o revista
+V158,Frecuencia con la que escucha la radio
+V159,Frecuencia con la que ve la televisión
+V160,Servicios sanitarios compartidos
+V161,Tipo de combustible para cocinar
+V166,Resultados de prueba de sal yodada
+V167,Número de viajes en los últimos 12 meses
+V168,Afuera por más de un mes en los últimos 12 meses
+ML101,Tipo de mosquitero que utilizo para dormir última noche
+QD333_1,"Alguna dificultad para ver, aún usando anteojos"
+QD333_2,"Alguna dificultad para oir, aún usando audífonos"
+QD333_3,"Alguna dificultad para hablar o comunicarse, aún usando la lengua de señas u otro"
+QD333_4,Alguna dificultad para mover o caminar para usar brazos y/o piernas
+QD333_5,Alguna dificultad para entender o aprender (concentrarse y recordarse)
+QD333_6,"Alguna dificultad para relacionarse con los demás, por sus pensamientos, sentimientos, emociones o conductas"
+ubigeo,Código de Ubicación Geográfica
+V022,Estrato
+nconglome,Número de Conglomerado (proveniente del marco)
+V005,Factor de ponderación
+V190,Índice de riqueza
+V191,Factor de puntuación del índice de riqueza (5 decimales)
+mujeres12a49,Mujeres de 12 a 49 años - descripcion

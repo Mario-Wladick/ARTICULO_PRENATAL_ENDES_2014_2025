@@ -1,0 +1,203 @@
+anio,archivo,variable,etiqueta
+2014,CSALUD01.sav,QSIDENT,Identificación
+2014,CSALUD01.sav,QS900,Peso seleccion
+2014,CSALUD01.sav,Peso_may15años,
+2014,CSALUD01.sav,HHID,Case Identification
+2014,CSALUD08.sav,peso_men12años,
+2014,CSALUD08.sav,HHID,Case Identification
+2014,Programas Sociales x Hogar.SAV,HHID,
+2014,ps_beca18.SAV,HHID,
+2014,ps_COMEDOR.SAV,HHID,
+2014,ps_PENSION65.SAV,HHID,
+2014,ps_QALIWARMA.SAV,HHID,
+2014,ps_TRABAJA.SAV,HHID,
+2014,ps_VL.SAV,HHID,
+2014,ps_WAWAWASI.SAV,HHID,
+2014,RECH0.SAV,HHID,Case Identification
+2014,RECH0.SAV,hv005,
+2014,RECH0.SAV,HV018,Interviewer identification
+2014,RECH0.SAV,HV019,Keyer identification
+2014,RECH0.SAV,HV028,Sample weight for male subsamp
+2014,RECH0.SAV,HV035,Number of eligible children for height & weight
+2014,RECH1.SAV,HHID,Case Identification
+2014,RECH1.SAV,HV120,Children eligibility for height/weight and hemoglobin
+2014,RECH4.SAV,HHID,Case Identification
+2014,RECH23.SAV,HHID,Case Identification
+2014,RECH23.SAV,HV271,Wealth index factor score (5 decimals)
+2014,REC0111.SAV,CASEID,Case Identification
+2014,REC0111.SAV,v005,
+2014,REC0111.SAV,V028,Interviewer identification
+2014,REC0111.SAV,V029,Keyer identification
+2014,REC0111.SAV,AWFACTT,All woman factor - total
+2014,REC0111.SAV,AWFACTU,All woman factor - urban/rural
+2014,REC0111.SAV,AWFACTR,All woman factor - regional
+2014,REC0111.SAV,AWFACTE,All woman factor - educational
+2014,REC0111.SAV,AWFACTW,All woman factor - wealth index
+2014,REC0111.SAV,V191,Wealth index factor score (5 decimals)
+2014,REC91.SAV,CASEID,Case Identification
+2014,REC91.SAV,S239A,Identification document: birth certificate
+2014,REC91.SAV,S239B,Identification document: inscription card
+2014,REC91.SAV,S239C,Identification document: DNI
+2014,REC91.SAV,S239D,Identification document: voting card
+2014,REC91.SAV,S239E,Identification document: military ID
+2014,REC91.SAV,S239F,Identification document: don't have any
+2014,REC91.SAV,S239X,Identification document: other
+2014,REC91.SAV,S816J,STD male symptoms: loss of weight
+2014,REC91.SAV,S816AJ,STD female symptoms: loss of weight
+2014,RE223132.SAV,CASEID,Case Identification
+2014,REC21.SAV,CASEID,Case Identification
+2014,REC41.SAV,CASEID,Case Identification
+2014,REC41.SAV,M19,Birth weight (kilos - 3 dec.)
+2014,REC41.SAV,M19A,Weight at birth recall
+2014,REC94.SAV,CASEID,Case Identification
+2015,CSALUD01.sav,QS900,Peso seleccion
+2015,CSALUD01.sav,HHID,Case Identification
+2015,CSALUD01.sav,hv271,Wealth index factor score (5 decimals)
+2015,CSALUD01.sav,PESO15_AJUS,
+2015,CSALUD08.sav,HHID,Case Identification
+2015,CSALUD08.sav,hv271,Wealth index factor score (5 decimals)
+2015,CSALUD08.sav,Peso12_ajustado,
+2015,Programas Sociales x Hogar.SAV,HHID,
+2015,ps_beca18.SAV,HHID,
+2015,ps_COMEDOR.SAV,HHID,
+2015,ps_PENSION65.SAV,HHID,
+2015,ps_QALIWARMA.SAV,HHID,
+2015,ps_WAWAWASI.SAV,HHID,
+2015,RECH0.SAV,HHID,Case Identification
+2015,RECH0.SAV,HV018,Interviewer identification
+2015,RECH0.SAV,HV019,Keyer identification
+2015,RECH0.SAV,HV028,Sample weight for male subsamp
+2015,RECH0.SAV,HV035,Number of eligible children for height & weight
+2015,RECH0.SAV,HV005,Factor de ponderación hogar 2015
+2015,RECH0.SAV,HV005X,Factor de ponderación niño menor de 5 años 2015
+2015,RECH1.SAV,HHID,Case Identification
+2015,RECH1.SAV,HV120,Children eligibility for height/weight and hemoglobin
+2015,RECH4.SAV,HHID,Case Identification
+2015,RECH23.SAV,HHID,Case Identification
+2015,RECH23.SAV,hv271,Wealth index factor score (5 decimals)
+2015,REC0111.SAV,CASEID,Case Identification
+2015,REC0111.SAV,V028,Interviewer identification
+2015,REC0111.SAV,V029,Keyer identification
+2015,REC0111.SAV,AWFACTT,All woman factor - total
+2015,REC0111.SAV,AWFACTU,All woman factor - urban/rural
+2015,REC0111.SAV,AWFACTR,All woman factor - regional
+2015,REC0111.SAV,AWFACTE,All woman factor - educational
+2015,REC0111.SAV,AWFACTW,All woman factor - wealth index
+2015,REC0111.SAV,V191,Wealth index factor score (5 decimals)
+2015,REC0111.SAV,V005,Factor de ponderación-mujer 2015
+2015,REC0111.SAV,HV005X,Factor de ponderacion niños menores de 5 años - 2015
+2015,REC91.SAV,CASEID,Case Identification
+2015,REC91.SAV,S239A,Identification document: birth certificate
+2015,REC91.SAV,S239B,Identification document: inscription card
+2015,REC91.SAV,S239C,Identification document: DNI
+2015,REC91.SAV,S239D,Identification document: voting card
+2015,REC91.SAV,S239E,Identification document: military ID
+2015,REC91.SAV,S239F,Identification document: don't have any
+2015,REC91.SAV,S239X,Identification document: other
+2015,REC91.SAV,S816J,STD male symptoms: loss of weight
+2015,REC91.SAV,S816AJ,STD female symptoms: loss of weight
+2015,RE223132.SAV,CASEID,Case Identification
+2015,REC21.SAV,CASEID,Case Identification
+2015,REC41.SAV,CASEID,Case Identification
+2015,REC41.SAV,M19,Birth weight (kilos - 3 dec.)
+2015,REC41.SAV,M19A,Weight at birth recall
+2015,REC94.SAV,CASEID,Case Identification
+2016,CSALUD01.sav,QS900,Peso seleccion
+2016,CSALUD01.sav,PESO15_AMAS,Factor de ponderacion
+2016,CSALUD01.sav,HHID,
+2016,CSALUD08.sav,Pesomen12,Factor de ponderacion
+2016,Programas Sociales x Hogar.SAV,HHID,
+2016,ps_beca18.SAV,HHID,
+2016,ps_COMEDOR.SAV,HHID,
+2016,ps_PENSION65.SAV,HHID,
+2016,ps_QALIWARMA.SAV,HHID,
+2016,ps_WAWAWASI.SAV,HHID,
+2016,RECH0.SAV,HHID,Case Identification
+2016,RECH0.SAV,HV018,Interviewer identification
+2016,RECH0.SAV,HV019,Keyer identification
+2016,RECH0.SAV,HV028,Sample weight for male subsamp
+2016,RECH0.SAV,HV035,Number of eligible children for height & weight
+2016,RECH0.SAV,hv005,Factor de ponderacion
+2016,RECH1.SAV,HHID,Case Identification
+2016,RECH1.SAV,HV120,Children eligibility for height/weight and hemoglobin
+2016,RECH4.SAV,HHID,Case Identification
+2016,RECH23.SAV,HHID,Case Identification
+2016,RECH23.SAV,hv271,Wealth index factor score (5 decimals)
+2016,REC0111.SAV,CASEID,Case Identification
+2016,REC0111.SAV,V028,Interviewer identification
+2016,REC0111.SAV,V029,Keyer identification
+2016,REC0111.SAV,AWFACTT,All woman factor - total
+2016,REC0111.SAV,AWFACTU,All woman factor - urban/rural
+2016,REC0111.SAV,AWFACTR,All woman factor - regional
+2016,REC0111.SAV,AWFACTE,All woman factor - educational
+2016,REC0111.SAV,AWFACTW,All woman factor - wealth index
+2016,REC0111.SAV,V191,Wealth index factor score (5 decimals)
+2016,REC0111.SAV,v005,Factor de ponderacion
+2016,REC0111.SAV,hhid,Id hogar
+2016,REC91.SAV,CASEID,Case Identification
+2016,REC91.SAV,S239A,Identification document: birth certificate
+2016,REC91.SAV,S239B,Identification document: inscription card
+2016,REC91.SAV,S239C,Identification document: DNI
+2016,REC91.SAV,S239D,Identification document: voting card
+2016,REC91.SAV,S239E,Identification document: military ID
+2016,REC91.SAV,S239F,Identification document: don't have any
+2016,REC91.SAV,S239X,Identification document: other
+2016,REC91.SAV,S816J,STD male symptoms: loss of weight
+2016,REC91.SAV,S816AJ,STD female symptoms: loss of weight
+2016,RE223132.SAV,CASEID,Case Identification
+2016,REC21.SAV,CASEID,Case Identification
+2016,REC41.SAV,CASEID,Case Identification
+2016,REC41.SAV,M19,Birth weight (kilos - 3 dec.)
+2016,REC41.SAV,M19A,Weight at birth recall
+2016,REC94.SAV,CASEID,Case Identification
+2017,CSALUD01.sav,QS900,Peso seleccion
+2017,CSALUD01.sav,HHID,Case Identification
+2017,CSALUD01.sav,PESO15_AMAS,
+2017,CSALUD08.sav,HHID,Case Identification
+2017,CSALUD08.sav,Pesomen12,
+2017,Programas Sociales x Hogar.SAV,HHID,
+2017,ps_beca18.SAV,HHID,
+2017,ps_COMEDOR.SAV,HHID,
+2017,ps_PENSION65.SAV,HHID,
+2017,ps_QALIWARMA.SAV,HHID,
+2017,ps_TRABAJA.SAV,HHID,
+2017,ps_VL.SAV,HHID,
+2017,ps_WAWAWASI.SAV,HHID,
+2017,RECH0.SAV,HHID,Case Identification
+2017,RECH0.SAV,HV018,Interviewer identification
+2017,RECH0.SAV,HV019,Keyer identification
+2017,RECH0.SAV,HV028,Sample weight for male subsamp
+2017,RECH0.SAV,HV035,Number of eligible children for height & weight
+2017,RECH0.SAV,HV005,Factor final Hogar con niños (HV005)
+2017,RECH1.SAV,HHID,Case Identification
+2017,RECH1.SAV,HV120,Children eligibility for height/weight and hemoglobin
+2017,RECH4.SAV,HHID,Case Identification
+2017,RECH23.SAV,HHID,Case Identification
+2017,RECH23.SAV,HV271,Wealth index factor score (5 decimals)
+2017,REC0111.SAV,CASEID,Case Identification
+2017,REC0111.SAV,V028,Interviewer identification
+2017,REC0111.SAV,V029,Keyer identification
+2017,REC0111.SAV,AWFACTT,All woman factor - total
+2017,REC0111.SAV,AWFACTU,All woman factor - urban/rural
+2017,REC0111.SAV,AWFACTR,All woman factor - regional
+2017,REC0111.SAV,AWFACTE,All woman factor - educational
+2017,REC0111.SAV,AWFACTW,All woman factor - wealth index
+2017,REC0111.SAV,hhid,Case Identification
+2017,REC0111.SAV,V191,Wealth index factor score (5 decimals)
+2017,REC0111.SAV,V005,Factor final de mef con niños (V005)
+2017,REC91.SAV,CASEID,Case Identification
+2017,REC91.SAV,S239A,Identification document: birth certificate
+2017,REC91.SAV,S239B,Identification document: inscription card
+2017,REC91.SAV,S239C,Identification document: DNI
+2017,REC91.SAV,S239D,Identification document: voting card
+2017,REC91.SAV,S239E,Identification document: military ID
+2017,REC91.SAV,S239F,Identification document: don't have any
+2017,REC91.SAV,S239X,Identification document: other
+2017,REC91.SAV,S816J,STD male symptoms: loss of weight
+2017,REC91.SAV,S816AJ,STD female symptoms: loss of weight
+2017,RE223132.SAV,CASEID,Case Identification
+2017,REC21.SAV,CASEID,Case Identification
+2017,REC41.SAV,CASEID,Case Identification
+2017,REC41.SAV,M19,Birth weight (kilos - 3 dec.)
+2017,REC41.SAV,M19A,Weight at birth recall
+2017,REC94.SAV,CASEID,Case Identification

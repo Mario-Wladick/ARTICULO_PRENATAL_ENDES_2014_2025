@@ -1,0 +1,1496 @@
+base,variable,etiqueta
+RECH0_2025,ID1,Año
+RECH0_2025,HHID,Identificacion Cuestionario del Hogar
+RECH0_2025,HV000,Código del país
+RECH0_2025,HV001,Conglomerado
+RECH0_2025,HV002,Vivienda
+RECH0_2025,HV002A,Hogar
+RECH0_2025,HV003,Número de orden del Informante del cuestionario del hogar
+RECH0_2025,HV004,Unidad última de muestreo
+RECH0_2025,HV007,Año de entrevista
+RECH0_2025,HV008,Fecha de entrevista meses (CMC)
+RECH0_2025,HV009,Total de personas en el hogar
+RECH0_2025,HV010,Número de mujeres elegibles para entrevista individual
+RECH0_2025,HV011,Número de hombres elegibles por hogar
+RECH0_2025,HV012,Número de miembros de jure (residentes habituales)
+RECH0_2025,HV013,Número de miembros de facto (personas que durmieron la noche anterior)
+RECH0_2025,HV014,Número de niños menores de 5 años
+RECH0_2025,HV015,Resultado de la entrevista en el hogar
+RECH0_2025,HV017,Número de visitas
+RECH0_2025,HV020,Muestra de alguna vez en union
+RECH0_2025,HV021,Unidad de muestreo primario (conglomerado)
+RECH0_2025,HV023,Dominio
+RECH0_2025,HV024,Región
+RECH0_2025,HV025,Área de residencia
+RECH0_2025,HV026,Lugar de residencia
+RECH0_2025,HV027,Selección para hombre/esposo
+RECH0_2025,HV028,Peso de muestra masculino
+RECH0_2025,HV030,Supervisor de campo
+RECH0_2025,HV031,Editor de campo
+RECH0_2025,HV032,Editor de la oficina
+RECH0_2025,HV033,Ultimate area selection prob.
+RECH0_2025,HV035,Número de niños elegibles para altura y peso
+RECH0_2025,HV040,Altitud del conglomerado en metros
+RECH0_2025,HV041,Número de mujeres con medición de peso y talla
+RECH0_2025,HV042,Selección para medición de  hemoglobina
+RECH0_2025,HV043,Hogares seleccionados para el módulo de mujeres de estado
+RECH0_2025,HV044,Selección para el módulo de violencia familiar
+RECH0_2025,UBIGEO,Código de Ubicación Gegráfica
+RECH0_2025,HV005,Factor de ponderación
+RECH0_2025,HV022,Estrato
+RECH0_2025,NCONGLOME1,Número de Conglomerado (proveniente del marco)
+RECH0_2025,CODCCPP,Código del Centro Poblado
+RECH0_2025,NOMCCPP,Nombre del Centro Poblado
+RECH0_2025,LONGITUDX,Longitud a nivel centro poblado
+RECH0_2025,LATITUDY,Latitud  a nivel centro poblado
+RECH1_2025,ID1,Año
+RECH1_2025,HHID,Identificación Cuestionario del Hogar
+RECH1_2025,HVIDX,Número de orden
+RECH1_2025,HV101,Relación de parentesco con el jefe del hogar
+RECH1_2025,HV102,¿Vive habitualmente aquí?
+RECH1_2025,HV103,¿Durmió aquí anoche?
+RECH1_2025,HV104,Sexo
+RECH1_2025,HV105,Edad
+RECH1_2025,HV106,¿Cuál fue el nivel de estudios más alto que aprobó?
+RECH1_2025,HV107,¿Cuál fue el año o grado más alto que aprobó?
+RECH1_2025,HV108,Número de años de estudio
+RECH1_2025,HV109,Nivel educativo alcanzado
+RECH1_2025,HV110,Actualmente ¿Asiste a una escuela o colegio (un instituto superior o universidad)?
+RECH1_2025,HV111,¿Está viva la madre natural?
+RECH1_2025,HV112,Número de orden de la madre
+RECH1_2025,HV113,¿Está vivo el padre natural?
+RECH1_2025,HV114,Número de orden del padre
+RECH1_2025,HV115,¿Cúal es su estado civil o conyugal?
+RECH1_2025,HV116,"Acutalmente, anteriormente o nunca unida"
+RECH1_2025,HV117,Elegibilidad para entrevista individual de mujeres
+RECH1_2025,HV118,Elegibilidad para entrevista de hombres
+RECH1_2025,HV120,Menores de 5 años para medición de peso/talla y hemoglobina
+RECH1_2025,HV121,¿Asistió a una escuela o colegio? en algún momento durante el año actual
+RECH1_2025,HV122,¿A qué nivel asiste o se matriculó?
+RECH1_2025,HV123,Año o grado que asiste o se matriculó
+RECH1_2025,HV124,Número de años de estudio al que asiste o se matriculó durante el año actual
+RECH1_2025,HV125,El año pasado ¿estuvo o matriculado en una escuela o colegio (un instituto superior o universidad)
+RECH1_2025,HV126,¿A que nivel asistió o se matriculó el año pasado?
+RECH1_2025,HV127,Año o grado que asistió o se matriculó
+RECH1_2025,HV128,Número de años de estudio al que asiste o se matriculó el año pasado
+RECH1_2025,HV129,"Condición de asistencia a una escuela, colegio, instituto superior o universidad"
+RECH1_2025,QH21A,¿Estudia en una escuela o colegio estatal?
+RECH1_2025,QH25A,¿Cuál es su nacionalidad?
+RECH1_2025,QH25B,Vive permanentemente en el Perú
+RECH1_2025,QH25CM,Desde qué mes vive/está de visita en el Perú
+RECH1_2025,QH25CA,Desde qué año vive/está de visita en el Perú
+RECH4_2025,ID1,Año
+RECH4_2025,HHID,Identificacion Cuestionario del Hogar
+RECH4_2025,IDXH4,Número de orden del listado del hogar
+RECH4_2025,SH11A,Seguro de salud: ESSALUD/IPSS
+RECH4_2025,SH11B,Seguro de salud: Militar
+RECH4_2025,SH11C,Seguro de salud: Integral
+RECH4_2025,SH11D,Seguro de salud: Compañía de seguros
+RECH4_2025,SH11E,Seguro de salud: Seguro privado
+RECH4_2025,SH11Y,Seguro de salud: No sabe
+RECH4_2025,SH11Z,Seguro de salud: No tienen
+RECH4_2025,SH12,Alguno de los seguros está a su nombre
+RECH4_2025,SH13,Actividad de la ultima semana
+RECH4_2025,SH15N,Nivel de educación aprobado
+RECH4_2025,SH15Y,Nivel de educación en años
+RECH4_2025,SH15G,Nivel de educación en grados
+RECH4_2025,SH18N,Nivel de educación que actualmente asiste o se matriculó
+RECH4_2025,SH18Y,Año al que actualmente asiste o se matriculó
+RECH4_2025,SH18G,Grado al que actualmente asiste o se matriculó
+RECH4_2025,SH20N,Nivel educativo al que asistió el año pasado
+RECH4_2025,SH20Y,Año al que asistió el año pasado
+RECH4_2025,SH20G,Grado al que asistió el año pasado
+RECH4_2025,SH21,Resultado de la asistencia del año escolar pasado
+RECHM_2025,ID1,Año
+RECHM_2025,HHID,Identificación del caso
+RECHM_2025,NRO_ORDEN_ID,Número de orden
+RECHM_2025,QH30M,Sexo
+RECHM_2025,QH31M,A qué edad murió
+RECHM_2025,QH32M_M,En qué  mes  murió
+RECHM_2025,QH32M_Y,En qué  año  murió
+RECHM_2025,QH33M,"Murió por alguna causa relacionada con el embarazo, parto, sobreparto o por alguna otra causa"
+RECH23_2025,ID1,Anio
+RECH23_2025,HHID,Identificacion Cuestionario del Hogar
+RECH23_2025,HV201,¿Cuál es la fuente principal de abastecimiento de agua para tomar o beber?
+RECH23_2025,HV202,¿Cuál es la fuente principal de abastecimiento de agua en su hogar?
+RECH23_2025,HV204,"¿Cuánto tiempo se demora en ir, recoger agua y volver?"
+RECH23_2025,HV205,¿Qué tipo de servicio higiénico tiene su hogar?
+RECH23_2025,HV206,¿Tiene electricidad en su hogar?
+RECH23_2025,HV207,Su hogar ¿tiene radio?
+RECH23_2025,HV208,Su hogar ¿tiene televisor?
+RECH23_2025,HV209,Su hogar ¿tiene refrigeradora /congeladora?
+RECH23_2025,HV210,Algún miembro de su hogar ¿tiene bicleta/triciclo?
+RECH23_2025,HV211,Algún miembro de su hogar ¿tiene motocileta/ motokar?
+RECH23_2025,HV212,Algún miembro de su hogar ¿tiene carro o camión?
+RECH23_2025,HV213,Material predominante del piso de la vivienda
+RECH23_2025,HV214,Material predominante de las paredes exteriores de la vivienda
+RECH23_2025,HV215,Material predominante del techo de la vivienda
+RECH23_2025,HV216,Número de habitaciones utilizadas para dormir
+RECH23_2025,HV217,Estructura de relaciones en el hogar (composición de los hogares)
+RECH23_2025,HV218,Número de orden del Jefe del hogar
+RECH23_2025,HV219,Sexo del jefe de hogar
+RECH23_2025,HV220,Edad del jefe de hogar
+RECH23_2025,HV221,Su hogar ¿tiene teléfono?
+RECH23_2025,HV225,¿El servicio higiénico es compartido con otros hogares?
+RECH23_2025,HV226,¿Cuál es el combustible que utilizan más frecuentemente en su hogar para cocinar?
+RECH23_2025,HV227,Tiene un mosquitero para dormir
+RECH23_2025,HV228,Los niños menores de 5 años durmieron bajo mosquiteros anoche
+RECH23_2025,HV234,Prueba de yodo para sal
+RECH23_2025,HV235,Ubicación de la fuente de agua
+RECH23_2025,HV236,Persona que a recoger agua para su hogar
+RECH23_2025,HV237,Hecho algo al agua para hacerla segura para beber
+RECH23_2025,HV237A,El agua usualmente es tratada por: hervida
+RECH23_2025,HV237B,El agua usualmente es tratada por: añadir lejía o cloro
+RECH23_2025,HV237C,El agua usualmente es tratada por: filtro a través de un paño
+RECH23_2025,HV237D,El agua usualmente es tratada por: uso de agua filtrada
+RECH23_2025,HV237E,El agua usualmente es tratada por: desinfección solar
+RECH23_2025,HV237F,El agua usualmente es tratada por: dejar reposar y asentarse
+RECH23_2025,HV237G,El agua usualmente es tratada por: CS - agua embotellada
+RECH23_2025,HV237H,El agua usualmente es tratada por: CS
+RECH23_2025,HV237I,El agua usualmente es tratada por: CS
+RECH23_2025,HV237J,El agua usualmente es tratada por: CS
+RECH23_2025,HV237K,El agua usualmente es tratada por: CS
+RECH23_2025,HV237X,El agua usualmente es tratada por: otros
+RECH23_2025,HV237Z,El agua usualmente es tratada por: no sabe
+RECH23_2025,HV238,Número de hogares que comparten el baño
+RECH23_2025,HV239,Comida cocinada en estufa o fuego abierto
+RECH23_2025,HV240,El hogar tiene una chimenea o una campana
+RECH23_2025,HV241,"Comida preparada en la casa, en edificio separado o al aire libre"
+RECH23_2025,HV242,¿Utilizan un cuarto especialmente para cocinar?
+RECH23_2025,HV243A,¿Tiene un teléfono móvil (celular)?
+RECH23_2025,HV243B,Tiene un reloj
+RECH23_2025,HV243C,¿Tiene un carreta jalada por animales?
+RECH23_2025,HV243D,¿Tiene un bote a motor?
+RECH23_2025,HV244,¿Algún miembro del hogar es dueño de tierras agrícolas?
+RECH23_2025,HV245,¿Cuántas hectáreas de tierras agrícolas le pertenecen?
+RECH23_2025,HV246,"¿Algún miembro del hogar es dueño de ganadería, rebaños o animales de granja?"
+RECH23_2025,HV246A,Cantidad de: ganado
+RECH23_2025,HV246B,"Cantidad de: vacas, toros"
+RECH23_2025,HV246C,"Cantidad de: caballos, burros, mulas"
+RECH23_2025,HV246D,Cantidad de: cabras
+RECH23_2025,HV246E,Cantidad de: ovejas
+RECH23_2025,HV246F,Cantidad de: pollos
+RECH23_2025,HV246G,Cantidad de: aves de corral
+RECH23_2025,HV246H,Cantidad de: cuyes/conejos
+RECH23_2025,HV246I,Cantidad de: cerdos
+RECH23_2025,HV246J,Cantidad de: otros
+RECH23_2025,HV246K,CS propio
+RECH23_2025,HV247,Posee una cuenta bancaria
+RECH23_2025,HV248,Número de personas enfermas 18-59
+RECH23_2025,HV249,Miembro de la HH fallecido los últimos 12 meses
+RECH23_2025,HV250,Número de miembros que murieron en los últimos 12 meses
+RECH23_2025,HV251,Número de huérfanos y niños vulnerables
+RECH23_2025,HML1,Número de mosquiteros
+RECH23_2025,HML1A,Número de mosquiteros con información específica
+RECH23_2025,HML2,Número de niños menores de edad en la noche anterior
+RECH23_2025,SHVER,Versión del cuestionario
+RECH23_2025,SHREGION,Región natural
+RECH23_2025,SHSEMES,Semestre
+RECH23_2025,SHPROVIN,Provincia
+RECH23_2025,SHDISTRI,Distrito
+RECH23_2025,SHTOTH,Total de hogares en la vivienda
+RECH23_2025,SH42,El abastecimiento de agua para beber está disponible todo el día
+RECH23_2025,SH43,Las últimas 2 semanas fueron interrumpidas por un día o más
+RECH23_2025,SH48,¿Conserva en un envase o recipiente el agua para beber?
+RECH23_2025,SH49,Tipo de envase o recipiente
+RECH23_2025,SH50,¿Lo usa con tapa?
+RECH23_2025,SH51,Pago por el agua?
+RECH23_2025,SH52,Institución de pago de agua
+RECH23_2025,SH56,Con qué frecuencia se limpia el baño o la letrina?
+RECH23_2025,SH58,Dónde tira la basura?
+RECH23_2025,SH59,Con qué frecuencia se recoge la basura?
+RECH23_2025,SH60,Antes de desechar la basura donde se almacena?
+RECH23_2025,SH61A,¿Tiene sofá?
+RECH23_2025,SH61B,¿Tiene vitrina/aparador?
+RECH23_2025,SH61C,¿Tiene repostero?
+RECH23_2025,SH61D,¿Tiene cómoda/ropero?
+RECH23_2025,SH61E,¿Tiene reloj de pared?
+RECH23_2025,SH61J,¿Tiene televisión por cable?
+RECH23_2025,SH61K,¿Tiene licuadora?
+RECH23_2025,SH61L,¿Tiene cocina de gas?
+RECH23_2025,SH61M,¿Tiene cocina de kerosene?
+RECH23_2025,SH61N,¿Tiene microondas?
+RECH23_2025,SH61O,¿Tiene lavadora?
+RECH23_2025,SH61P,¿Tiene computadora?
+RECH23_2025,SH61Q,¿Tiene acceso a Internet en casa?
+RECH23_2025,SH61R,¿Tiene bomba de agua?
+RECH23_2025,SH61S,¿Tiene generador de electricidad?
+RECH23_2025,SH63,¿Utiliza otro tipo de combustible para cocinar?
+RECH23_2025,SH64,Otro tipo de combustible utilizado para cocinar
+RECH23_2025,SH66,¿La cocina tiene una chimenea o un mecanismo para eliminar el humo?
+RECH23_2025,SH69,El hogar compra combustible para cocinar?
+RECH23_2025,SH70,¿Qué tipo de alumbrado utiliza el hogar?
+RECH23_2025,SH71,Número de habitaciones en el hogar
+RECH23_2025,SH72,Número de habitaciones que usa para dormir
+RECH23_2025,SXH73,Tiene una red (No 20011)
+RECH23_2025,SH76A,La vivienda tiene ventanas
+RECH23_2025,SH76B,Ventanas con cristal
+RECH23_2025,SH76C,Ventanas de madera
+RECH23_2025,SH76D,Ventanas con malla
+RECH23_2025,SH76E,Ventanas con cortinas/persianas
+RECH23_2025,SH77F,"Otro tipo de transporte (caballos, peque-peque, etc.)"
+RECH23_2025,SH78,Algún miembro de su hogar es dueño de tierras agricolas
+RECH23_2025,SH79,Cuantas hectareas (1 decimal)
+RECH23_2025,SH224,Prueba de Yodo
+RECH23_2025,SH225U,Visualización de la bolsa de sal
+RECH23_2025,SH225,Marca de sal usada por el hogar
+RECH23_2025,SH227,Prueba de cloro
+RECH23_2025,QH227A,La muestra fue tomada por:
+RECH23_2025,QH227B,La nuestra del agua se extrajo del:
+RECH23_2025,HV270,Índice de riqueza
+RECH23_2025,HV271,Factor de puntuación del índice de riqueza (5 decimales)
+REC0111_2025,ID1,Año
+REC0111_2025,CASEID,Identificación Cuestionario Individual
+REC0111_2025,HHID,Identificación Cuestionario del Hogar
+REC0111_2025,V000,Código y fase del país
+REC0111_2025,V001,Conglomerado
+REC0111_2025,V002,Número de vivienda
+REC0111_2025,V003,Número de línea de entrevistada
+REC0111_2025,V004,Unidad de área final
+REC0111_2025,V007,Año de la entrevista
+REC0111_2025,V008,"Fecha de la entrevista, Codificación centenaria de meses (CMC)"
+REC0111_2025,Q105DD,Dia de nacimiento de la entrevistada
+REC0111_2025,V009,Mes de nacimiento de la entrevistada
+REC0111_2025,V010,Año de nacimiento de la entrevistada
+REC0111_2025,V011,"Fecha de nacimiento, Codificación centenaria de meses (CMC)"
+REC0111_2025,V012,Edad actual - entrevistada
+REC0111_2025,V013,Edad actual por grupos de 5 años
+REC0111_2025,V014,Integridad de la información para la fecha de nacimiento
+REC0111_2025,V015,Resultado entrevista individual
+REC0111_2025,V017,"Inicio del calendario, Codificación centenaria de mesesl CMC"
+REC0111_2025,V018,Columna del mes de la entrevista
+REC0111_2025,V019,Duración del calendario
+REC0111_2025,V019A,Número de columnas de calendario
+REC0111_2025,V020,Muestra alguna vez casada
+REC0111_2025,V021,Unidad de muestreo primario - conglomerado
+REC0111_2025,V023,Dominio de ejemplo - Departamento
+REC0111_2025,V024,Región
+REC0111_2025,V025,Tipo de lugar de residencia
+REC0111_2025,V026,El lugar de residencia en el que se entrevistó - De Facto
+REC0111_2025,V027,Número de visitas
+REC0111_2025,V028,Identificación del entrevistador
+REC0111_2025,V029,Identificador del digitador
+REC0111_2025,V030,Supervisor de campo
+REC0111_2025,V031,Editor de campo
+REC0111_2025,V032,Editor de la oficina
+REC0111_2025,V033,Selección final del área de probabilidad
+REC0111_2025,V034,Número de orden del esposo
+REC0111_2025,V040,Altitud del conglomerado en metros
+REC0111_2025,V042,Selección de hogar para hemoglobina
+REC0111_2025,V043,Selección para módulo de estatus de mujeres
+REC0111_2025,V044,Selección para módulo de violencia domestica
+REC0111_2025,V101,Región
+REC0111_2025,V102,Tipo de lugar de residencia
+REC0111_2025,V103,Lugar de residencia de la infancia
+REC0111_2025,V104,Cuanto tiempo tiene viviendo continuamente en el lugar de residencia actual
+REC0111_2025,V105,Tipo de lugar de residencia anteriormente
+REC0111_2025,V106,Nivel educativo más alto
+REC0111_2025,V107,Año/grado de educación más alto aprobado
+REC0111_2025,V113,Fuente principal de abasteciemiento de agua potable que utilizan en su hogar para tomar o beber
+REC0111_2025,V115,Tiempo para llegar a la fuente de agua
+REC0111_2025,V116,Tipo de instalación sanitaria
+REC0111_2025,V119,En su hogar tiene: electricidad
+REC0111_2025,V120,En su hogar tiene: radio
+REC0111_2025,V121,En su hogar tiene: televisión
+REC0111_2025,V122,En su hogar tiene: refrigerador
+REC0111_2025,V123,En su hogar tiene: bicicleta
+REC0111_2025,V124,En su hogar tiene: motocicleta/motocar
+REC0111_2025,V125,En su hogar tiene: coche/camión
+REC0111_2025,V127,Material predominante del piso de la vivienda
+REC0111_2025,V128,Material predominante de las paredes exteriores de la vivienda
+REC0111_2025,V129,Material predominante del techo de la vivienda
+REC0111_2025,V130,Religión
+REC0111_2025,V131,Etnicidad
+REC0111_2025,V133,Educación en años simples
+REC0111_2025,V134,El lugar en el que se realizó la entrevista  De-facto
+REC0111_2025,V135,Residente habitual o visitante
+REC0111_2025,V136,Número de miembros del hogar
+REC0111_2025,V137,Número de niños de 6 años de edad
+REC0111_2025,V138,Número de mujeres de 15 a 49 años de edad elegibles en el hogar
+REC0111_2025,V139,"Región, residencia habitual De-jure"
+REC0111_2025,V140,Tipo de área de residencia De-jure
+REC0111_2025,V141,Lugar de residencia De-jure
+REC0111_2025,V149,Logro educativo
+REC0111_2025,V150,Relación con el jefe del hogar
+REC0111_2025,V151,Sexo del Jefe del Hogar
+REC0111_2025,V152,Edad del jefe del hogar
+REC0111_2025,V153,En su hogar tiene: teléfono
+REC0111_2025,AWFACTT,Factor todas las mujeres - total
+REC0111_2025,AWFACTU,Factor todas las mujeres - urbano/rural
+REC0111_2025,AWFACTR,Factor todas las mujeres - regional
+REC0111_2025,AWFACTE,Factor todas las mujeres - educación
+REC0111_2025,AWFACTW,Factor todas las mujeres - índice de riqueza
+REC0111_2025,V155,Alfabetización
+REC0111_2025,V156,Alguna vez participó en un programa de alfabetización (no incluyendo la escuela primaria)
+REC0111_2025,V157,Frecuencia de lectura de un periódico o revista
+REC0111_2025,V158,Frecuencia de escuchar radio
+REC0111_2025,V159,Frecuencia de ver televisión
+REC0111_2025,V160,Baño compartido con otros hogares
+REC0111_2025,V161,Tipo de combustible para cocinar
+REC0111_2025,V166,Resultados de la prueba del yodo en la sal
+REC0111_2025,V167,Número de viajes en los últimos 12 meses
+REC0111_2025,V168,Afuera más de un mes en los últimos 12 meses
+REC0111_2025,ML101,Tipo de mosquitero que utilizo para dormir última noche
+REC0111_2025,QD333_1,"Alguna dificultad o limitación permanente para ver, aún usando anteojos"
+REC0111_2025,QD333_2,"Alguna dificultad o limitación permanente para oir, aún usando audífonos"
+REC0111_2025,QD333_3,"Alguna dificultad o limitación permanente para hablar o comunicarse, aún usando la lengua de señas u otro"
+REC0111_2025,QD333_4,Alguna dificultad o limitación permanente para moverse o caminar para usar brazos y/o piernas
+REC0111_2025,QD333_5,Alguna dificultad o limitación permanente para entender o aprender (concentrarse y recordarse)
+REC0111_2025,QD333_6,"Alguna dificultad o limitación permanente para relacionarse con los demás, por sus pensamientos, sentimientos, emociones o conductas"
+REC0111_2025,UBIGEO,Código de Ubicación Gegráfica
+REC0111_2025,V022,Estratos
+REC0111_2025,V005,Factor de ponderacion
+REC0111_2025,V190,Índice de riqueza
+REC0111_2025,V191,Factor de puntuación del índice de riqueza (5 decimales)
+REC91_2025,ID1,Año
+REC91_2025,CASEID,Identificación del caso
+REC91_2025,SVER,Versión del cuestionario
+REC91_2025,SREGION,Región natural
+REC91_2025,SSEMES,Semestre
+REC91_2025,SPROVIN,Provincia
+REC91_2025,SDISTRI,Distrito
+REC91_2025,S108N,Nivel educativo aprobado
+REC91_2025,S108Y,El último año de educación aprobado
+REC91_2025,S108G,El último grado de educación aprobado
+REC91_2025,S111,"Actualmente asiste a la escuela, colegio, instituto o universidad"
+REC91_2025,S112,Razón por que dejo de asistir a la escuela
+REC91_2025,S119,Idioma o lengua materna que aprendió hablar en su niñez
+REC91_2025,S119NA,Idioma materna su madre
+REC91_2025,S119NB,Lengua materna su padre
+REC91_2025,S119D,Por sus antepasados y costumbres Ud. se considera
+REC91_2025,S229A,Control del embarazo en: hospital MINSA
+REC91_2025,S229B,Control del embarazo en: hospital ESSALUD
+REC91_2025,S229C,Control del embarazo en: hospital FFAA & PNP
+REC91_2025,S229D,Control del embarazo en: centro de salud MINSA
+REC91_2025,S229E,Control del embarazo en: puesto de salud MINSA
+REC91_2025,S229F,Control del embarazo en: center/post ESSALUD
+REC91_2025,S229G,Control del embarazo en: Hospital/Otro gobierno local.
+REC91_2025,S229H,Control del embarazo en: Clínica privada
+REC91_2025,S229I,Control del embarazo en: Médico particular
+REC91_2025,S229J,Control del embarazo en: casa de partera
+REC91_2025,S229K,Control de embarazo en: clínica/posta de ONG
+REC91_2025,S229L,Control del embarazo en: hospital/otro de la iglesia
+REC91_2025,S229X,Control del embarazo en: otro
+REC91_2025,S229Y,Sin control
+REC91_2025,S229A1,Meses de embarazo al primer control
+REC91_2025,S229B1,Afiliada a seguro de salud (seguro integral)
+REC91_2025,S229CDAY,Día de afiliación
+REC91_2025,S229CM,Mes de afiliación
+REC91_2025,S229CY,Año de afiliación
+REC91_2025,S229DA,Conocimiento de Seguro Integral por: TV
+REC91_2025,S229DB,Conocimiento del Seguro Integral por: radio
+REC91_2025,S229DC,Conocimiento del Seguro Integral por: periódicos
+REC91_2025,S229DD,Conocimiento del Seguro Integral por: personal de salud
+REC91_2025,S229DE,Se hizo consciente de Seguro Integral por: familia/amigos
+REC91_2025,S229DF,Conocimiento de Seguro Integral por: club de madres
+REC91_2025,S229DX,Conocimiento de Seguro Integral por: otros
+REC91_2025,S239A,Documento de identificación: Partida de Nacimiento
+REC91_2025,S239B,Documento de identificación: Tarjeta de Inscripción
+REC91_2025,S239C,Documento de identificación: DNI
+REC91_2025,S239D,Documento de identificación: Tarjeta de Votación
+REC91_2025,S239E,Documento de identificación: Libreta Militar
+REC91_2025,S239F,Documento de identificación: No tiene
+REC91_2025,S239X,Documento de identificación: Otro
+REC91_2025,S314,Monto de pago de la esterilización incluyendo la consulta
+REC91_2025,S315B,Momento que se esterilizó
+REC91_2025,S317AC,Marca Vaginales
+REC91_2025,S317AD,Marca de inyección
+REC91_2025,S317C,Cómo determinar días de fertilidad
+REC91_2025,S321A,Primera fuente para el método actual
+REC91_2025,S325A,El método actual es el que quería
+REC91_2025,S325B,Qué método quería
+REC91_2025,S325CA,Problema para obtener el método: el centro de salud no tenía método
+REC91_2025,S325CB,Problema para obtener el método: muy costoso
+REC91_2025,S325CX,Problema para obtener el método: otro
+REC91_2025,S325D,Quién decidió sobre el método actual
+REC91_2025,S325E,Por qué aceptó el método actual
+REC91_2025,S325GA,Opinión de atención recibida: horas de trabajo
+REC91_2025,S325GB,Opinión de la atención recibida: métodos de planificación familiar
+REC91_2025,S325GC,Opinión de la atención recibida: método prescrito
+REC91_2025,S325GD,Opinión de la atención recibida: sala de espera cómoda
+REC91_2025,S325GE,Opinión de la atención recibida: limpieza de la sala de espera
+REC91_2025,S325GF,Opinión de la atención recibida: tiempo de espera
+REC91_2025,S325GG,Opinión de la atención recibida: tratamiento del personal administrativo
+REC91_2025,S325GH,Opinión de la atención recibida: tratamiento del personal de salud
+REC91_2025,S325GI,Opinión de la atención recibida: tratamiento del médico
+REC91_2025,S325GJ,Opinión de la atención recibida: explicaciones del médico
+REC91_2025,S325GK,Opinión de atención recibida: privacidad
+REC91_2025,S327B,Ha ido a consulta de control de DIU/IMPLANTES
+REC91_2025,S327C,Número de controles de DIU/IMPLANTES en los últimos 12 meses
+REC91_2025,S481AA,Llevaría inmediatamente al niño al centro de salud si: no puede beber o lactar
+REC91_2025,S481AB,Llevaría inmediatamente al niño al centro de salud si: se pone más enfermo
+REC91_2025,S481AC,Llevaría inmediatamente al niño al centro de salud si: le da fiebre/diarrea/vómito
+REC91_2025,S481AD,Llevaría inmediatamente al niño al centro de salud si: tiene respiraciones rápidas
+REC91_2025,S481AE,Llevaría inmediatamente al niño al centro de salud si: tiene tos/dificultad para respirar
+REC91_2025,S481AF,Llevaría inmediatamente al niño al centro de salud si: sangre sobre las heces hace deposiciones con sangre
+REC91_2025,S481AG,Llevaría inmediatamente al niño al centro de salud si: come/bebe poco
+REC91_2025,S481AX,Llevaría inmediatamente al niño al centro de salud si: Otro
+REC91_2025,S481AZ,Llevaría inmediatamente al niño al centro de salud si: no sabe
+REC91_2025,S484,Afiliado o incorporado al programa Juntos
+REC91_2025,S484D,Día de afiliación
+REC91_2025,S484M,Mes de afiliación
+REC91_2025,S484Y,Año de afiliación
+REC91_2025,S485,A oído/escuchado de la prueba del papanicolao
+REC91_2025,S485A,Le hicieron una prueba de papanicolaou en los últimos 5 años
+REC91_2025,S486,Le hicieron un examen de mama en los últimos 5 años
+REC91_2025,S486A,Ud. conoce como hacerse el auto-examen de mama
+REC91_2025,S486B,Ud. misma se realizó el examen de mama
+REC91_2025,S489C,Cuidaría a parientes si se enfermaran con la TBC
+REC91_2025,S489D,"Si un miembro de su familia tuviera tuberculosis, mantendría en secreto su enfermedad"
+REC91_2025,S490,"Normalmente, cuántas veces al día se lava las manos"
+REC91_2025,S490AA,Se lava las manos necesariamente después de usar el baño
+REC91_2025,S490AB,Se lava las manos necesariamente después de cambiar pañales
+REC91_2025,S490AC,Se lava las manos necesariamente antes de preparar la comida
+REC91_2025,S490AD,Se lava las manos necesariamente antes de servir la comida
+REC91_2025,S490AE,Se lava las manos necesariamente antes de comer
+REC91_2025,S490AF,Se lava las manos necesariamente antes de alimentar al niño
+REC91_2025,S490AG,Se lava las manos necesariamente en cualquier momento
+REC91_2025,S490AX,Se lava las manos necesariamente en otra situación
+REC91_2025,S490BA,Normalmente utiliza cuando se lava las manos: Agua de caño o grifo
+REC91_2025,S490BB,Normalmente utiliza cuando se lava las manos: Jabón
+REC91_2025,S490BC,Normalmente utiliza cuando se lava las manos: Detergente
+REC91_2025,S490BD,Normalmente utiliza cuando se lava las manos: Toalla
+REC91_2025,S490BX,Normalmente utiliza cuando se lava las manos: Otro
+REC91_2025,S492A,Ayer el niño(a) durante el día o la noche bebió: Solo agua
+REC91_2025,S492B,"Ayer el niño(a) durante el día o la noche bebió: Leche en polvo (NAM,S26, SIMILAC, etc)"
+REC91_2025,S492C,Ayer el niño(a) durante el día o la noche bebió: Leche materna refrigerada
+REC91_2025,S492D,"Ayer el niño(a) durante el día o la noche bebió: cualquier otra leche (fresca, evaporada o en polvo)"
+REC91_2025,S492E,Ayer el niño(a) durante el día o la noche bebió: Zumo de frutas
+REC91_2025,S492F,Ayer el niño(a) durante el día o la noche bebió: Té Café
+REC91_2025,S492G,"Ayer el niño(a) durante el día o la noche bebió: cualquier otro líquido como bebidas gaseosas, caldo"
+REC91_2025,S493A,"Ayer el niño(a) durante el día o la noche comió: harina, pan, fideos, galletas o comida hecha de cereales"
+REC91_2025,S493B,"Ayer el niño(a) durante el día o la noche comió: camote, zapallo, zanahoria"
+REC91_2025,S493C,"Ayer el niño(a) durante el día o la noche comió: habas, frijol, lenteja, soya, pallares, garbanzos, alrvejas"
+REC91_2025,S493D,"Ayer el niño(a) durante el día o la noche comió: comida hecha de tubérculos, raíces (papa, yuca, olluco, oca, mashua)"
+REC91_2025,S493E,"Ayer el niño(a) durante el día o la noche comió: verduras (espinacas, acelgas, etc.)"
+REC91_2025,S493F,"Ayer el niño(a) durante el día o la noche comió: mango, papaya, aguaje"
+REC91_2025,S493G,"Ayer el niño(a) durante el día o la noche comió: naranja, mandarina, maracuyá, toronja, etc."
+REC91_2025,S493H,"Ayer el niño(a) durante el día o la noche comió: Otras frutas (bananas, manzanas, etc.)"
+REC91_2025,S493I,"Ayer el niño(a) durante el día o la noche comió: carne, pollo, pescado"
+REC91_2025,S493J,Ayer el niño(a) durante el día o la noche comió: huevos
+REC91_2025,S493K,"Ayer el niño(a) durante el día o la noche comió: queso, yogurt, helado u otros alimentos preparados con leche (leche asada, helados, crema volteada, etc.)"
+REC91_2025,S493L,"Ayer el niño(a) durante el día o la noche comió: cualquier comida hecha alimentos hechos con aceite, manteca, mantequilla, o al que le agregó aceite manteca, mantequilla"
+REC91_2025,S493M,Ayer el niño(a) durante el día o la noche comió: papilla de programas sociales
+REC91_2025,S493N,Ayer el niño(a) durante el día o la noche comió: cualquier otra comida sòlida o semisòlida Otros alimentos sólidos o semisólidos
+REC91_2025,S493O,Ayer el niño(a) durante el día o la noche comió: Otras frutas secas
+REC91_2025,S493P,"Ayer el niño(a) durante el día o la noche comió: Cualquier alimento dulce, caramelo, chocolates u otros"
+REC91_2025,S494,Recibir papilla de los programas sociales
+REC91_2025,S494A,Cuántos paquetes tiene
+REC91_2025,S494B,Come la papilla de programas sociales
+REC91_2025,S495A,Ayer el niño no recibe líquidos o sólidos excepto la leche materna
+REC91_2025,S496,Persona que normalmente alimenta al niño
+REC91_2025,S500A,Presencia de niñas/os menores de 10 años
+REC91_2025,S500B,Presencia del esposo/compañero
+REC91_2025,S500C,Presencia de otros hombres
+REC91_2025,S500D,Presencia de otras mujeres
+REC91_2025,S508A,Principal causa de la ùltima del último divorcio/separación
+REC91_2025,S512C,Relación con la primera pareja sexual
+REC91_2025,S616,"Aprueba, desaprueba que parejas usen métodos de planificación familiar"
+REC91_2025,S618A,Los últimos 12 meses comentado sobre planificación familiar con: esposo/pareja
+REC91_2025,S618B,Los últimos 12 meses comentado sobre planificación familiar con: madre
+REC91_2025,S618C,Los últimos 12 meses comentado sobre planificación familiar con: padre
+REC91_2025,S618D,Los últimos 12 meses comentado sobre planificación familiar con: hermanas
+REC91_2025,S618E,Los últimos 12 meses comentado sobre planificación familiar con: hermanos
+REC91_2025,S618F,Los últimos 12 meses comentado sobre planificación familiar con: hija
+REC91_2025,S618G,Los últimos 12 meses comentado sobre planificación familiar con: hijo
+REC91_2025,S618H,Los últimos 12 meses comentado sobre planificación familiar con: suegra
+REC91_2025,S618I,Los últimos 12 meses comentado sobre planificación familiar con: suegro
+REC91_2025,S618J,Los últimos 12 meses comentado sobre planificación familiar con: novio
+REC91_2025,S618K,Los últimos 12 meses comentado sobre planificación familiar con: amigas/vecinas
+REC91_2025,S618L,Los últimos 12 meses comentado sobre planificación familiar con: amigos
+REC91_2025,S618M,Los últimos 12 meses comentado sobre planificación familiar con: otros familiares
+REC91_2025,S618X,Los últimos 12 meses comentado sobre planificación familiar con: otros
+REC91_2025,S621,Su esposo/compañero aprueba/desaprueba que las parejas usen planificación familiar
+REC91_2025,S621A,Frecuencia de los últimos 12 meses habló con su esposo acerca de planificación familiar
+REC91_2025,S704N,Nivel educativo del esposo/compañero
+REC91_2025,S704Y,Último año aprobado del esposo
+REC91_2025,S704G,Último grado aprobado del esposo
+REC91_2025,S718,Ingresos de la entrevistada utilizada para gastos familiares
+REC91_2025,S720A,Quién cuida de la niña/niño cuando Ud. sale de la casa
+REC91_2025,S802,Cree Ud. Que una persona puede hacer algo para prevenir el virus que causa el SIDA (VIH)
+REC91_2025,S802D,Cree Ud. que la gente puede contraer el SIDA (VIH) a través de abrazos o caricias a una persona infectada
+REC91_2025,S802E,Cree Ud. que la gente puede contraer el SIDA (VIH) a través de utensilios compartidos con una persona infectada
+REC91_2025,S802F,"Cree Ud. que se pueden contraer el SIDA (VIH) comparten baño, ducha y/o piscinas"
+REC91_2025,S802H,Cree Ud. que se puede contraer el SIDA (VIH) a través de la brujería
+REC91_2025,S802I,Cree Ud. que la gente puede contraer el SIDA (VIH) por el castigo divino
+REC91_2025,S803AF,Lugar para hacerse la prueba de VIH SIDA: Hospital/Otros FFAA & PNP
+REC91_2025,S803AG,Lugar para hacerse la prueba de VIH SIDA: Hospital/Otros de la Municipalidad
+REC91_2025,S803AM,Lugar para hacerse la prueba de VIH SIDA: Hospital/Otro de la Iglesia
+REC91_2025,S804A,Cuando fue a realizarse la prueba: recibió asesoramiento antes del examen
+REC91_2025,S804C,Cuando le dieron resultados. Le brindaron consejería
+REC91_2025,S806AX,En que etapa puede ser transmitido el VIH de la madre al hijo: otro
+REC91_2025,S806AZ,En que etapa puede ser transmitido el VIHI de la madre al hijo: No sabe
+REC91_2025,S807,Si una niña/niño tiene infección por el virus que causa el SIDA: se debe permitir asistir a la escuela o colegio
+REC91_2025,S809,Si una persona tiene la infecciòn por el virus que causa el SIDA: el empleador lo debe despedir por esta causa
+REC91_2025,S810,Si un médico tiene la infecciòn por el virus que causa el SIDA: se le debe permitir continuar con su trabajo
+REC91_2025,S811,Si una persona tiene el virus que causa el SIDA y necesita ser operada: debe permitirle la operación
+REC91_2025,S815AA,Conoce la ETS: sífilis
+REC91_2025,S815AB,Conoce la ETS: gonorrea
+REC91_2025,S815AC,Conoce la ETS: verrugas genitales/condiloma
+REC91_2025,S815AD,Conoce la ETS: Chancro
+REC91_2025,S815AE,Conoce la ETS: Herpes
+REC91_2025,S815AX,Conoce la ETS: Otros
+REC91_2025,S815AZ,Conoce la ETS: No sabe
+REC91_2025,S816A,Síntomas de ETS en hombres: dolor abdominal
+REC91_2025,S816B,Síntomas de ETS en hombres: secreción/goteos en genitales
+REC91_2025,S816C,Síntomas de ETS en hombres: secreción mal oliente
+REC91_2025,S816D,Síntomas de ETS en hombres: molestia al orinar
+REC91_2025,S816E,Síntomas de ETS en hombres: enrojecimiento/picazón/ardor en genitales
+REC91_2025,S816F,Síntomas de ETS en hombres: inflamación/hinchazón /dolor en genitales
+REC91_2025,S816G,Síntomas de ETS en hombres: úlceras/llagas genitales
+REC91_2025,S816H,Síntomas de ETS en hombres: verrugas genitales
+REC91_2025,S816I,Síntomas de ETS en hombres: sangre en la orina
+REC91_2025,S816J,Síntomas de ETS en hombres: pérdida de peso
+REC91_2025,S816K,Síntomas de ETS en hombres: la impotencia
+REC91_2025,S816L,Síntomas de ETS en hombres: los síntomas pueden no estar presentes
+REC91_2025,S816M,Síntomas de ETS en hombres: secreción/pus por el pene
+REC91_2025,S816W,Síntomas de ETS en hombres: otros
+REC91_2025,S816Z,Síntomas de ETS en hombres: no sabe
+REC91_2025,S816AA,Síntomas de ETS en mujeres: dolor abdominal
+REC91_2025,S816AB,Síntomas de ETS en mujeres: secreción genital de flujo por la vagina
+REC91_2025,S816AC,Síntomas de ETS en mujeres: secreción mal oliente
+REC91_2025,S816AD,Síntomas de ETS en mujeres: molestias al orinar
+REC91_2025,S816AE,Síntomas de ETS en mujeres: enrojecimiento/picazón/ardor en genitales
+REC91_2025,S816AF,Síntomas de ETS en mujeres: inflamación/hinchazón /dolor en genitales
+REC91_2025,S816AG,Síntomas de ETS en mujeres: úlceras/llagas genitales
+REC91_2025,S816AH,Síntomas de ETS en mujeres: verrugas genitales
+REC91_2025,S816AI,Síntomas de ETS en mujeres: sangre en la orina
+REC91_2025,S816AJ,Síntomas de ETS en mujeres: pérdida de peso
+REC91_2025,S816AK,Síntomas de ETS en mujeres: infertilidad/no poder tener hijos
+REC91_2025,S816AL,Síntomas de ETS en mujeres: los síntomas pueden no estar presentes
+REC91_2025,S816AW,Síntomas de ETS en mujeres: otros
+REC91_2025,S816AZ,Síntomas de ETS en mujeres: no sabe
+REC91_2025,S817,Le han Diagnosticado alguna ETS en los últimos 12 meses
+REC91_2025,S817GF,Dónde fue a recibir tratamiento: Hospital/Otros FFAA o PNP
+REC91_2025,S817GG,Dónde fue a recibir tratamiento: Hospital/Otro de la Municipalidad
+REC91_2025,S817GM,Dónde fue a recibir tratamiento: Hospital/Otro de la Iglesia
+REC91_2025,S818,Ha tenido relaciones sexuales por dinero en los últimos 12 meses
+REC91_2025,S1002A,En última/actual relación su esposo/compañero: se mostró tierno/cariñoso
+REC91_2025,S1002B,En última/actual relación su esposo/compañero: paso tiempo libre con usted
+REC91_2025,S1002C,En última/actual relación su esposo/compañero: tomo en cuenta su opinión
+REC91_2025,S1002D,En última/actual relación su esposo/compañero: respetó sus deseos
+REC91_2025,S1002E,En última/actual relación su esposo/compañero: respetó sus derechos
+REC91_2025,S1008AN,"En los últimos 12 meses como resultado de algo que su esposo/compañero le hizo, Ud. tuvo: moretones y/o dolores"
+REC91_2025,S1008BN,"En los últimos 12 meses como resultado de algo que su esposo/compañero le hizo, Ud. tuvo: herida o lesión, huesos y dientes rotos, quemaduras"
+REC91_2025,S1008CN,"En los últimos 12 meses como resultado de algo que su esposo/compañero le hizo, Ud. tuvo: que ir al médico o centro de salud"
+REC91_2025,S1008DN,"En los últimos 12 meses como resultado de algo que su esposo/compañero le hizo, Ud. tuvo:  que ir al curandero, huesero u otra persona"
+REC91_2025,S1012B,Cuando su esposo/compañero la ha agredido o golpeado se encontraba bajo los efectos de licor o drogas
+REC91_2025,S1012BN,En los últimos 12 meses con qué frecuencia su esposo/compañero la ha agredido o golpeado bajo los efectos de licor o drogas
+REC91_2025,S1017,"La persona que le pegó, abofeteó, pateó o la maltrato físicamente con mayor frecuencia, en los últimos 12 meses cuántas veces lo hizo"
+REC91_2025,S1023AA,Para buscar ayuda acudió a: Comisaría
+REC91_2025,S1023AB,Para buscar ayuda acudió a: Juzgado
+REC91_2025,S1023AC,Para buscar ayuda acudió a: Fiscalía
+REC91_2025,S1023AD,Para buscar ayuda acudió a: Defensoría Municipal (DEMUNA)
+REC91_2025,S1023AE,Para buscar ayuda acudió a: Ministerio de la mujer (MIMP)/CEM/MINDES
+REC91_2025,S1023AF,Para buscar ayuda acudió a: Defensoría del Pueblo
+REC91_2025,S1023AG,Para buscar ayuda acudió a: Establecimiento de salud
+REC91_2025,S1023AH,Para buscar ayuda acudió a: Organización privada
+REC91_2025,S1023AX,Para buscar ayuda acudió a: Otro
+REC91_2025,S1023AZ,"No, nunca ha buscado ayuda"
+REC91_2025,S1026,"Conoce el caso de alguna vecina, conocida o familiar que ha muerto por violencia de su pareja o expareja"
+REC91_2025,S1028A,Reprende o castiga a sus hijas o hijos en el hogar: padre biológico
+REC91_2025,S1028B,Reprende o castiga a sus hijas o hijos en el hogar: madre biológica
+REC91_2025,S1028X,Reprende o castiga a sus hijas o hijos en el hogar: otros
+REC91_2025,S1028Y,"Nadie, reprende o castiga a los niños en el hogar"
+REC91_2025,S1030AA,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): palmadas
+REC91_2025,S1030AB,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): reprimenda verbal
+REC91_2025,S1030AC,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): prohibición de algo que les gusta
+REC91_2025,S1030AD,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): privarlos de alimentos
+REC91_2025,S1030AE,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): golpes y castigos físicos
+REC91_2025,S1030AF,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): dejándolos cerrados
+REC91_2025,S1030AG,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): ignorándolos
+REC91_2025,S1030AH,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): poniéndoles más trabajo
+REC91_2025,S1030AI,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): dejándolos fuera de la casa
+REC91_2025,S1030AJ,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): echándoles agua
+REC91_2025,S1030AK,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): quitándoles la ropa
+REC91_2025,S1030AL,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): quitándole las pertenencias
+REC91_2025,S1030AM,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): quitándoles el apoyo económico
+REC91_2025,S1030AX,De qué manera castiga padre biológico a su(s) hija(s)/hijo(s): otro
+REC91_2025,S1030BA,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): palmadas
+REC91_2025,S1030BB,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): reprimenda verbal
+REC91_2025,S1030BC,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): prohibición de algo que les gusta
+REC91_2025,S1030BD,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): privarlos de alimentos
+REC91_2025,S1030BE,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): golpes y castigos físicos
+REC91_2025,S1030BF,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): dejándolos cerrados
+REC91_2025,S1030BG,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): ignorándolos
+REC91_2025,S1030BH,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): poniéndoles más trabajo
+REC91_2025,S1030BI,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): dejándolos fuera de la casa
+REC91_2025,S1030BJ,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): echándoles el agua
+REC91_2025,S1030BK,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): quitándoles la ropa
+REC91_2025,S1030BL,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): quitándoles las pertenencias
+REC91_2025,S1030BM,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): quitándoles el apoyo económico
+REC91_2025,S1030BX,De qué manera castiga Ud. a su(s) hija(s)/hijo(s): otro
+REC91_2025,S1030CA,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): palmadas
+REC91_2025,S1030CB,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): reprimenda verbal
+REC91_2025,S1030CC,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): prohibición de algo que les gusta
+REC91_2025,S1030CD,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): privarlos de alimentos
+REC91_2025,S1030CE,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): golpes y castigos físicos
+REC91_2025,S1030CF,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): dejándolos cerrados
+REC91_2025,S1030CG,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): ignorándolos
+REC91_2025,S1030CH,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): poniéndoles más trabajo ellos
+REC91_2025,S1030CI,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): dejándolos fuera de la casa
+REC91_2025,S1030CJ,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): echándoles agua
+REC91_2025,S1030CK,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): quitándoles la ropa
+REC91_2025,S1030CL,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): quitándoles las pertenencias
+REC91_2025,S1030CM,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): quitándoles el apoyo económico
+REC91_2025,S1030CX,De qué manera castiga esa persona a su(s) hija(s)/hijo(s): otro
+REC91_2025,S1031,Algunos de sus hijos fueron castigado por su mal comportamiento
+REC91_2025,S1032A,De qué manera la castigan o castigaban a Ud. sus padres:  palmadas
+REC91_2025,S1032B,De qué manera la castigan o castigaban a Ud. sus padres:  reprimenda verbal
+REC91_2025,S1032C,De qué manera la castigan o castigaban a Ud. sus padres:  prohibición de algo que les gusta
+REC91_2025,S1032D,De qué manera la castigan o castigaban a Ud. sus padres:  privarla de alimentos
+REC91_2025,S1032E,De qué manera la castigan o castigaban a Ud. sus padres:  golpes y castigos físicos
+REC91_2025,S1032F,De qué manera la castigan o castigaban a Ud. sus padres:  quemándola
+REC91_2025,S1032G,De qué manera la castigan o castigaban a Ud. sus padres:  dejándola cerrada
+REC91_2025,S1032H,De qué manera la castigan o castigaban a Ud. sus padres:  ignorándola
+REC91_2025,S1032I,De qué manera la castigan o castigaban a Ud. sus padres:  ponerle más trabajo
+REC91_2025,S1032J,De qué manera la castigan o castigaban a Ud. sus padres:  dejándola fuera de la casa
+REC91_2025,S1032K,De qué manera la castigan o castigaban a Ud. sus padres:  hundiéndola en agua
+REC91_2025,S1032L,De qué manera la castigan o castigaban a Ud. sus padres:  quitándole la ropa
+REC91_2025,S1032M,De qué manera la castigan o castigaban a Ud. sus padres:  quitándole sus pertenencias
+REC91_2025,S1032N,De qué manera la castigan o castigaban a Ud. sus padres:  quitándole el apoyo económico
+REC91_2025,S1032X,De qué manera la castigan o castigaban a Ud. sus padres: otro
+REC91_2025,S1032Y,No la castigaban/No la castigan
+REC91_2025,S1033,Cree Ud. que para la educación de los niños es necesario el castigo físico
+REC91_2025,S1034A,Presencia de niños menores de 10 años
+REC91_2025,S1034B,Presencia de niños mayores de 10 años
+REC91_2025,Q479A,En los últimos 12 meses participó en reuniones o sesiones demostrativas sobre preparación de alimentos por el MINSA
+REC91_2025,Q479B,En los últimos 12 meses en cuántas sesiones demostrativas participó
+REC91_2025,Q479C,"En los últimos 12 meses recibió la visita del MINSA para aconsejarle de la alimentación, nutrición y/o lactancia de su niña(o)"
+REC91_2025,Q479D,En los últimos 12 meses cuantas visitas recibió
+REC91_2025,QI479E_A,"¿Qué síntomas tendría su niña(o) si tuviera anemia.... Cansancio, mucho sueño y palidez?"
+REC91_2025,QI479E_B,¿Qué síntomas tendría su niña(o) si tuviera anemia... Alteraciones del desarrollo Psicomotor?
+REC91_2025,QI479E_C,"¿Qué síntomas tendría su niña(o) si tuviera anemia... Pérdida de apetito, bajo peso?"
+REC91_2025,QI479E_D,"¿Qué síntomas tendría su niña(o) si tuviera anemia... Dolor de cabeza, mareos?"
+REC91_2025,QI479E_E,"¿Qué síntomas tendría su niña(o) si tuviera anemia... Piel seca, caida de cabello, uñas quebradas y aplanadas?"
+REC91_2025,QI479E_F,"¿Qué síntomas tendría su niña(o) si tuviera anemia... Comer tierra, hielo, uñas, cabello, pasta de dientes entre otros?"
+REC91_2025,QI479E_G,"¿Qué síntomas tendría su niña(o) si tuviera anemia... Vómitos, diarrea, fiebre, tos?"
+REC91_2025,QI479E_H,¿Qué síntomas tendría su niña(o) si tuviera anemia... Dolor muscular?
+REC91_2025,QI479E_I,¿Qué síntomas tendría su niña(o) si tuviera anemia... Falta de sueño?
+REC91_2025,QI479E_J,¿Qué síntomas tendría su niña(o) si tuviera anemia... No tiene síntomas?
+REC91_2025,QI479E_X,¿Qué síntomas tendría su niña(o) si tuviera anemia... Otro?
+REC91_2025,QI479E_Y,¿No sabe/no recuerda?
+REC91_2025,QI479F_A,"¿Qué alimentos le ofrecería a su niña(o)......Carnes rojas, visceras, sangrecita?"
+REC91_2025,QI479F_B,¿Qué alimentos le ofrecería a su niña(o)......Otras carnes y pescados?
+REC91_2025,QI479F_C,¿Qué alimentos le ofrecería a su niña(o)......Lentejas y otras menestras?
+REC91_2025,QI479F_D,"¿Qué alimentos le ofrecería a su niña(o)......Verduras de hojas verdes, alfalfa?"
+REC91_2025,QI479F_E,"¿Qué alimentos le ofrecería a su niña(o)......Jugo de naranja, limonada?"
+REC91_2025,QI479F_F,¿Qué alimentos le ofrecería a su niña(o)......Fruta?
+REC91_2025,QI479F_G,¿Qué alimentos le ofrecería a su niña(o)......Frutas secas?
+REC91_2025,QI479F_H,"¿Qué alimentos le ofrecería a su niña(o)......Huevo, leche y derivados?"
+REC91_2025,QI479F_I,¿Qué alimentos le ofrecería a su niña(o)......Arroz y tubérculos?
+REC91_2025,QI479F_J,¿Qué alimentos le ofrecería a su niña(o)......Arroz fortificado con hierro?
+REC91_2025,QI479F_K,¿Qué alimentos le ofrecería a su niña(o)......Hierro (Sulfato ferroso o similar)?
+REC91_2025,QI479F_L,¿Qué alimentos le ofrecería a su niña(o)......Calcio?
+REC91_2025,QI479F_M,¿Qué alimentos le ofrecería a su niña(o)......Vitaminas?
+REC91_2025,QI479F_X,¿Qué alimentos le ofrecería a su niña(o)......Otro?
+REC91_2025,QI479F_Y,¿Qué alimentos le ofrecería a su niña(o)......No sabe/no recuerda?
+RE223132_2025,ID1,Año
+RE223132_2025,CASEID,Identificación Cuestionario Individual
+RE223132_2025,V201,Total de niños nacidos
+RE223132_2025,V202,¿Cuántos hijos viven con usted?
+RE223132_2025,V203,¿Cuántas hijas viven con usted?
+RE223132_2025,V204,¿Cuántos hijos no están viviendo con usted?
+RE223132_2025,V205,¿Cuántas hijas no están viviendo con usted?
+RE223132_2025,V206,¿Cuántos hijos han muerto?
+RE223132_2025,V207,¿Cuántas hijas han muerto?
+RE223132_2025,V208,Nacimientos en los últimos cinco años
+RE223132_2025,V209,Nacimientos del año pasado
+RE223132_2025,V210,Nacimientos en el mes de entrevista
+RE223132_2025,V211,"Fecha del primer nacimiento, Codificación centenaria de meses (CMC)"
+RE223132_2025,V212,Edad del entrevistado al primer nacimiento
+RE223132_2025,V213,Actualmente embarazada
+RE223132_2025,V214,Duración del embarazo actual
+RE223132_2025,V215,Tiempo transcurrido desde la última menstruación
+RE223132_2025,V216,Menstruado en las últimas seis semanas
+RE223132_2025,V217,Conocimiento del ciclo ovulatorio
+RE223132_2025,V218,Número de niños vivos
+RE223132_2025,V219,Número total de hijos vivos incluido el embarazo actual
+RE223132_2025,V220,"Número total de hijos vivos incluido el embarazo actual (6, si es mayor de 6)"
+RE223132_2025,V221,Intervalo entre la primera unión y primer nacimiento en meses
+RE223132_2025,V222,Intervalo entre el último nacimiento y la fecha de la entrevista en meses
+RE223132_2025,V223,Integridad de la información relativa a la fecha de la concepción del embarazo actual
+RE223132_2025,V224,Total de hijas(os) nacidos vivos - Entrada historial de nacimiento
+RE223132_2025,V225,El embarazo actual es deseado
+RE223132_2025,V226,Tiempo calculado desde el último período menstrual
+RE223132_2025,V227,Marca para último periodo
+RE223132_2025,V228,Ha tenido un embarazo que terminó en aborto involuntario o nacido muerto
+RE223132_2025,V229,En qué mes ocurrió el último de estos embarazos
+RE223132_2025,V230,En qué año ocurrió el último de estos embarazos
+RE223132_2025,V231,Código siglo meses de la terminación del último embarazo CMC
+RE223132_2025,V232,Información mes y año que ocurrió el último embarazo
+RE223132_2025,V233,"Cuantos meses tenía cuando terminò el ùltimo embarazo (pèrdida, aborto, nacido muerto)"
+RE223132_2025,V234,Ha tenido otros embarazos que terminaron en pérdida o aborto
+RE223132_2025,V235,Índice de la historia de nacimiento de último hijo nacido
+RE223132_2025,V237,Otros nacimientos vivos en el intervalo entre el último parto y la fecha de la entrevista
+RE223132_2025,V238,Nacimientos en los últimos tres años
+RE223132_2025,V239,"Embarazos que terminaron en pérdida, aborto o nacido muerto antes del comienzo del calendario"
+RE223132_2025,V240,Mes de la última terminación antes del calendario
+RE223132_2025,V241,Año de la última terminación antes del calendario
+RE223132_2025,V242,"La terminación finalizó antes del calendario, Codificación centenaria de meses CMC"
+RE223132_2025,V243,Información completa de último término
+RE223132_2025,V301,Conocimiento de cualquier método
+RE223132_2025,V302,Alguna vez usó cualquier método
+RE223132_2025,V310,Cuantas hijas e hijos tenía cuando empezó a usar el primer método para no quedar embarazada
+RE223132_2025,V311,Cuantas hijas e hijos tenía cuando empezó a usar el primer método (Grupos)
+RE223132_2025,V312,Método anticonceptivo actual
+RE223132_2025,V313,Uso actual por tipo de método
+RE223132_2025,V315,Mes de inicio del uso del método
+RE223132_2025,V316,Año de inicio del uso del método
+RE223132_2025,V317,"Fecha de inicio del uso del método, Codificación centenaria de meses (CMC)"
+RE223132_2025,V318,Integridad de la información para la fecha de la esterilización
+RE223132_2025,V319,Años desde la esterilización
+RE223132_2025,V320,Edad en la esterilización
+RE223132_2025,V321,Duración conyugal en la esterilización
+RE223132_2025,V322,Número de niños en la esterilización
+RE223132_2025,V323,Marca de la píldora usada
+RE223132_2025,V325A,Costo del método actual
+RE223132_2025,V326,Fuente para obtener el actual método anticonceptivo
+RE223132_2025,V327,Fuente para obtener el actual método anticonceptivo (Grupos)
+RE223132_2025,V337,Meses de uso del método actual
+RE223132_2025,V359,Última discontinuidad del método los últimos 5 años
+RE223132_2025,V360,Motivo de la última discontinuidad
+RE223132_2025,V361,Patrón de uso
+RE223132_2025,V362,Intención de uso
+RE223132_2025,V363,Método futuro preferido
+RE223132_2025,V364,Uso e intención de anticonceptivos
+RE223132_2025,V367,Quería quedar embarazada:
+RE223132_2025,V372,Se muestra el paquete de pastillas
+RE223132_2025,V372A,Se muestra el paquete de Condónes
+RE223132_2025,V375A,La razón principal para no utilizar un método
+RE223132_2025,V376,La razón principal por la que no piensa usar ningún método en el futuro
+RE223132_2025,V376A,Alguna vez usaría algún método
+RE223132_2025,V379,Fuente conocida por cualquier método
+RE223132_2025,V380,Fuente conocida por cualquier método (Grupos)
+RE223132_2025,V384A,Ha oído mensajes de Planificación Familiar en: la radio los 12 últimos meses
+RE223132_2025,V384B,Ha oído mensajes de Planificación Familiar en: la televisión los 12 últimos meses
+RE223132_2025,V384C,Ha leído mensajes de Planificación Familiar en: el periódico los 12 últimos meses
+RE223132_2025,QI616AD,"Ha oído mensajes de Planificación Familiar en: redes sociales como facebook, TikTok, Instagram y otros en los 12 últimos meses"
+RE223132_2025,V393,La ha visitado un trabajador de salud para hablarle sobre planificación Familiar en los últimos 12 meses
+RE223132_2025,V394,En los últimos 12 meses ha tenido alguna consulta de salud
+RE223132_2025,V395,"En el centro de salud, se le informó acerca de métodos  planificación familiar"
+RE223132_2025,V3A01,Antes de la operación de esterilización les dijeron que no podrían tener más hijas(os)
+RE223132_2025,V3A02,Le dijeron de los efectos secundarios que podría tener con este método
+RE223132_2025,V3A03,Fue informada por un trabajador o promotor de salud/farmacéutico sobre los efectos secundarios que podría tener con ese método
+RE223132_2025,V3A04,  Le dijeron qué hacer si llegaba a experimentar efectos secundarios con ese método
+RE223132_2025,V3A05,Le hablaron acerca de otros métodos de planificación familiar que podía usar
+RE223132_2025,V3A06,Fue informada por un trabajador o promotor de salud acerca de otros métodos de planificación familiar que usted podría usar
+RE223132_2025,V3A07,Primera fuente para el método actual
+RE223132_2025,V3A08A,Porque no usa un método: No en unión
+RE223132_2025,V3A08B,Porque no usa un método: No tiene relaciones sexuales
+RE223132_2025,V3A08C,Porque no usa un método: Sexo poco frecuente
+RE223132_2025,V3A08D,Porque no usa un método: Menopáusica/histerectomizada
+RE223132_2025,V3A08E,Porque no usa un método: Infertilidad de la mujer
+RE223132_2025,V3A08F,Porque no usa un método: Amenorrea postparto
+RE223132_2025,V3A08G,Porque no usa un método: Lactancia
+RE223132_2025,V3A08H,Porque no usa un método: Fatalista
+RE223132_2025,V3A08I,Porque no usa un método: Entrevistada se opone
+RE223132_2025,V3A08J,Porque no usa un método: Esposo/compañero se opone
+RE223132_2025,V3A08K,Porque no usa un método: Otros se oponen
+RE223132_2025,V3A08L,Porque no usa un método: Prohibición religiosa
+RE223132_2025,V3A08M,Porque no usa un método: No conoce ningún método
+RE223132_2025,V3A08N,Porque no usa un método: No conoce ninguna fuente
+RE223132_2025,V3A08O,Porque no usa un método: Problemas de salud
+RE223132_2025,V3A08P,Porque no usa un método: Miedo a los efectos secundarios
+RE223132_2025,V3A08Q,Porque no usa un método: Falta de acceso/demasiado lejos
+RE223132_2025,V3A08R,Porque no usa un método: Muy costoso
+RE223132_2025,V3A08S,Porque no usa un método: Uso inconveniente
+RE223132_2025,V3A08T,Porque no usa un método: Interfiere con procesos normales del cuerpo
+RE223132_2025,V3A08U,Porque no usa un método: Infertilidad masculina
+RE223132_2025,V3A08V,Porque no usa un método: País específico
+RE223132_2025,V3A08W,Porque no usa un método: País específico
+RE223132_2025,V3A08X,Porque no usa un método: Otra
+RE223132_2025,V3A08Z,Porque no usa un método: No sabe
+RE223132_2025,V3A09A,Cuántas pastillas obtuvo la última vez
+RE223132_2025,V3A09B,Cuantos Condónes obtuvo  la última vez
+RE223132_2025,V305_01,Alguna vez ha usado: Píldora
+RE223132_2025,V305_02,Alguna vez ha usado: DIU
+RE223132_2025,V305_03,Alguna vez ha usado: Inyección anticonceptiva
+RE223132_2025,QI302_05A,Uso inyección anticonceptiva de 1 mes
+RE223132_2025,QI302_05B,Uso inyección anticonceptiva de 3 meses
+RE223132_2025,V305_05,Alguna vez ha usado: Preservativo condón
+RE223132_2025,V305_06,Alguna vez ha usado: Esterilizacion femenina
+RE223132_2025,V305_07,Alguna vez ha usado: Esterilizacion masculina
+RE223132_2025,V305_08,Alguna vez ha usado: Abstinecia periódica
+RE223132_2025,V305_09,Alguna vez ha usado: Retiro
+RE223132_2025,V305_10,Alguna vez ha usado: Otros métodos
+RE223132_2025,V305_11,Alguna vez ha usado: Norplant/Implantes
+RE223132_2025,V305_13,Alguna vez ha usado: Método de lactancia exclusiva - MELA
+RE223132_2025,V305_14,Alguna vez ha usado: Condón femenino
+RE223132_2025,V305_15,"Alguna vez ha usado: Espuma, jalea óvulos (métodos vaginales)"
+RE223132_2025,V305_16,Alguna vez ha usado: Anticoncepción oral de emergencia (Píldora del día siguiente)
+RE223132_2025,V307_01,Método usado actualmente: Píldora
+RE223132_2025,V307_02,Método usado actualmente: Diu
+RE223132_2025,V307_03,Método usado actualmente: Inyección
+RE223132_2025,V307_04,Método usado actualmente: Diafragma
+RE223132_2025,V307_05,Método usado actualmente: Condón
+RE223132_2025,V307_06,Método usado actualmente: Esterilización femenina
+RE223132_2025,V307_07,Método usado actualmente: Esterilización masculina
+RE223132_2025,V307_08,Método usado actualmente: Abstinencia periódica
+RE223132_2025,V307_09,Método usado actualmente: Retiro
+RE223132_2025,V307_10,Método usado actualmente: Otros
+RE223132_2025,V307_11,Método usado actualmente: Norplant/Implantes
+RE223132_2025,V307_12,Método usado actualmente:
+RE223132_2025,V307_13,Método usado actualmente: Lactancia exclusiva (MELA)
+RE223132_2025,V307_14,Método usado actualmente: Condón femenino
+RE223132_2025,V307_15,"Método usado actualmente: Espuma, jalea óvulos (mètodos vaginales)"
+RE223132_2025,V307_16,Método usado actualmente: Anticoncepción oral de emergencia (Píldora del día siguiente)
+REC21_2025,ID1,Año
+REC21_2025,CASEID,Identificación Cuestionario Individual
+REC21_2025,BIDX,Número de orden de nacimeinto
+REC21_2025,BORD,Número de orden en la historia de nacimiento
+REC21_2025,B0,El nacimiento fue parto ùnico o mùltiple
+REC21_2025,BD,Día del nacimiento
+REC21_2025,B1,Mes de nacimiento
+REC21_2025,B2,Año de nacimiento
+REC21_2025,B3,"Fecha de nacimiento, Codificación centenaria de meses (CMC)"
+REC21_2025,B4,Sexo del niño
+REC21_2025,B5,El niño está vivo
+REC21_2025,B6,Edad a la muerte
+REC21_2025,B7,Edad a la muerte (meses imputados)
+REC21_2025,B8,Edad actual del niño
+REC21_2025,B9,Con quien vive el niño
+REC21_2025,B10,Exhaustividad de la información
+REC21_2025,B11,Intervalo de nacimiento anterior
+REC21_2025,B12,Intervalo de nacimiento satisfactorio
+REC21_2025,B13,Bandera para la edad en la muerte
+REC21_2025,B15,Nacimiento vivo entre nacimientos
+REC21_2025,B16,Número de línea del niño en el hogar
+REC21_2025,BDD,Fecha apertura historia de nacimiento: día
+REC21_2025,BMM,Fecha apertura historia de nacimiento: mes
+REC21_2025,BAA,Fecha apertura historia de nacimiento: año
+REC21_2025,BCMC,"Fecha apertura, Codificación centenaria de meses (cmc)"
+REC21_2025,BEDAD,"Meses exactos desde nacimiento hasta la fecha apertura, (para los difuntos no coincide con edad al morir)"
+REC21_2025,QD333_1,"Alguna dificultad o limitaciòn permanente para ver, aún usando anteojos"
+REC21_2025,QD333_2,"Alguna dificultad o limitaciòn permanente para oir, aún usando audífonos"
+REC21_2025,QD333_3,"Alguna dificultad o limitaciòn permanente para hablar o comunicarse, aún usando la lengua de señas u otro"
+REC21_2025,QD333_4,Alguna dificultad o limitaciòn permanente para moverse o caminar para usar brazos y/o piernas
+REC21_2025,QD333_5,Alguna dificultad o limitaciòn permanente para entender o aprender (concentrarse y recordar)
+REC21_2025,QD333_6,"Alguna dificultad o limitaciòn permanente para relacionarse con los demás, por sus pensamientos, sentimientos, emociones o conductas"
+REC21_2025,Q220A,Duración del embarazo
+REC21_2025,QULT5,Es un nacimiento en ultimos 5 años
+REC41_2025,ID1,Año
+REC41_2025,CASEID,Identificación Cuestionario Individual
+REC41_2025,MIDX,Orden de historia de nacimiento
+REC41_2025,M1,Durante el embarazo cuantas dosis contra el tétano le aplicaron
+REC41_2025,M1A,Antes del embarazo cuantas dosis de la vacuna contra el  tétano recibió
+REC41_2025,M1B,Mes última inyección contra el tétano antes del embarazo
+REC41_2025,M1C,Año de la última inyección contra el tétano antes del embarazo
+REC41_2025,M1D,Hace cuantos años recibió la última inyección contra el tétano antes del embarazo
+REC41_2025,M1E,Última inyección contra el tétano antes del embarazo (CMC)
+REC41_2025,M2A,La chequeó en su control prenatal: Médico
+REC41_2025,M2B,La chequeó en su control prenatal: Enfermera
+REC41_2025,M2C,La chequeó en su control prenatal: Obstetra
+REC41_2025,M2D,La chequeó en su control prenatal: Técnico en enfermería
+REC41_2025,M2E,La chequeó en su control prenatal: Promotor de salud
+REC41_2025,M2F,La chequeó en su control prenatal: Asistente de parto entrenado
+REC41_2025,M2G,La chequeó en su control prenatal: Comadrona/partera
+REC41_2025,M2H,La chequeó en su control prenatal: Relativo (no estándar y rara vez se usa)
+REC41_2025,M2I,La chequeó en su control prenatal: CS otra persona
+REC41_2025,M2J,La chequeó en su control prenatal: CS otra persona
+REC41_2025,M2K,La chequeó en su control prenatal: Otro
+REC41_2025,M2L,La chequeó en su control prenatal: CS otro
+REC41_2025,M2M,La chequeó en su control prenatal: CS otro
+REC41_2025,M2N,La chequeó en su control prenatal: Nadie
+REC41_2025,M3A,La atendió en el parto: Médico
+REC41_2025,M3B,La atendió en el parto: Enfermera
+REC41_2025,M3C,La atendió en el parto: Obstetra
+REC41_2025,M3D,La atendió en el parto: Técnico en enfermería
+REC41_2025,M3E,La atendió en el parto: Promotor de salud
+REC41_2025,M3F,La atendió en el parto: Asistente de parto entrenado
+REC41_2025,M3G,La atendió en el parto: Comadrona/partera
+REC41_2025,M3H,La atendió en el parto: Familiar
+REC41_2025,M3I,La atendió en el parto: CS otra persona
+REC41_2025,M3J,La atendió en el parto: CS otra persona
+REC41_2025,M3K,La atendió en el parto: Otro
+REC41_2025,M3L,La atendió en el parto: CS otro
+REC41_2025,M3M,La atendió en el parto: CS otro
+REC41_2025,M3N,La atendió en el parto: Nadie
+REC41_2025,M4,Duración de la lactancia
+REC41_2025,M5,Meses de amamantamiento
+REC41_2025,M6,Duración de la amenorrea
+REC41_2025,M7,Meses de amenorrea
+REC41_2025,M8,Duración de la abstinencia
+REC41_2025,M9,Meses de abstinencia
+REC41_2025,M10,Momento que quería quedar embarazada
+REC41_2025,M11,Tiempo que hubiera querido esperar
+REC41_2025,M13,Momento del primer control prenatal
+REC41_2025,M14,Visitas prenatales por embarazo
+REC41_2025,M15,Lugar del parto
+REC41_2025,M17,Parto por cesárea
+REC41_2025,M18,Tamaño del niño al nacer
+REC41_2025,M19,Peso del niño al nacer  (kilos - 3 dec.)
+REC41_2025,M19A,Peso del niño al nacer según recuerda
+REC41_2025,M27,Marca para lactancia
+REC41_2025,M28,Marca para amenorrea
+REC41_2025,M29,Marca para abstinencia
+REC41_2025,M34,Cuando empezó a darle el pecho al niño
+REC41_2025,M35,Cuantas veces le dio pecho durante la noche de ayer
+REC41_2025,M36,Cuantas veces le dio pecho durante el día de ayer
+REC41_2025,M38,El día de ayer o noche tomó algo en biberón
+REC41_2025,M39,El día de ayer o durante el dìa o la noche cuantas veces le dio comida sólidas o semisólidas
+REC41_2025,M42A,Durante su embarazo Durante su embarazo en alguno de sus controles: La pesaron
+REC41_2025,M42B,Durante su embarazo en alguno de sus controles: Le midieron la barriga
+REC41_2025,M42C,Durante su embarazo en alguno de sus controles: Le tomaron le presión arterial
+REC41_2025,M42D,Durante su embarazo en alguno de sus controles: Le hicieron examen de orina
+REC41_2025,M42E,Durante su embarazo en alguno de sus controles: Le hicieron examen de sangre
+REC41_2025,M43,Le explicaron acerca de las complicaciones que se pueden presentar en el embarazo
+REC41_2025,M44,Le dijeron dónde acudir si se presentan complicaciones del embarazo
+REC41_2025,M45,"Durante el embarazo, le administraron tabletas, jarabe o inyecciones de hierro"
+REC41_2025,M46,Por cuantos días tomó hierro y/o cuantas inyecciones recibió
+REC41_2025,M47,"Durante el embarazo, tuvo dificultad para ver objetos o personas siendo de día"
+REC41_2025,M48,"Durante el embarazo, tuvo dificultad para ver objetos o personas siendo de noche"
+REC41_2025,M49A,Durante el embarazo - tomó fansidar para la malaria
+REC41_2025,M49B,Durante el embarazo - tomó cloroquina para la malaria
+REC41_2025,M49C,Durante el embarazo - tomó medicamento para la malaria
+REC41_2025,M49D,Durante el embarazo: tomó un medicamento específico del país para la malaria
+REC41_2025,M49E,Durante el embarazo: tomó un medicamento específico del país para la malaria
+REC41_2025,M49F,Durante el embarazo: tomó un medicamento específico del país para la malaria
+REC41_2025,M49G,Durante el embarazo: tomó un medicamento específico del país para la malaria
+REC41_2025,M49X,Durante el embarazo - tomó otro medicamento para la malaria
+REC41_2025,M49Z,Durante el embarazo: no tomó medicamento para la malaria
+REC41_2025,M51A,Tiempo en que tuvo control después del parto
+REC41_2025,M54,Recibió una dosis de vitamina A en los primeros 2 meses después del parto
+REC41_2025,M55A,"Durante los primeros 3 días despues del parto, le dieron de tomar: leche, diferente a la leche materna"
+REC41_2025,M55B,"Durante los primeros 3 días despues del parto, le dieron de tomar: agua sola"
+REC41_2025,M55C,"Durante los primeros 3 días despues del parto, le dieron de tomar: dextrosa glucosada"
+REC41_2025,M55D,"Durante los primeros 3 días despues del parto, le dieron de tomar: agua"
+REC41_2025,M55E,"Durante los primeros 3 días despues del parto, le dieron de tomar: agua azucarada"
+REC41_2025,M55F,"Durante los primeros 3 días despues del parto, le dieron de tomar: jugo de fruta"
+REC41_2025,M55G,"Durante los primeros 3 días despues del parto, le dieron de tomar: fórmula para bebes"
+REC41_2025,M55H,"Durante los primeros 3 días despues del parto, le dieron de tomar: té/infusiones"
+REC41_2025,M55I,"Durante los primeros 3 días despues del parto, le dieron de tomar: miel"
+REC41_2025,M55J,"Durante los primeros 3 días despues del parto, le dieron de tomar: país específico"
+REC41_2025,M55K,"Durante los primeros 3 días despues del parto, le dieron de tomar: país específico"
+REC41_2025,M55L,"Durante los primeros 3 días despues del parto, le dieron de tomar: país específico"
+REC41_2025,M55M,"Durante los primeros 3 días despues del parto, le dieron de tomar: país específico"
+REC41_2025,M55N,"Durante los primeros 3 días, le dieron de tomar: país específico"
+REC41_2025,M55X,"Durante los primeros 3 días despues del parto, le dieron de tomar: otro"
+REC41_2025,M55Z,"Durante los primeros 3 días despues del parto, le dieron de tomar: nada"
+REC41_2025,M57A,Cuidado prenatal: su hogar
+REC41_2025,M57B,Cuidado prenatal: otro hogar
+REC41_2025,M57C,Cuidado prenatal: CS hogar
+REC41_2025,M57D,Cuidado prenatal: CS hogar
+REC41_2025,M57E,Atención prenatal: Hospital MINSA
+REC41_2025,M57F,Atención prenatal: Centro de salud MINSA
+REC41_2025,M57G,Atención prenatal: Posta médica MINSA
+REC41_2025,M57H,Atención prenatal: Clínica móvil
+REC41_2025,M57I,Atención prenatal: Hospital ESSALUD
+REC41_2025,M57J,Atención prenatal: Hospital FF.AA. y PNP
+REC41_2025,M57K,Atención prenatal: Policlínico/centro/posta ESSALUD
+REC41_2025,M57L,Atención prenatal: Hospital/Otro de la Municipalidad
+REC41_2025,M57M,Atención prenatal: Hospital privado/clínica
+REC41_2025,M57N,Atención prenatal: Clínica móvil particular
+REC41_2025,M57O,Atención prenatal: Médico particular
+REC41_2025,M57P,Atención prenatal: Clínica/Posta de ONG
+REC41_2025,M57Q,Atención prenatal: Hospital/Otro de la Iglesia
+REC41_2025,M57R,Atención prenatal: Otros privados
+REC41_2025,M57S,Atención prenatal: Casa de partera
+REC41_2025,M57T,Atención prenatal: Otro CS
+REC41_2025,M57U,Atención prenatal: Otro CS
+REC41_2025,M57V,Atención prenatal: Otro CS
+REC41_2025,M57X,Atención prenatal: Otro
+REC41_2025,M60,Durante el embarazo tomó medicamentos contra parásitos intestinales
+REC41_2025,M61,Tiempo que permaneció en el lugar del parto
+REC41_2025,M62,Alguien verificó su salud antes del alta
+REC41_2025,M63,Cuánto tiempo antes del parto se realizó un control de salud
+REC41_2025,M64,Quién verificó la salud de los encuestados antes del alta
+REC41_2025,M65A,Razón no fue a centro de salud: Cuesta mucho
+REC41_2025,M65B,Razón no fue a centro de salud: No está abierto
+REC41_2025,M65C,"Razón no fue a centro de salud: Muy lejos, no hay transporte"
+REC41_2025,M65D,Razón no fue a centro de salud: No confía en atención
+REC41_2025,M65E,Razón no fue a centro de salud: No había personal femenino
+REC41_2025,M65F,"Razón no fue a centro de salud: Nsposo, familia no quería"
+REC41_2025,M65G,Razón no fue a centro de salud: No fue necesario
+REC41_2025,M65H,Razón no fue a centro de salud: No acostumbrada
+REC41_2025,M65I,Razón no fue a centro de salud: CS
+REC41_2025,M65J,Razón no fue a centro de salud: CS
+REC41_2025,M65K,Razón no fue a centro de salud: CS
+REC41_2025,M65L,Razón no fue a centro de salud: CS
+REC41_2025,M65X,Razón no fue a centro de salud: otro
+REC41_2025,M66,Después del parto tuvo algún chequeo o revisiòn médica
+REC41_2025,M67,Cuánto tiempo después del parto se realizó su primer chequeo o revisiòn médica
+REC41_2025,M68,Quién le realizó su chequeo o revisión médica después del parto
+REC41_2025,M69,Donde se chequeo Ud.
+REC41_2025,M70,Durante el primer mes le hicieron al bebe algún control o revisión médica
+REC41_2025,M71,Cuánto tiempo después del parto se realizó el control postnatal
+REC41_2025,M72,Quién realizó el control posnatal
+REC41_2025,M73,Dónde le hicieron el chequeo o revisión médica al bebé por primera vez
+REC94_2025,ID1,Año
+REC94_2025,CASEID,Identificación Cuestionario Individual
+REC94_2025,IDX94,Orden de historia de nacimiento
+REC94_2025,S410B,Cuantos meses de embarazo tenía en la última revisión prenatal
+REC94_2025,S411B,En alguno de sus controles: Le midieron la barriga
+REC94_2025,S411F,En alguno de sus controles: Escucharon los latidos del corazón del bebé
+REC94_2025,S411G,En alguno de sus controles: Le hicieron la prueba para descartar Sífilis
+REC94_2025,S411H,En alguno de sus controles: Le hicieron la prueba para descartar de VIH/SIDA
+REC94_2025,S411I,En alguno de sus controles: Le informaron como alimentarse
+REC94_2025,S411J,En alguno de sus controles: Le informaron sobre sus derechos
+REC94_2025,S411K,En alguno de sus controles: Le enseñaron como preparar pezones para lactancia materna
+REC94_2025,S411L,En alguno de sus controles: Le enseñaron como darle el pecho a su bebe
+REC94_2025,S411BA,Cuantos meses de embarazo tenía cuando se realizó la primera prueba de orina
+REC94_2025,S411CA,Cuantos meses de embarazo tenía cuando se realizó el primer análisis de sangre
+REC94_2025,S411DA,Cuantos meses de embarazo tenía cuando se realizó la primera prueba de Sífilis
+REC94_2025,S411EA,Cuantos meses de embarazo tenía cuando se realizó la primera prueba de VIH/SIDA
+REC94_2025,S413,Durante el embarazo estaba afiliada al SIS
+REC94_2025,S422I,Cantidad de inyecciones de hierro recibidas durante el embarazo
+REC94_2025,S426B,"Razón por qué no acudió a un hospital, centro o puesto de salud del MINSA para dar a luz"
+REC94_2025,S426E,La cesárea fue programada
+REC94_2025,S426FA,Cuánto tiempo transcurrió hasta llegar al establecimiento para dar a luz
+REC94_2025,S426FB,Cuanto tiempo transcurrió desde que llegó al establecimeinto hasta que fué examinada por personal de salud.
+REC94_2025,S426GA,Complicaciones de parto: Parto prolongado
+REC94_2025,S426GB,Complicaciones de parto: Sangrado excesivo
+REC94_2025,S426GC,Complicaciones de parto: Fiebre con sangrado vaginal
+REC94_2025,S426GD,Complicaciones de parto: Convulsiones
+REC94_2025,S426GE,Complicaciones de parto: Otras
+REC94_2025,S430C,El niño fue inscrito en la municipalidad/Oficina Registral de la RENIEC
+REC94_2025,S430D,La partida/acta tiene Código Único de Identidad (CUI)
+REC94_2025,S431A,En el establecimiento de salud le dieron algo en biberón al bebe después del nacimiento
+REC94_2025,S425A,Entrevistada era miembro del seguro de salud materna
+REC94_2025,S432,El niño está afiliado al Seguro Integral de Salud
+REC94_2025,S432AD,Day affiliation integral health insurance
+REC94_2025,S432AM,Mes afiliación seguro de salud integral
+REC94_2025,S432AY,Año de afiliación seguro de salud integral
+REC94_2025,S427DA,Complicaciones después del parto: sangrado intenso
+REC94_2025,S427DB,Complicaciones después del parto: pérdida de conciencia
+REC94_2025,S427DC,"Complicaciones después del parto: fiebre alta, escalofríos"
+REC94_2025,S427DD,Complicaciones después del parto: infección de los senos
+REC94_2025,S427DE,Complicaciones después del parto: dolor al orinar
+REC94_2025,S427DF,Complicaciones después del parto: flujos vaginales
+REC94_2025,S427DG,Complicaciones después del parto: Pérdida involuntaria de orina
+REC94_2025,S427F,Cuando tuvo esas complicaciones recibió atención médica
+REC94_2025,S435,Por qué no le dio pecho al bebé
+REC94_2025,S436C,Pusieron al niño en contacto piel a piel con Ud. inmediatamente después del  nacimiento
+REC94_2025,S440,Por qué dejo de darle pecho
+REC94_2025,S441,Recibió alguna capacitación sobre lactancia materna durante el embarazo
+REC94_2025,S442,En qué lugar recibió capacitación sobre lactancia materna
+REC94_2025,S446AA,Con cuanto tiempo de anticipación preparó el biberón
+REC94_2025,S446AB,Donde guardó el biberón
+REC94_2025,S446A,Se agregó azúcar a cualquiera de los alimentos del bebé
+REC94_2025,S447,Se agrego azúcar a algun alimento o liquido que comiò o tomò el dìa de ayer
+REC94_2025,S448A,Tiempo entre que terminó de preparar los alimentos del bebé y los sirvió
+REC94_2025,S448B,Dónde se almacenó la comida
+REC94_2025,QI411_M,En alguno de sus controles: le hicieron la prueba para descartar Hepatitis B
+REC94_2025,QI411F,Cuántos meses de embarazo tenía en primera prueba para descartar Hepatitis B
+REC94_2025,QI440B,"Durante primeros 6 meses, solo recibió leche materna"
+REC94_2025,QI422A_A,Durante el embarazo algún personal de salud le realizó una prueba o análisis para descartar anemia
+REC94_2025,QI422A_B,Durante el embarazo le diagnosticaron o le dijeron que tenía anemia
+REC94_2025,QI422A_C,Durante el embarazo le indicaron tratamiento con hierro
+REC94_2025,QI422A_D,Durante el embarazo consumió hierro tal como le indicó el personal de salud
+CSALUD01_2025,ID1,Año
+CSALUD01_2025,HHID,Identificación Cuestionario del Hogar
+CSALUD01_2025,QHCLUSTER,Conglomerado
+CSALUD01_2025,QHNUMBER,Vivienda seleccionada
+CSALUD01_2025,QHHOME,Hogar seleccionado
+CSALUD01_2025,QSNUMERO,Número de la persona seleccionada
+CSALUD01_2025,QSINTM,Mes de visita final
+CSALUD01_2025,QSINTY,Año de visita final
+CSALUD01_2025,QSTOTVISIT,Número total de visitas
+CSALUD01_2025,QSRESULT,Codigo resultado final
+CSALUD01_2025,QSNINOS,Total Niños/Niñas de 0 a 11 años
+CSALUD01_2025,QSRESINF,Resultado informante
+CSALUD01_2025,QS20C,Codigo persona seleccionada
+CSALUD01_2025,QSSEXO,Sexo de la persona seleccionada
+CSALUD01_2025,QSMEF,Informante en MEF
+CSALUD01_2025,QSDIA,Día de nacimiento
+CSALUD01_2025,QS22M,Mes de nacimiento
+CSALUD01_2025,QS22A,Año de nacimiento
+CSALUD01_2025,QS23,Años cumplidos
+CSALUD01_2025,QS24,Asistió a la escuela
+CSALUD01_2025,QS25N,Nivel que aprobó
+CSALUD01_2025,QS25AG,Grado o año
+CSALUD01_2025,QS25A,Año de estudios
+CSALUD01_2025,QS25G,Grado de estudios
+CSALUD01_2025,QS25AA,¿Cuál es el idioma o lengua materna que aprendió hablar en su niñez
+CSALUD01_2025,QS25BB,Por sus antepasados y de acuerdo a sus costumbres ¿Usted se siente o se considera:
+CSALUD01_2025,QS25C1,"Alguna dificultad para ver, aún usando anteojos"
+CSALUD01_2025,QS25C2,"Alguna dificultad para oír, aún usando audífonos"
+CSALUD01_2025,QS25C3,"Alguna dificultad para hablar o comunicarse, aún usando la lengua de señas u otro"
+CSALUD01_2025,QS25C4,Alguna dificultad para mover o caminar para usar brazos y/o piernas
+CSALUD01_2025,QS25C5,Alguna dificultad para entender o aprender (concentrarse y recordarse)
+CSALUD01_2025,QS25C6,"Alguna dificultad para relacionarse con los demás, por sus pensamientos, sentimientos, emociones o conductas"
+CSALUD01_2025,QS26,Tiene seguro de salud
+CSALUD01_2025,QS27,Institucion a que corresponde el seguro que tiene
+CSALUD01_2025,QS28,Conoce o ha oído hablar de la tuberculosis o TBC
+CSALUD01_2025,QS29A,Ha oído hablar de la infección por VIH
+CSALUD01_2025,QS29B,Ha oído hablar de la enfermedad llamada SIDA
+CSALUD01_2025,QS100,Algun profesional le ha medido la Presión Arterial
+CSALUD01_2025,QS101,Donde le midieron la Presión Arterial
+CSALUD01_2025,QS102,Le diagnosticaron Hipertensión Arterial o Presión Alta
+CSALUD01_2025,QS103U,Unidad de tiempo que le diagnosticaron hipertensión arterial o presión alta
+CSALUD01_2025,QS103C,Años/meses que diagnosticaron hipertensión arterial o presión arterial alta
+CSALUD01_2025,QS104,Compraron medicamentos para controlar su Presión Alta
+CSALUD01_2025,QS105,Compro con/sin receta médica
+CSALUD01_2025,QS106,Tomo medicamentos tal cual indico le indico el médico
+CSALUD01_2025,QS107,Le midieron el azúcar o glucosa en la sangre
+CSALUD01_2025,QS108,"Donde le midieron el azúcar o glucosa en la sangre, última vez"
+CSALUD01_2025,QS109,Le diagnosticaron diabetes o azúcar alta
+CSALUD01_2025,QS110U,Unidad de tiempo en que le diagnosticaron Diabetes o azúcar alta
+CSALUD01_2025,QS110C,Años/meses diagnosticaron Diabetes o azúcar alta
+CSALUD01_2025,QS111,Ha comprado medicamentos para controlar la diabetes o azúcar alta
+CSALUD01_2025,QS112,Compro con/sin receta médica
+CSALUD01_2025,QS113,Tomó los medicamentos tal cual le indicó el médico
+CSALUD01_2025,QS200,En los  últimos 12 meses ha fumado cigarrillos
+CSALUD01_2025,QS201,En los últimos 30 días ha fumado cigarrillos
+CSALUD01_2025,QS202,Fuma diariamente
+CSALUD01_2025,QS203U,Edad que empezó a fumar diariamente - Unidad
+CSALUD01_2025,QS203C,Edad que empezó a fumar diariamente
+CSALUD01_2025,QS204U,Hace que años empezó a fumar diariamente - Unidad
+CSALUD01_2025,QS204C,Cantidad años
+CSALUD01_2025,QS205U,Cuántos cigarrillos fuma a diario - Unidad
+CSALUD01_2025,QS205C,Cantidad de cigarrillos
+CSALUD01_2025,QS206,Ha consumido alguna vez bebidas alcohólicas
+CSALUD01_2025,QS207U,Unidad Edad primera vez que tomo bebidas alcohólicas
+CSALUD01_2025,QS207C,Cantidad  Edad primera vez que tomo bebidas alcohólicas
+CSALUD01_2025,QS208,En los últimos 12 meses ha consumido alguna bebida alcohólica
+CSALUD01_2025,QS209,"En los últimos 12 meses, tomó bebidas alcohólicas 12 o más días"
+CSALUD01_2025,QS210,En los últimos 30 días ha consumido bebidas alcohólicas
+CSALUD01_2025,QS211U,Unidad Veces que tomo
+CSALUD01_2025,QS211C,Cantidad Veces que tomo
+CSALUD01_2025,QS212T,Tomó bebidas
+CSALUD01_2025,QS212A,Tomó cerveza
+CSALUD01_2025,QS212AV,Fueron Vasos/copas
+CSALUD01_2025,QS212AB,Fueron botellas
+CSALUD01_2025,QS212B,Tomó Vino/cachina
+CSALUD01_2025,QS212BV,Fueron vasos/copas
+CSALUD01_2025,QS212BB,Fueron botellas
+CSALUD01_2025,QS212C,Tomó chicha de jora fermentada
+CSALUD01_2025,QS212CV,Fueron vasos/copas
+CSALUD01_2025,QS212CB,Fueron botellas
+CSALUD01_2025,QS212D,Tomó masato fermentado
+CSALUD01_2025,QS212DV,Fueron vasos/copas
+CSALUD01_2025,QS212DB,Fueron botellas
+CSALUD01_2025,QS212E,Tomó Yonque/cañazo
+CSALUD01_2025,QS212EV,Fueron vasos/copas
+CSALUD01_2025,QS212EB,Fueron botellas
+CSALUD01_2025,QS212F,Tomó Anisado
+CSALUD01_2025,QS212FV,Fueron vasos/copas
+CSALUD01_2025,QS212FB,Fueron botellas
+CSALUD01_2025,QS212G,Tomó Whisky/pisco /ron
+CSALUD01_2025,QS212GV,Fueron vasos/copas
+CSALUD01_2025,QS212GB,Fueron botellas
+CSALUD01_2025,QS212O,Tomó otro
+CSALUD01_2025,QS212XV,Fueron vasos/copas
+CSALUD01_2025,QS212XB,Fueron botellas
+CSALUD01_2025,QS212Z,No sabe/no recuerda
+CSALUD01_2025,QS213U,Cuántos días consumió frutas - Unidad
+CSALUD01_2025,QS213C,Cantidad de días que consumió frutas
+CSALUD01_2025,QS214U,Cuántas tajadas o racimos de fruta comió - Unicad
+CSALUD01_2025,QS214C,Cantidad de tajadas o racimos de fruta que comió
+CSALUD01_2025,QS215U,Cuántos días tomó jugo de frutas - Unidad
+CSALUD01_2025,QS215C,Cantidad de días tomó jugo de frutas
+CSALUD01_2025,QS216U,Cuántos vasos de jugo tomo - Unidad
+CSALUD01_2025,QS216C,Cantidad de vasos de jugo que tomo
+CSALUD01_2025,QS217U,Cuántos días comió ensalada frutas - Unidad
+CSALUD01_2025,QS217C,Cantidad de días ensalada frutas
+CSALUD01_2025,QS218U,Cuántas porciones de ensalada de frutas comió - Unidad
+CSALUD01_2025,QS218C,Cantidad porciones ensalada frutas
+CSALUD01_2025,QS219U,Cuántos días comió ensalada de verduras - Unidad
+CSALUD01_2025,QS219C,Días que comió ensalada de verduras
+CSALUD01_2025,QS220U,Cuántas porciones ensalada verduras comió - Unidad
+CSALUD01_2025,QS220CV,Cantidad porciones ensalada verduras
+CSALUD01_2025,QS220CC,Cantidad cucharadas
+CSALUD01_2025,QS301,Alguna vez un médico/personal de salud le ha evaluado o medido la vista
+CSALUD01_2025,QS302U,Hace cuánto tiempo que le evaluaron - Unidad
+CSALUD01_2025,QS302C,Hace cuánto tiempo que le evaluaron - cantidad
+CSALUD01_2025,QS303,Lugar donde la evaluaron
+CSALUD01_2025,QS304,Le han diagnosticado Catarata
+CSALUD01_2025,QS305U,Tiempo que le diagnosticaron - Unidad
+CSALUD01_2025,QS305C,Tiempo que le diagnosticaron - cantidad
+CSALUD01_2025,QS306,En los últimos 12 meses ha tenido dificultad para ver o reconocer a una distancia aproximada de 6 metros
+CSALUD01_2025,QS307,En los últimos 30 días continúa con la dificultad
+CSALUD01_2025,QS308,En los últimos 12 meses dificultad ver imagen o texto brazo extendido
+CSALUD01_2025,QS309,En los últimos 30 días continúa con esa dificultad
+CSALUD01_2025,QS311,Alguna vez ha sido atendido en servicio dental o un odontólogo
+CSALUD01_2025,QS312U,Hace cuánto tiempo - Unidad
+CSALUD01_2025,QS312C,Hace cuánto tiempo - cantidad
+CSALUD01_2025,QS313,Donde le atendieron la última vez
+CSALUD01_2025,QS401,Se puede prevenir el cáncer
+CSALUD01_2025,QS402,Ha oído hablar de cáncer cuello uterino/cervical
+CSALUD01_2025,QS403,Ha oído del virus papiloma humano
+CSALUD01_2025,QS404,Cree que el virus papiloma humano causa el cáncer uterino
+CSALUD01_2025,QS404C,"Cree que el análisis de sangre para el dosaje del Antígeno Prostático Específico (PSA), permite la detección temprana del cáncer de próstata"
+CSALUD01_2025,QS406,"Se realizo un chequeo general, descarte algun tipo de cáncer"
+CSALUD01_2025,QS407,Donde le realizaron el chequeo
+CSALUD01_2025,QS409,Alguna vez un médico/profesional salud le ha realizado un examen físico de mama
+CSALUD01_2025,QS410U,Hace cuánto tiempo del examen de mama - Unidad
+CSALUD01_2025,QS410C,Hace cuánto tiempo del examen de mama - cantidad
+CSALUD01_2025,QS411,Alguna vez un médico/profesional de salud le ha realizado la prueba de Papanicolaou
+CSALUD01_2025,QS412U,Hace cuánto tiempo de la prueba papanicolaou - Unidad
+CSALUD01_2025,QS412C,Hace cuánto tiempo de la prueba papanicolaou - cantidad
+CSALUD01_2025,QS413,Recogió o llegó a  conocer los resultados de la prueba de Papanicolaou
+CSALUD01_2025,QS413A,Alguna vez en su vida un médico u otro profesional de salud le ha realizado la Prueba de Inspección de Ácido Acético (IVAA)
+CSALUD01_2025,QS413B,Hace cuánto tiempo le realizaron la última vez la prueba de Inspección de Ácido Acético (IVAA)
+CSALUD01_2025,QS413B_A,Años/meses en que le realizaron la prueba de Inspección de Ácido Acético (IVAA)
+CSALUD01_2025,QS413C,Recogió o llegó a conocer los resultados de la prueba de Inspección de Ácido Acético (IVAA)
+CSALUD01_2025,QS413D,Alguna vez en su vida un médico u otro profesional de salud le ha realizado la Prueba Molecular del Virus del Papiloma Humano (VPH)
+CSALUD01_2025,QS413E,Hace cuánto tiempo le realizaron la última vez la Prueba Molecular del Virus del Papiloma Humano (VPH)
+CSALUD01_2025,QS413E_A,Años/meses en que le realizaron la prueba Molecular del Virus del Papiloma Humano (VPH)
+CSALUD01_2025,QS413F,Recogió o llegó a conocer los resultados de la Prueba Molecular del Virus del Papiloma Humano (VPH)
+CSALUD01_2025,QS415,Alguna vez un médico/profesional de salud le ha realizado un examen de mamografía
+CSALUD01_2025,QS416U,Hace cuanto tiempo le realizaron la mamografía - Unidad
+CSALUD01_2025,QS416C,Hace cuanto tiempo le realizaron la mamografía - cantidad
+CSALUD01_2025,QS418A,Alguna vez en su vida le han realizado el análisis de sangre para el dosaje de Antígeno Prostático Específico (PSA)
+CSALUD01_2025,QS419A,Hace cuánto tiempo realizaron la última vez el análisis de sangre para el dosaje de Antígeno Prostático Específico (PSA) - Unidad
+CSALUD01_2025,QS419A_A,Hace cuánto tiempo realizaron la última vez el análisis de sangre para el dosaje de Antígeno Prostático Específico (PSA) - Cantidad
+CSALUD01_2025,QS500,Actualmente tiene tos con flema
+CSALUD01_2025,QS501U,Hace cuánto tiene tos con flema - Unidad
+CSALUD01_2025,QS501C,Hace cuánto tiene tos con flema - cantidad
+CSALUD01_2025,QS503,"Conoce o ha oído hablar de una enfermedad llamada tuberculosis, TB o TBC"
+CSALUD01_2025,QS505A,La tuberculosis se contagia cuando la persona enferma tose o estornuda cerca a otra persona
+CSALUD01_2025,QS505B,Se contagia cuando una persona enferma habla cerca con otra persona
+CSALUD01_2025,QS505C,Se contagia cuando una persona enferma toca a otra
+CSALUD01_2025,QS505D,Se contagia cuando una persona enferma comparte alimentos o utensilios con otra persona
+CSALUD01_2025,QS506,Se puede curar la tuberculosis
+CSALUD01_2025,QS506B,Si un miembro de su familia tuviera tuberculosis¿Usted guardaría en secreto su enfermedad?
+CSALUD01_2025,QS601A,Ha oído hablar de infección por VIH
+CSALUD01_2025,QS601B,Ha oído hablar de una enfermedad llamada SIDA
+CSALUD01_2025,QS603,En los últimos 12 meses se ha hecho una prueba de SIDA (VIH)
+CSALUD01_2025,QS604,Conoció los resultados del examen de laboratorio
+CSALUD01_2025,QS606,"Las personas tienen menos riesgo de adquirir el virus que causa el VIH (SIDA), si tiene una sola pareja sexual que no infectada y que no tenga otras parejas"
+CSALUD01_2025,QS607,Es posible que una persona que parece saludable este infectada con el virus que causa el SIDA (VIH)
+CSALUD01_2025,QS608,"Las personas pueden adquirir el virus que causa el SIDA (VIH) por dar un abrazo, beso o caricias a una persona infectada"
+CSALUD01_2025,QS609,Las personas pueden adquirir el virus que causa el SIDA (VIH) por la picadura de un mosquito
+CSALUD01_2025,QS610,Las personas pueden adquirir el virus que causa el SIDA (VIH) compartiendo alimentos o utensilios con una persona infectada
+CSALUD01_2025,QS611,Las personas que usan condón cada vez que tienen relaciones sexuales tienen menos riesgo de adquirir el virus que causa el SIDA (VIH)
+CSALUD01_2025,QS700A,Últimos 14 días ha sentido molestias o problemas como:  Poco interés
+CSALUD01_2025,QS700B,Últimos 14 días ha sentido molestias o problemas como: Deprimido
+CSALUD01_2025,QS700C,Últimos 14 días ha sentido molestias o problemas como: No puede dormir/dormir demasiado
+CSALUD01_2025,QS700D,Últimos 14 días ha sentido molestias o problemas como: Cansado
+CSALUD01_2025,QS700E,Últimos 14 días ha sentido molestias o problemas como: Poco apetito/comer en exceso
+CSALUD01_2025,QS700F,Últimos 14 días ha sentido molestias o problemas como: Poner atencion
+CSALUD01_2025,QS700G,Últimos 14 días ha sentido molestias o problemas como: Moverse
+CSALUD01_2025,QS700H,Últimos 14 días ha sentido molestias o problemas como: Hacerse daño de alguna forma buscando morir
+CSALUD01_2025,QS700I,Últimos 14 días ha sentido molestias o problemas como: Sentirse mal
+CSALUD01_2025,QS702,"Estas molestias o problema, cuanto le han dificultado para realizar su trabajo, sus actividades en la casa o llevarse bien con otras personas, mucho, poco o nada"
+CSALUD01_2025,QS703,"Últimos 12 meses, ha tenido molestias o problemas mencionados anteriormente como: sentirse con poco interés, triste, con problemas para dormir, desanimada(o), cansada(o), sin motivo, desconcentrada(o) o con poco apetito"
+CSALUD01_2025,QS704T,Ahora hablemos solo de las molestias o problemas que tuvo cuando (en)
+CSALUD01_2025,QS704A,Últimos 12 meses: tuvo pocas ganas o interés en hacer las cosas
+CSALUD01_2025,QS704B,"Últimos 12 meses: se sintió desanimada(o), deprimida(o), triste o sin esperanza"
+CSALUD01_2025,QS704C,Últimos 12 meses: tuvo problemas para dormir o mantenerse dormida(o) o en dormir demasiado
+CSALUD01_2025,QS704D,Últimos 12 meses: se sintió cansada(o) o tuvo poca energía sin motivo que lo justifique
+CSALUD01_2025,QS704E,Últimos 12 meses: tuvo poco apetito o ha comido en exceso
+CSALUD01_2025,QS704F,Últimos 12 meses: ha tenido dificultad en poner atención o concentrarse en las cosas que hace
+CSALUD01_2025,QS704G,Últimos 12 meses: dificultad para moverse o hablar más lento de lo normal o se ha sentido inquieta(o) o intranquila(o) de lo normal
+CSALUD01_2025,QS704H,Últimos 12 meses: ha tenido pensamientos de morir o de hacerse daño
+CSALUD01_2025,QS704I,Últimos 12 meses: se ha sentido mal de sí misma(o) o ha sentido que es una(un) fracasada(o) o que se ha fallado a si misma(o) o a su familia
+CSALUD01_2025,QS706,"Las molestias o problema cuánto le han dificultado para realizar su trabajo, sus actividades en la casa o llevarse bien con otras personas"
+CSALUD01_2025,QS707,"En los últimos 12 meses recibió tratamiento de algún profesional de salud por depresión, tristeza, desánimo, falta de interés o irritabilidad"
+CSALUD01_2025,QS708_A,¿Dónde recibió tratamiento? - General (Minsa/Gobierno Regional)
+CSALUD01_2025,QS708_AA,¿Dónde recibió tratamiento? -  Hospital Psiquiátrico
+CSALUD01_2025,QS708_AB,¿Dónde recibió tratamiento? -  Instituto Nacional de Salud Mental
+CSALUD01_2025,QS708_B,¿Dónde recibió tratamiento? - ESSALUD
+CSALUD01_2025,QS708_C,¿Dónde recibió tratamiento? - FFAA y PNP
+CSALUD01_2025,QS708_D,¿Dónde recibió tratamiento? -  Hospital/ Otro Municipal
+CSALUD01_2025,QS708_E,¿Dónde recibió tratamiento? -  Centro/ Puesto del MINSA
+CSALUD01_2025,QS708_EA,¿Dónde recibió tratamiento? -  Centro de Salud Mental Comunitaria
+CSALUD01_2025,QS708_F,¿Dónde recibió tratamiento? -  Policlínico/ Posta de ESSALUD/ UBAP
+CSALUD01_2025,QS708_G,¿Dónde recibió tratamiento? -  Clínica Particular
+CSALUD01_2025,QS708_H,¿Dónde recibió tratamiento? -  Consultorio Particular
+CSALUD01_2025,QS708_I,¿Dónde recibió tratamiento? -  Clínica/ Posta de ONG
+CSALUD01_2025,QS708_J,¿Dónde recibió tratamiento? - Hospital/ Otro de Iglesia
+CSALUD01_2025,QS708_X,¿Dónde recibió tratamiento? -  Otro
+CSALUD01_2025,QS708_Y,¿Dónde recibió tratamiento? -  No Sabe/No Recuerda
+CSALUD01_2025,QS709,Últimos 12 meses ha estado casada(o) o conviviendo
+CSALUD01_2025,QS710,"Últimos 12 meses cuantas veces su pareja le golpeó con el pie, el puño o alguna otra parte del cuerpo (cabeza, codo, rodilla)"
+CSALUD01_2025,QS711,"Últimos 12 meses cuantas veces su pareja le golpeó, agredió con un objeto como: correa, palo, cuchillo o arma"
+CSALUD01_2025,QS713,"Últimos 12 meses hubo momentos en que la bebida o la resaca le dificultaron realizar sus actividades o sus responsabilidades en los estudios, en el trabajo o en la casa"
+CSALUD01_2025,QS714,"Últimos 12 meses hubo momentos en que el consumo de alcohol le provocó discusiones u otros problemas con su familia, amigos, vecinos o compañeros de trabajo"
+CSALUD01_2025,QS715,Siguió bebiendo a pesar que le provocaba estos problemas con estas personas
+CSALUD01_2025,QS716,Últimos 12 meses hubo momentos que estuvo bajo los efectos del alcohol en situaciones en que podía hacerse daño
+CSALUD01_2025,QS717,Le han detenido más de una vez por alterar el orden o manejar bajo los efectos del alcohol
+CSALUD01_2025,QS719,Últimos 12 meses hubo momentos en que tuvo tantas ganas de beber que no pudo resistirse a tomar una copa o le resultó difícil pensar en otra cosa
+CSALUD01_2025,QS720,Últimos 12 meses hubo momentos que necesitó beber más cantidad de alcohol para sentir el mismo efecto o  notó que ya no conseguía ponerse alegre con la misma cantidad que bebía habitualmente
+CSALUD01_2025,QS721,"Últimos 12 meses hubo momentos en que tuvo síntomas como cansancio, dolores de cabeza, diarrea, temblores o problemas emocionales cuando bebió menos, dejaba de beber o estaba sin beber"
+CSALUD01_2025,QS722,"Últimos 12 meses hubo momentos en que tomó un vaso, copa o botella para evitar tener problemas"
+CSALUD01_2025,QS723,Últimos 12 meses hubo momentos en que continúo bebiendo a pesar que se había prometido que no lo haría o bebió mucho más de los que se había propuesto
+CSALUD01_2025,QS724,Últimos 12 meses hubo momentos en que bebió más frecuentemente o durante más días seguidos de lo que se había propuesto
+CSALUD01_2025,QS725,Últimos 12 meses hubo momentos en que empezó a beber y se emborrachó cuando no quería hacerlo
+CSALUD01_2025,QS726,Últimos 12 meses hubo momentos en qué intentó beber menos o dejar de beber y no pudo hacerlo
+CSALUD01_2025,QS727,Últimos 12 meses hubieron períodos de varios días o más en los que pasó tanto tiempo bebiendo o recuperándose de los efectos del alcohol que no le dio tiempo para nada más
+CSALUD01_2025,QS728,Últimos 12 meses tuvo un período de un mes o más que dejó de hacer actividades importantes o las redujo considerablemente a causa de la bebida
+CSALUD01_2025,QS729,Últimos 12 meses hubo momentos en que siguió bebiendo aunque sabía que tenía un problema físico o emocional grave que puede haber sido provocado o empeorados por la bebida
+CSALUD01_2025,QS730,Últimos 12 meses recibió tratamiento de algún profesional de la salud por consumo de alcohol
+CSALUD01_2025,QS731_A,¿Dónde recibió tratamiento? - General (Minsa/Gobierno Regional)
+CSALUD01_2025,QS731_AA,¿Dónde recibió tratamiento? -  Hospital Psiquiátrico
+CSALUD01_2025,QS731_AB,¿Dónde recibió tratamiento? -  Instituto Nacional de Salud Mental
+CSALUD01_2025,QS731_B,¿Dónde recibió tratamiento? - ESSALUD
+CSALUD01_2025,QS731_C,¿Dónde recibió tratamiento? - FFAA y PNP
+CSALUD01_2025,QS731_D,¿Dónde recibió tratamiento? -  Hospital/ Otro Municipal
+CSALUD01_2025,QS731_E,¿Dónde recibió tratamiento? -  Centro/ Puesto del MINSA
+CSALUD01_2025,QS731_EA,¿Dónde recibió tratamiento? -  Centro de Salud Mental Comunitaria
+CSALUD01_2025,QS731_F,¿Dónde recibió tratamiento? -  Policlínico/ Posta de ESSALUD/ UBAP
+CSALUD01_2025,QS731_G,¿Dónde recibió tratamiento? -  Clínica Particular
+CSALUD01_2025,QS731_H,¿Dónde recibió tratamiento? -  Consultorio Particular
+CSALUD01_2025,QS731_I,¿Dónde recibió tratamiento? -  Clínica/ Posta de ONG
+CSALUD01_2025,QS731_J,¿Dónde recibió tratamiento? - Hospital/ Otro de Iglesia
+CSALUD01_2025,QS731_X,¿Dónde recibió tratamiento? -  Otro
+CSALUD01_2025,QS731_Y,¿Dónde recibió tratamiento? -  No Sabe/No Recuerda
+CSALUD01_2025,QFIN,Final de Entrevista del Informante
+CSALUD01_2025,QS8INICIO,Indicación inicio capítulo 8
+CSALUD01_2025,QS900,Personas de 15 años a màs de edad - Peso en kilogramos
+CSALUD01_2025,QS901,Personas de 15 años a màs de edad - Talla en centímetros
+CSALUD01_2025,QS902,Resultado medición antropométrica
+CSALUD01_2025,QS903S,Primera medición presión arterial sistólica
+CSALUD01_2025,QS903D,Primera medición presión arterial diastólica
+CSALUD01_2025,QS905S,Segunda medición presión arterial sistólica
+CSALUD01_2025,QS905D,Segunda medición presión arterial diastólica
+CSALUD01_2025,QS906,Resultado medición presión arterial
+CSALUD01_2025,QS907,Perímetro abdominal en centímetros
+CSALUD01_2025,QS908,Resultado de la medición del perímetro abdominal
+CSALUD01_2025,Peso15_AMAS,Factor ponderado
+CSALUD08_2025,ID1,Año
+CSALUD08_2025,HHID,Identificación Cuestionario del Hogar
+CSALUD08_2025,QHCLUSTER,Conglomerado
+CSALUD08_2025,QHNUMBER,Vivienda seleccionada
+CSALUD08_2025,QHHOME,Hogar seleccionado
+CSALUD08_2025,QS800,Línea de niña/niño
+CSALUD08_2025,QS801,Nro. de orden niña/niño
+CSALUD08_2025,QS802,Nro. de orden responsable
+CSALUD08_2025,QS802V,Responsable vive en el hogar
+CSALUD08_2025,QS802A,Resultado entrevista niña/niño
+CSALUD08_2025,QS802CD,Dia Nacimiento niño/niña
+CSALUD08_2025,QS802CM,Mes nacimiento niño/niña
+CSALUD08_2025,QS802CA,Año nacimiento niño/niña
+CSALUD08_2025,QS802D,Edad niño/niña
+CSALUD08_2025,QS803,Alguna vez ha sido atendido(a) en un servicio dental por un odontólogo
+CSALUD08_2025,QS804U,Unidad de tiempo - hace cuanto tiempo fue atendido la última vez
+CSALUD08_2025,QS804C,Hace cuánto tiempo fue atendido la última vez
+CSALUD08_2025,QS805,Donde lo atendieron
+CSALUD08_2025,QS806,"En los últimos 12 meses, recibio información sobre cuidado e higiene bucal de las niñas y niños de una persona o medio de comunicación"
+CSALUD08_2025,QS807,Donde recibió la información
+CSALUD08_2025,QS809,Se lava los dientes con cepillo dental
+CSALUD08_2025,QS810,Se cepilla los dientes todos los días
+CSALUD08_2025,QS811,Cuantas veces al día se cepilla los dientes
+CSALUD08_2025,QS812U,Unidad - tiempo que tiene el cepillo para lavarse los dientes
+CSALUD08_2025,QS812C,Tiempo en meses que usa cepillo para lavarse los dientes
+CSALUD08_2025,QS813,Personas que usan cepillo dental de la niña(o)
+CSALUD08_2025,QS814,Usa crema dental cuando se cepilla los dientes la niña(o)
+CSALUD08_2025,QS817,Alguna vez un médico/otro personal de salud le ha evaluado o medido la vista con la cartilla Snellen a la niña(o)
+CSALUD08_2025,QS818U,Unidad - tiempo que evaluaron o midieron la vista a la niña(o) la última vez
+CSALUD08_2025,QS818C,Hace cuánto tiempo lo evaluaron de la vista
+CSALUD08_2025,QS819,Donde le evaluaron o midieron la vista a la niña(o) la última vez
+CSALUD08_2025,QS820,Le han diagnosticado un problema de visión y el uso de anteojos
+CSALUD08_2025,QS821,Que problema de visión le diagnosticaron
+CSALUD08_2025,QS822U,Unidad - tiempo desde que le indicaron el uso de lentes o anteojos a la niña(o)
+CSALUD08_2025,QS822C,Hace cuánto tiempo le indicaron el uso de lentes a la niña(o)
+CSALUD08_2025,QS823,Donde le diagnosticaron el problema de visión a la niña(o)
+CSALUD08_2025,QS824,Está usando lentes o anteojos para mejorar su problema de visión de la niña(o)
+CSALUD08_2025,QS825,Por qué motivo no está usando lentes o anteojos para corregir su problema de visión de la niña(o)
+CSALUD08_2025,QS826,"La niña(o) está usando lentes o anteojos a veces, casi siempre o siempre"
+CSALUD08_2025,QS827,Por qué motivo la niña(o) no usa lentes o anteojos siempre
+CSALUD08_2025,QS828,"La niña(o) ve televisión/computadora/laptop/tablet muy cerca, a menos de 30 cm"
+CSALUD08_2025,QS829,"Cuando la niña(o) está en un lugar sin techo, haga o no haga calor, con qué frecuencia usa gorro con visera, sombrero o lentes de sol nunca, a veces, siempre"
+CSALUD08_2025,QS831,Considera que la niña(o) tiene buena iluminación en el ambiente donde lee
+CSALUD08_2025,QS832,"La niña(o) acostumbra leer mientras está caminando, en el carro o mototaxi"
+CSALUD08_2025,QS833,"En los últimos 30 días, la niña(o) asistió a la escuela o colegio"
+CSALUD08_2025,QS834,"En los últimos 30 días, cuántas veces la niña(o) fue golpeado por un profesor(a)"
+CSALUD08_2025,QS835,"En los últimos 30 días, cuántas veces la niña(o) fue golpeado(a) por otro estudiante"
+CSALUD08_2025,QS836,La niña(o) tiene confianza para contarle sus cosas con algún(a) profesor(a) del colegio
+CSALUD08_2025,QS837,"Durante este año, alguna vez la niña(o) no quiso ir al colegio por miedo a que alguien le pegue"
+CSALUD08_2025,QS838,Usted sabe a quién pedir apoyo si la niña(o) sufre violencia física en el colegio
+CSALUD08_2025,QS840A,Podría mostrar el cepillo dental de la niña(o)
+CSALUD08_2025,QS840B,Podría mostrar la crema dental de la niña(o) y verifique la concentración de flúor
+CSALUD08_2025,Pesomen12,Factor ponderado
+Programas Sociales x Hogar_2025,ID1,Año
+Programas Sociales x Hogar_2025,HHID,Identificacion Cuestionario del Hogar
+Programas Sociales x Hogar_2025,QHCLUSTER,Conglomerado
+Programas Sociales x Hogar_2025,QHNUMBER,Vivienda seleccionada
+Programas Sociales x Hogar_2025,QHHOME,Hogar seleccionado
+Programas Sociales x Hogar_2025,QH91,Algun miembro es beneficiario de BECA 18?
+Programas Sociales x Hogar_2025,QH93,Algun miembro es beneficiario de TRABAJA PERÚ?
+Programas Sociales x Hogar_2025,QH95,Algun miembro es beneficiario de JUNTOS?
+Programas Sociales x Hogar_2025,QH96,Número de orden
+Programas Sociales x Hogar_2025,QH96A,Hace cuanto tiempo es beneficiario: Años
+Programas Sociales x Hogar_2025,QH96M,Hace cuanto tiempo es beneficiario: Meses
+Programas Sociales x Hogar_2025,QH96AC,Muestra acuerdo de compromiso
+Programas Sociales x Hogar_2025,QH97D,Día de afiliación
+Programas Sociales x Hogar_2025,QH97M,Mes de afiliación
+Programas Sociales x Hogar_2025,QH97A,Año de afiliación
+Programas Sociales x Hogar_2025,QH99,Algun miembro es beneciario de PENSIÓN 65?
+Programas Sociales x Hogar_2025,QH101,Algun miembro recibe ayuda de VASO DE LECHE?
+Programas Sociales x Hogar_2025,QH103,Algun miembro recibe ayuda del COMEDOR POPULAR?
+Programas Sociales x Hogar_2025,QH106,Algun miembro recibe ayuda de WAWA WASI/ CUNA MAS?
+Programas Sociales x Hogar_2025,QHVIOLEN,Numero de mujer para violencia domestica
+Programas Sociales x Hogar_2025,QH100B,Alguna gestante y/o niño o niño de 0 a 36 meses de edad reciben en su hogar visitas de la facilitadora del Programa Nacional CUNA MÁS?:
+PS_BECA18_2025,ID1,Año
+PS_BECA18_2025,HHID,Identificacion Cuestionario del Hogar
+PS_BECA18_2025,HVIDX,Número de Orden en el Hogar
+PS_BECA18_2025,QHCLUSTER,Conglomerado
+PS_BECA18_2025,QHNUMBER,Vivienda seleccionada
+PS_BECA18_2025,QHHOME,Hogar seleccionado
+PS_BECA18_2025,PS92_1A,Hace cuanto tiempo es beneficiario: Años
+PS_BECA18_2025,PS92_1M,Hace cuanto tiempo es beneficiario: Meses
+PS_BECA18_2025,PS92_1S,Alguien más es beneficiario
+PS_BECA18_2025,PS1,Número de Orden
+PS_COMEDOR_2025,ID1,Año
+PS_COMEDOR_2025,HHID,Identificacion Cuestionario del Hogar
+PS_COMEDOR_2025,HVIDX,Número de Orden en el Hogar
+PS_COMEDOR_2025,QHCLUSTER,Conglomerado
+PS_COMEDOR_2025,QHNUMBER,Vivienda seleccionada
+PS_COMEDOR_2025,QHHOME,Hogar seleccionado
+PS_COMEDOR_2025,PS104_1A,Hace cuanto tiempo es beneficiario: Años
+PS_COMEDOR_2025,PS104_1M,Hace cuanto tiempo es beneficiario: Meses
+PS_COMEDOR_2025,PS104_1S,Alguien más es beneficiario
+PS_COMEDOR_2025,PS5,Número de Orden
+PS_CUNAMAS_VISITA_2025,ID1,Año
+PS_CUNAMAS_VISITA_2025,HHID,Identificacion Cuestionario del Hogar
+PS_CUNAMAS_VISITA_2025,HVIDX,Número de Orden en el Hogar
+PS_CUNAMAS_VISITA_2025,QHCLUSTER,Conglomerado
+PS_CUNAMAS_VISITA_2025,QHNUMBER,Vivienda seleccionada
+PS_CUNAMAS_VISITA_2025,QHHOME,Hogar seleccionado
+PS_CUNAMAS_VISITA_2025,PS100C1_A,AÑOS
+PS_CUNAMAS_VISITA_2025,PS100C1_M,MESES
+PS_CUNAMAS_VISITA_2025,PS100C_1S,Alguien más?
+PS_CUNAMAS_VISITA_2025,PS8,NORDEN
+PS_PENSION65_2025,ID1,Año
+PS_PENSION65_2025,HHID,Identificacion Cuestionario del Hogar
+PS_PENSION65_2025,HVIDX,Número de Orden en el Hogar
+PS_PENSION65_2025,QHCLUSTER,Conglomerado
+PS_PENSION65_2025,QHNUMBER,Vivienda seleccionada
+PS_PENSION65_2025,QHHOME,Hogar seleccionado
+PS_PENSION65_2025,PS100_1A,Hace cuanto tiempo es beneficiario: Años
+PS_PENSION65_2025,PS100_1M,Hace cuanto tiempo es beneficiario: Meses
+PS_PENSION65_2025,PS100_1S,Alguien más es beneficiario
+PS_PENSION65_2025,PS3,Número de Orden
+PS_QALIWARMA_2025,ID1,Año
+PS_QALIWARMA_2025,HHID,Identificacion Cuestionario del Hogar
+PS_QALIWARMA_2025,HVIDX,Número de Orden en el Hogar
+PS_QALIWARMA_2025,QHCLUSTER,Conglomerado
+PS_QALIWARMA_2025,QHNUMBER,Vivienda seleccionada
+PS_QALIWARMA_2025,QHHOME,Hogar seleccionado
+PS_QALIWARMA_2025,PS109_1R,Recibió desayuno y/o almuerzo del programa nacional de alimentación escolar QALIWARMA
+PS_QALIWARMA_2025,PS109_1A,Hace cuanto tiempo es beneficiario: Años
+PS_QALIWARMA_2025,PS109_1M,Hace cuanto tiempo es beneficiario: Meses
+PS_QALIWARMA_2025,PS109_1S,Alguien más es beneficiario
+PS_QALIWARMA_2025,PS7,Número de Orden
+PS_TRABAJA_2025,ID1,Año
+PS_TRABAJA_2025,HHID,Identificacion Cuestionario del Hogar
+PS_TRABAJA_2025,HVIDX,Número de Orden en el Hogar
+PS_TRABAJA_2025,QHCLUSTER,Conglomerado
+PS_TRABAJA_2025,QHNUMBER,Vivienda seleccionada
+PS_TRABAJA_2025,QHHOME,Hogar seleccionado
+PS_TRABAJA_2025,PS94_1A,Hace cuanto tiempo es beneficiario: Años
+PS_TRABAJA_2025,PS94_1M,Hace cuanto tiempo es beneficiario: Meses
+PS_TRABAJA_2025,PS94_1S,Alguien más es beneficiario
+PS_TRABAJA_2025,PS2,Número de Orden
+PS_VL_2025,ID1,Año
+PS_VL_2025,HHID,Identificacion Cuestionario del Hogar
+PS_VL_2025,HVIDX,Número de Orden en el Hogar
+PS_VL_2025,QHCLUSTER,Conglomerado
+PS_VL_2025,QHNUMBER,Vivienda seleccionada
+PS_VL_2025,QHHOME,Hogar seleccionado
+PS_VL_2025,PS102_1A,Hace cuanto tiempo es beneficiario: Años
+PS_VL_2025,PS102_1M,Hace cuanto tiempo es beneficiario: Meses
+PS_VL_2025,PS102_1S,Alguien más es beneficiario
+PS_VL_2025,PS4,Número de Orden
+PS_WAWAWASI_2025,ID1,Año
+PS_WAWAWASI_2025,HHID,Identificacion Cuestionario del Hogar
+PS_WAWAWASI_2025,HVIDX,Número de Orden en el Hogar
+PS_WAWAWASI_2025,QHCLUSTER,Conglomerado
+PS_WAWAWASI_2025,QHNUMBER,Vivienda seleccionada
+PS_WAWAWASI_2025,QHHOME,Hogar seleccionado
+PS_WAWAWASI_2025,PS107_1A,Hace cuanto tiempo es beneficiario: Años
+PS_WAWAWASI_2025,PS107_1M,Hace cuanto tiempo es beneficiario: Meses
+PS_WAWAWASI_2025,PS107_1S,Alguien más es beneficiario
+PS_WAWAWASI_2025,PS6,Número de Orden

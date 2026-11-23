@@ -8,9 +8,11 @@ Curso: Ciencia de Datos I. Escuela Profesional de Ingeniería Estadística e Inf
 ## Contenido del proyecto
 
 ```
-informe.qmd        Informe completo (texto + código R). Al renderizar genera informe.pdf
+informe.qmd        Informe técnico del proyecto (proceso completo). Genera informe.pdf
+articulo.qmd       Artículo científico en formato IEEE. Genera articulo.pdf
 R/funciones.R      Funciones de diseño muestral, modelos, márgenes y gráficos
-header.tex         Autores y ajustes de LaTeX (formato IEEE)
+header.tex         Autores y ajustes de LaTeX del artículo (IEEE)
+header_informe.tex, titulo_informe.tex   Formato del informe técnico
 referencias.bib    Bibliografía
 datos/             Datos livianos que usa el informe (~1,2 MB)
   base_analitica_2014_2025.rds    5 684 mujeres de Puno con su nacimiento más reciente
@@ -30,11 +32,12 @@ scripts_R/         Scripts 01–51: todo el proceso desde los microdatos del INE
    ```r
    install.packages(c("survey", "dplyr", "ggplot2", "knitr", "rmarkdown", "tibble"))
    ```
-4. Abrir esta carpeta en Positron (*File → Open Folder*), abrir `informe.qmd` y pulsar **Preview / Render**, o en la terminal:
+4. Abrir esta carpeta en Positron (*File → Open Folder*), abrir `informe.qmd` (o `articulo.qmd`) y pulsar **Preview / Render**, o en la terminal:
    ```
    quarto render informe.qmd
+   quarto render articulo.qmd
    ```
-   Se genera `informe.pdf` (tarda alrededor de un minuto).
+   Se generan `informe.pdf` y `articulo.pdf` (alrededor de un minuto cada uno).
 
 Todos los números, tablas y figuras se calculan al renderizar; ninguno está escrito a mano.
 
